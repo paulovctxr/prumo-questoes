@@ -8,6 +8,14 @@
     char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[char]));
   const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
+  window.bookEntryCard = function () {
+    return `<section class="book-entry" aria-label="Questões do livro de álgebra">
+      <div><span class="badge">QUESTÕES DO LIVRO</span><h2>Tópicos de Álgebra Elementar</h2>
+        <p>712 exercícios originais, organizados por capítulo, com acesso aos gabaritos.</p></div>
+      <button class="btn" data-nav="book">Abrir as 712 questões do livro →</button>
+    </section>`;
+  };
+
   function picture(image, alt) {
     return `<img class="book-original" src="${escape(image.src)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${escape(alt)}">`;
   }

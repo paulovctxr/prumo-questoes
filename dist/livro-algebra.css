@@ -1,4 +1,7 @@
 .book-intro{margin:0 0 26px}.book-intro h1{font-size:28px;margin:12px 0}.book-intro p{line-height:1.6}
+.book-entry{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;margin:0 0 28px;border:1px solid var(--border);border-radius:12px;background:var(--pale,#edf5fa)}
+.book-entry h2{margin:10px 0;font-size:21px;color:var(--text)}.book-entry p{margin:0;line-height:1.6;color:var(--muted)}.book-entry .btn{flex-shrink:0;white-space:normal}
+@media(max-width:760px){.book-entry{align-items:stretch;flex-direction:column;padding:18px;gap:16px}.book-entry .btn{width:100%}}
 .book-filters{display:flex;flex-wrap:wrap;gap:16px;padding:22px;background:var(--card,#fff);border:1px solid var(--border);border-radius:12px}
 .book-filters .field{flex:1;min-width:220px;margin:0}.book-filters .inline-check{width:100%;margin:0}
 .book-question{max-width:860px;margin:22px auto;padding:26px;background:var(--card,#fff);border:1px solid var(--border);border-radius:12px}
