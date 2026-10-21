@@ -1,0 +1,281 @@
+{
+  "11:1": {
+    "answer": "32 subconjuntos",
+    "steps": [
+      "O conjunto tem cinco elementos distintos. Para formar um subconjunto, decidimos independentemente se cada elemento entra ou não entra.",
+      "São duas escolhas para cada um dos cinco elementos: $2^5=32$. Essa contagem inclui o conjunto vazio e o próprio conjunto A."
+    ]
+  },
+  "11:2": {
+    "answer": "D",
+    "steps": [
+      "É necessário distinguir o número 1 do conjunto $\\{1\\}$ e o número 2 do conjunto $\\{2\\}$. Os elementos comuns a A e B são 1 e $\\{2\\}$.",
+      "Logo, $A-B=\\{\\{1\\}\\}$ e $B-A=\\{2\\}$. As afirmações I, II e V são verdadeiras.",
+      "Como $1\\in A$, o conjunto $\\{1\\}$ está contido em A: III também é verdadeira.",
+      "A união correta é $\\{1,2,\\{1\\},\\{2\\}\\}$, não $\\{1,2,\\{1,2\\}\\}$. Somente IV é falsa: alternativa D."
+    ]
+  },
+  "11:3": {
+    "answer": "590 pessoas",
+    "steps": [
+      "Das 500 pessoas que gabaritaram matemática, $500-170=330$ não gabaritaram português.",
+      "Das 430 que gabaritaram português, $430-170=260$ não gabaritaram matemática.",
+      "As duas parcelas são disjuntas: exatamente uma disciplina foi gabaritada por $330+260=590$ pessoas."
+    ]
+  },
+  "11:4": {
+    "answer": "34 professores",
+    "steps": [
+      "Pela inclusão-exclusão, a união dos grupos tem $26+13-5=34$ professores.",
+      "Subtraímos 5 porque os professores que trabalham nos dois níveis foram contados tanto no grupo de 26 quanto no grupo de 13. O resultado pressupõe, como o enunciado pretende, que todos os professores do grupo lecionam em pelo menos um dos níveis."
+    ]
+  },
+  "11:5": {
+    "answer": "200 funcionários",
+    "steps": [
+      "Dos 1080 funcionários que fabricam roupas esportivas, precisamos excluir quem também fabrica roupas sociais ou básicas.",
+      "A expressão é $|E\\setminus(S\\cup B)|=|E|-|E\\cap S|-|E\\cap B|+|E\\cap S\\cap B|$.",
+      "O último termo corrige a dupla exclusão dos funcionários presentes nos três grupos: $1080-800-180+100=200$."
+    ]
+  },
+  "11:6": {
+    "answer": "D — 18",
+    "steps": [
+      "Escreva $s=|A|+|B|+|C|$ e $p=|A\\cap B|+|A\\cap C|+|B\\cap C|$. Somando as três uniões de dois conjuntos, obtemos $8+9+10=2s-p$, ou seja, $27=2s-p$.",
+      "A inclusão-exclusão na união tripla fornece $11=s-p+2$, logo $s-p=9$.",
+      "Subtraindo as equações, $s=27-9=18$. Alternativa D."
+    ]
+  },
+  "11:7": {
+    "answer": "A = {−4, −3, −2, −1, 0}",
+    "steps": [
+      "Na convenção utilizada pelo livro, $\\mathbb Z_-$ representa os inteiros não positivos, incluindo o zero.",
+      "Devemos selecionar os inteiros desse conjunto estritamente maiores que −5: $-4,-3,-2,-1,0$. Portanto $A=\\{-4,-3,-2,-1,0\\}$."
+    ]
+  },
+  "11:8": {
+    "answer": "E",
+    "steps": [
+      "A expressão da alternativa E é um quadrado perfeito: $x^2-2xy+y^2=(x-y)^2$. Como os números são distintos, $x-y\\ne0$, portanto $(x-y)^2>0$.",
+      "As demais não são necessárias: A falha para $x=-2,y=1$; B falha para $x=1,y=-1$; C falha para $x=1/2,y=1$; D falha para $x=1,y=-1$.",
+      "Logo, a única alternativa sempre verdadeira é E."
+    ]
+  },
+  "11:9": {
+    "answer": "D — ]−8, −1/2[",
+    "steps": [
+      "Como $-4<x<-1$ e $1<y<2$, o produto negativo satisfaz $-8<xy<-1$. Nenhuma extremidade é atingida.",
+      "A função $2/x$ é decrescente para x negativo. Nesse intervalo, $-2<2/x<-1/2$.",
+      "O intervalo aberto que contém ambos os conjuntos de valores é $]-8,-1/2[$. Alternativa D."
+    ]
+  },
+  "11:10": {
+    "answer": "3/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3",
+    "editorial_note": "O gabarito impresso coloca 3/4 antes de 2/5 e 3/7. A ordem correta está demonstrada abaixo; os números do enunciado foram preservados.",
+    "steps": [
+      "Entre as frações menores que 1, $3/9=1/3$. Por multiplicação cruzada: $1/3<2/5$, pois $5<6$; $2/5<3/7$, pois $14<15$; e $3/7<3/4$, pois $12<21$.",
+      "Para os demais, $1<4/3<2<5/2<3$, pois $4/3=1+1/3$ e $5/2=2+1/2$.",
+      "Reunindo: $\\frac39<\\frac25<\\frac37<\\frac34<1<\\frac43<2<\\frac52<3$."
+    ]
+  },
+  "11:11": {
+    "answer": "D — 9",
+    "steps": [
+      "Os elementos que pertencem exclusivamente a A são $|A\\cup B\\cup C|-|B\\cup C|=22-20=2$.",
+      "Em $A\\cap B$ há $5-1=4$ elementos que não estão em C. Em $A\\cap C$ há $4-1=3$ que não estão em B.",
+      "Ao excluir de A os elementos de $B\\cap C$, retiramos somente a interseção tripla. Restam $2+4+3=9$ elementos: alternativa D."
+    ]
+  },
+  "11:12": {
+    "answer": "b = 2a",
+    "steps": [
+      "Um conjunto com n elementos possui $a=2^n$ subconjuntos. Ao acrescentar um elemento novo, B passa a ter $n+1$ elementos e $b=2^{n+1}$ subconjuntos.",
+      "Assim, $b=2\\cdot2^n=2a$. Também podemos emparelhar cada subconjunto de A com duas escolhas em B: sem o elemento novo e com ele."
+    ]
+  },
+  "11:13": {
+    "answer": "C",
+    "steps": [
+      "A interseção $A\\cap B\\cap C$ está contida em A. Como A tem dois elementos, essa interseção tem no máximo dois elementos. C é verdadeira.",
+      "A pode ter interseção de dois elementos com B, refutando A. A e C podem ser disjuntos, com união de seis elementos, refutando B.",
+      "A união de A e B pode conter quatro elementos de C, refutando D. A interseção de qualquer conjunto com o vazio é vazia, refutando E."
+    ]
+  },
+  "11:14": {
+    "answer": "C — 12",
+    "steps": [
+      "Defina $a=|A-B|$ e $b=|B-A|$. A união possui dez elementos e a interseção cinco, portanto $a+b=5$.",
+      "Como $|A|=a+5>|B|=b+5$, temos $a>b$. As soluções inteiras não negativas são $(a,b)=(3,2),(4,1),(5,0)$.",
+      "Os valores possíveis de $|A-B|$ são 3, 4 e 5. A soma é $3+4+5=12$, alternativa C."
+    ]
+  },
+  "11:15": {
+    "answer": "B — 39 pessoas assistem a C",
+    "steps": [
+      "A união tem $142-40=102$ pessoas. Como 72 assistem a exatamente um programa e 25 a exatamente dois, a interseção tripla tem $102-72-25=5$ pessoas.",
+      "Há $13-5=8$ pessoas exclusivamente em A e B. Exclusivamente em B e C há $8/2=4$. Exclusivamente em A e C há $25-8-4=13$.",
+      "O número de espectadores de C é diretamente $142-103=39$, provando B. Só C tem $39-4-13-5=17$ pessoas. Como só B tem 25, só A tem $72-25-17=30$.",
+      "Logo $|A|=30+8+13+5=56$, $|A\\cap C|=13+5=18$ e $|A\\cup B|=102-17=85$. Essas contas refutam as demais alternativas."
+    ]
+  },
+  "11:16": {
+    "answer": "E — no mínimo 4",
+    "steps": [
+      "Se O é o grupo que usa óculos e R o que usa relógio, então $|O\\cap R|=6+8-|O\\cup R|$.",
+      "A união não pode exceder os dez estudantes da equipe. Assim, $|O\\cap R|\\ge6+8-10=4$. O máximo possível é 6.",
+      "A interseção pode ter 4, 5 ou 6 pessoas. Portanto a garantia correta é 'no mínimo 4', alternativa E."
+    ]
+  },
+  "11:17": {
+    "answer": "C e D são verdadeiras na impressão fornecida",
+    "editorial_note": "O livro indica D, mas C está impressa como 'se x ∈ A, então x ∈ A', uma tautologia. O enunciado foi mantido; há mais de uma alternativa verdadeira.",
+    "steps": [
+      "Da inclusão $A\\subseteq B$, todo elemento de A também pertence a B. Pela contrapositiva, $x\\notin B\\Rightarrow x\\notin A$: D é verdadeira.",
+      "A alternativa C, tal como impressa, repete a mesma condição no antecedente e no consequente; ela também é verdadeira para qualquer conjunto A.",
+      "A é incompatível com a inclusão. B não é garantida quando a convenção do livro admite $A=B$. E é falsa, pois $A\\cap B=A\\ne\\varnothing$.",
+      "Por isso, D é o gabarito informado, mas a questão original não possui resposta única."
+    ]
+  },
+  "11:18": {
+    "answer": "D — 8",
+    "steps": [
+      "A tem cinco elementos distintos: $2,0,\\{0\\},5,\\{5\\}$. O elemento 5 deve pertencer a B, e o elemento $\\{0\\}$ deve ficar de fora.",
+      "Os três elementos restantes, $2,0,\\{5\\}$, podem entrar ou não entrar livremente. Existem $2^3=8$ escolhas: alternativa D."
+    ]
+  },
+  "11:19": {
+    "answer": "A — 2047",
+    "steps": [
+      "Se A tem a elementos, $120<2^a<250$. A única potência de 2 nesse intervalo é $128=2^7$, logo $a=7$.",
+      "B tem quinze subconjuntos não vazios: $2^b-1=15$, portanto $b=4$. C possui $7+4=11$ elementos.",
+      "Subconjuntos próprios são todos, exceto o próprio C; o vazio é contado. Assim, o resultado é $2^{11}-1=2047$, alternativa A."
+    ]
+  },
+  "11:20": {
+    "answer": "D — 57",
+    "steps": [
+      "Uma vigília é determinada pela escolha de um subconjunto dos seis operários. Existem $2^6=64$ subconjuntos.",
+      "Excluímos a escolha vazia e as seis escolhas com apenas um operário: $64-1-6=57$.",
+      "Todas as escolhas restantes têm pelo menos dois operários e são admissíveis. Alternativa D."
+    ]
+  },
+  "11:21": {
+    "answer": "D",
+    "steps": [
+      "As diferenças são $A-B=\\{\\{1\\}\\}$ e $B-A=\\{\\{2\\}\\}$. Portanto I é falsa, pois confunde 1 com $\\{1\\}$, enquanto V é verdadeira.",
+      "II é falsa: para $\\{2\\}$ ser subconjunto de $B-A$, o número 2 teria que ser elemento de $B-A$; ali há apenas o conjunto $\\{2\\}$.",
+      "III é verdadeira, pois $1\\in A$. A união é $\\{1,2,\\{1\\},\\{2\\}\\}$, então IV é falsa.",
+      "Somente III e V estão corretas: alternativa D."
+    ]
+  },
+  "11:22": {
+    "answer": "B",
+    "steps": [
+      "Mulheres morenas ou de olhos azuis que não são cariocas formam $(B\\cup C)\\setminus A$. Devemos sombrear B e C fora de A, incluindo a parte comum a B e C que está fora de A.",
+      "Mulheres cariocas que não são morenas nem têm olhos azuis formam $A\\setminus(B\\cup C)$: devemos acrescentar somente a parte exclusiva de A.",
+      "A região final é $[(B\\cup C)\\setminus A]\\cup[A\\setminus(B\\cup C)]$, representada pelo diagrama B. As interseções de A com B ou C não são sombreadas."
+    ]
+  },
+  "11:23": {
+    "answer": "D — quatro afirmações verdadeiras",
+    "steps": [
+      "Das dez crianças louras, quatro são meninas; logo há seis meninos louros. Das dezenove meninas, quinze não são louras. I e II são verdadeiras.",
+      "Há $19+6+10=35$ crianças, portanto III é falsa. Louras ou meninas são $10+19-4=25$, então IV é verdadeira.",
+      "Não louras ou meninos correspondem a todas as crianças exceto as quatro meninas louras: $35-4=31$. V é verdadeira.",
+      "São quatro afirmações verdadeiras: I, II, IV e V. Alternativa D."
+    ]
+  },
+  "11:24": {
+    "answer": "E — 64 turistas",
+    "steps": [
+      "Seja x o número de turistas que visitaram ambos os países. Visitaram a França $6x$, portanto somente a França foram $5x$. Somente a Espanha foram $3x$.",
+      "A união totaliza $5x+x+3x=9x=72$, de onde $x=8$.",
+      "Visitaram um único país $5x+3x=8x=64$ turistas. Alternativa E."
+    ]
+  },
+  "11:25": {
+    "answer": "D — 9 dias",
+    "steps": [
+      "Em n dias existem n manhãs e n tardes. Se seis manhãs foram secas, choveu em $n-6$ manhãs. Se cinco tardes foram secas, choveu em $n-5$ tardes.",
+      "O enunciado totaliza sete ocorrências de chuva e não permite chuva de manhã e à tarde no mesmo dia. Logo $(n-6)+(n-5)=7$.",
+      "Resolvendo, $2n-11=7$, então $n=9$. São três manhãs e quatro tardes chuvosas, confirmando o total. Alternativa D."
+    ]
+  },
+  "11:26": {
+    "answer": "A — 6",
+    "steps": [
+      "Como os conjuntos são iguais, x deve coincidir com um elemento de $\\{x+3,y\\}$. A igualdade $x=x+3$ é impossível, então $x=y$.",
+      "Substituindo, a igualdade de conjuntos é $\\{x,2x\\}=\\{x+3,x\\}$. Se $x=0$, os conjuntos seriam $\\{0\\}$ e $\\{3,0\\}$, que são diferentes.",
+      "Para $x\\ne0$, o segundo elemento deve satisfazer $2x=x+3$, logo $x=3$ e $y=3$. Conferindo: ambos os conjuntos são $\\{3,6\\}$. Assim, $x+y=6$."
+    ]
+  },
+  "11:27": {
+    "answer": "D — 18",
+    "steps": [
+      "Defina $s=|A|+|B|+|C|$ e $p=|A\\cap B|+|A\\cap C|+|B\\cap C|$. A soma das três uniões de pares fornece $2s-p=8+9+10=27$.",
+      "Pela inclusão-exclusão tripla, $s-p+2=11$, ou seja, $s-p=9$.",
+      "Subtraindo, obtemos $s=18$. Alternativa D."
+    ]
+  },
+  "11:28": {
+    "answer": "A",
+    "steps": [
+      "A diferença simétrica $X\\triangle Y$ contém exatamente os elementos que pertencem a apenas um dos conjuntos X e Y.",
+      "A interseção $X\\cap Y$ contém os elementos que pertencem aos dois. Essas condições são incompatíveis, logo $(X\\triangle Y)\\cap(X\\cap Y)=\\varnothing$.",
+      "As alternativas B e C falham quando as respectivas diferenças são não vazias. D e E não são identidades: a união com uma diferença já contida na diferença simétrica não recupera os elementos da interseção. Portanto A."
+    ]
+  },
+  "11:29": {
+    "answer": "B — somente I",
+    "steps": [
+      "I é verdadeira: se A é um elemento de B e todos os elementos de B também pertencem a C, então A é elemento de C.",
+      "Para refutar II e III, escolha $A=\\{1\\}$, $B=\\{1,2\\}$ e $C=\\{\\{1,2\\}\\}$. Temos $A\\subseteq B$ e $B\\in C$.",
+      "Entretanto, A não é o único elemento de C, logo $A\\notin C$; e $1\\notin C$, logo A não está contido em C. II e III são falsas. Alternativa B."
+    ]
+  },
+  "11:30": {
+    "answer": "A — 10%",
+    "steps": [
+      "Sejam C, S e R os grupos que apreciam música clássica, sertaneja e rock. Como ninguém aprecia simultaneamente clássica e sertaneja, $C\\cap S=\\varnothing$ e a interseção tripla também é vazia.",
+      "A inclusão-exclusão fornece $|C\\cup S\\cup R|=30\\%+50\\%+25\\%-5\\%-10\\%=90\\%$.",
+      "Os que não apreciam nenhum desses gêneros são o complemento: $100\\%-90\\%=10\\%$. Alternativa A."
+    ]
+  },
+  "11:31": {
+    "answer": "B",
+    "steps": [
+      "Sejam I os importados, G os garfos e M os metálicos. Há 18 garfos importados metálicos; garfos importados não metálicos são $71-18=53$; garfos nacionais metálicos são $27-18=9$.",
+      "Garfos nacionais não metálicos são $108-71-9=28$. Garfos nacionais, somando os dois materiais, são $108-71=37$.",
+      "Facas importadas metálicas são $52-18=34$. Facas importadas no total são $142-71=71$, portanto as importadas não metálicas são $71-34=37$. Isso prova B.",
+      "Para conferir C: há $102-27-34=41$ facas nacionais metálicas e $302-108-71=123$ facas nacionais no total; as nacionais não metálicas são $123-41=82$, não mais de 90. A e D também são falsas pelos valores 28 e 53."
+    ]
+  },
+  "11:32": {
+    "answer": "A",
+    "steps": [
+      "Na ficha A, $0{,}\\overline7=7/9$ e $(5/4)^0=1$. O numerador é $(7/9+2/9+1)^{-1}=1/2$. O denominador é $-1/2-4^{3/2}-2^{-1}=-9$. Logo $A=-1/18$.",
+      "Na ficha B, $8^{0{,}\\overline6}=8^{2/3}=4$, $4^{3/2}=8$, $2^{\\sqrt9}=8$ e $9^{0{,}5}=3$. O denominador é $-(1/49)^{-1/2}=-7$. Assim $B=(4+8-8+3)/(-7)=-1$.",
+      "Na ficha C, $(0{,}333\\ldots)^3=1/27$, $1\\frac45=9/5$, $2{,}2=11/5$ e $-1{,}1333\\ldots=-17/15$. Então $C=[(1/27)(9/5)+11/5]/(-17/15)=(34/15)/(-17/15)=-2$.",
+      "Na ficha D, $[(1/6)^{-3}\\cdot0{,}\\overline6]^{1/2}=\\sqrt{216\\cdot2/3}=12$ e $[(2/3)^0-1/(1{,}333\\ldots)]^{1/2}=\\sqrt{1-3/4}=1/2$. Logo $D=(12+1/2)^{-1/2}=\\sqrt2/5$.",
+      "A é racional negativo, logo pertence a $T=\\mathbb R\\setminus\\mathbb Q_+$. B é inteiro não positivo, portanto pertence a W. C é racional estritamente negativo, portanto pertence a X. D é irracional, logo também pertence a T. Todas as correspondências estão corretas: alternativa A."
+    ]
+  },
+  "11:33": {
+    "answer": "C",
+    "steps": [
+      "Os elementos são $a_n=1/(n+1)$. Todos são racionais positivos; por isso zero não pertence a A e as alternativas B, D e E são falsas.",
+      "A distância entre termos consecutivos é $a_n-a_{n+1}=1/[(n+1)(n+2)]$. Dado $p>0$, escolha n suficientemente grande para que $(n+1)(n+2)>1/p$. Então essa distância é menor que p, provando C.",
+      "A alternativa A exigiria que um elemento estivesse a distância inferior a todo real positivo de outro elemento distinto; isso obrigaria a distância a ser zero, o que é impossível entre números distintos."
+    ]
+  },
+  "11:34": {
+    "answer": "C — 122 estudantes, entre as alternativas apresentadas",
+    "editorial_note": "Os dados sozinhos permitem mais de um total inteiro. A alternativa C é a única opção apresentada compatível com eles; essa ressalva não altera o enunciado original.",
+    "steps": [
+      "Todos visitaram o Museu do Amanhã; 32 visitaram somente esse museu. Entre os outros três museus, há 30 visitantes exclusivos do CCBB, 22 exclusivos do MN e 18 exclusivos do MHN, totalizando 70.",
+      "Se t visitaram os três museus e x, y, z visitaram somente os pares CCBB–MN, CCBB–MHN e MN–MHN, então $x+y+t=50-30=20$, $x+z+t=40-22=18$ e $y+z+t=30-18=12$.",
+      "Daí $x=13-t/2$, $y=7-t/2$ e $z=5-t/2$. A não negatividade e a integridade impõem $t\\in\\{0,2,4,6,8,10\\}$.",
+      "O total de estudantes é $32+70+x+y+z+t=127-t/2$, podendo ser 127, 126, 125, 124, 123 ou 122. Dentre as opções, somente 122 aparece: alternativa C. Nesse caso, $t=10$, $x=8$, $y=2$ e $z=0$, confirmando todos os totais."
+    ]
+  }
+}
