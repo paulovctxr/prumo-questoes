@@ -1,0 +1,398 @@
+{
+  "imported": 2070,
+  "pending": [],
+  "sections": [
+    {
+      "topic": "Noções de lógica",
+      "sub": "Proposições",
+      "headings": 20,
+      "keys": 20,
+      "imported": 20,
+      "expectedByKey": 20
+    },
+    {
+      "topic": "Conjuntos",
+      "sub": "Operações e diagramas de Venn",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Conjuntos",
+      "sub": "Conjuntos numéricos e intervalos",
+      "headings": 32,
+      "keys": 32,
+      "imported": 32,
+      "expectedByKey": 32
+    },
+    {
+      "topic": "Funções",
+      "sub": "Introdução às funções",
+      "headings": 39,
+      "keys": 39,
+      "imported": 39,
+      "expectedByKey": 39
+    },
+    {
+      "topic": "Funções",
+      "sub": "Composta e inversa",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Funções",
+      "sub": "Afim",
+      "headings": 34,
+      "keys": 34,
+      "imported": 34,
+      "expectedByKey": 34
+    },
+    {
+      "topic": "Funções",
+      "sub": "Quadrática",
+      "headings": 43,
+      "keys": 43,
+      "imported": 43,
+      "expectedByKey": 43
+    },
+    {
+      "topic": "Funções",
+      "sub": "Modular",
+      "headings": 34,
+      "keys": 34,
+      "imported": 34,
+      "expectedByKey": 34
+    },
+    {
+      "topic": "Funções",
+      "sub": "Exponencial",
+      "headings": 44,
+      "keys": 44,
+      "imported": 44,
+      "expectedByKey": 44
+    },
+    {
+      "topic": "Funções",
+      "sub": "Logarítmica",
+      "headings": 77,
+      "keys": 77,
+      "imported": 77,
+      "expectedByKey": 77
+    },
+    {
+      "topic": "Progressões aritméticas e geométricas",
+      "sub": "PA e PG",
+      "headings": 84,
+      "keys": 84,
+      "imported": 84,
+      "expectedByKey": 84
+    },
+    {
+      "topic": "Matrizes, determinantes e sistemas lineares",
+      "sub": "Matrizes",
+      "headings": 34,
+      "keys": 34,
+      "imported": 34,
+      "expectedByKey": 34
+    },
+    {
+      "topic": "Matrizes, determinantes e sistemas lineares",
+      "sub": "Determinantes",
+      "headings": 48,
+      "keys": 48,
+      "imported": 48,
+      "expectedByKey": 48
+    },
+    {
+      "topic": "Matrizes, determinantes e sistemas lineares",
+      "sub": "Sistemas lineares",
+      "headings": 35,
+      "keys": 35,
+      "imported": 35,
+      "expectedByKey": 35
+    },
+    {
+      "topic": "Análise combinatória",
+      "sub": "Contagem e combinações",
+      "headings": 88,
+      "keys": 88,
+      "imported": 88,
+      "expectedByKey": 88
+    },
+    {
+      "topic": "Análise combinatória",
+      "sub": "Binômio de Newton",
+      "headings": 32,
+      "keys": 32,
+      "imported": 32,
+      "expectedByKey": 32
+    },
+    {
+      "topic": "Probabilidade",
+      "sub": "Probabilidade",
+      "headings": 82,
+      "keys": 82,
+      "imported": 82,
+      "expectedByKey": 82
+    },
+    {
+      "topic": "Números complexos",
+      "sub": "Números complexos",
+      "headings": 101,
+      "keys": 101,
+      "imported": 101,
+      "expectedByKey": 101
+    },
+    {
+      "topic": "Polinômios",
+      "sub": "Polinômios",
+      "headings": 53,
+      "keys": 53,
+      "imported": 53,
+      "expectedByKey": 53
+    },
+    {
+      "topic": "Polinômios",
+      "sub": "Equações polinomiais",
+      "headings": 65,
+      "keys": 65,
+      "imported": 65,
+      "expectedByKey": 65
+    },
+    {
+      "topic": "Geometria plana",
+      "sub": "Ângulos",
+      "headings": 31,
+      "keys": 31,
+      "imported": 31,
+      "expectedByKey": 31
+    },
+    {
+      "topic": "Geometria plana",
+      "sub": "Triângulos",
+      "headings": 47,
+      "keys": 47,
+      "imported": 47,
+      "expectedByKey": 47
+    },
+    {
+      "topic": "Geometria plana",
+      "sub": "Polígonos",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria plana",
+      "sub": "Circunferências",
+      "headings": 35,
+      "keys": 35,
+      "imported": 35,
+      "expectedByKey": 35
+    },
+    {
+      "topic": "Geometria plana",
+      "sub": "Áreas e perímetros",
+      "headings": 68,
+      "keys": 68,
+      "imported": 68,
+      "expectedByKey": 68
+    },
+    {
+      "topic": "Trigonometria",
+      "sub": "Triângulo e circunferência",
+      "headings": 32,
+      "keys": 32,
+      "imported": 32,
+      "expectedByKey": 32
+    },
+    {
+      "topic": "Trigonometria",
+      "sub": "Identidades e redução ao primeiro quadrante",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Trigonometria",
+      "sub": "Funções trigonométricas",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Trigonometria",
+      "sub": "Transformações trigonométricas",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Trigonometria",
+      "sub": "Equações e inequações",
+      "headings": 53,
+      "keys": 53,
+      "imported": 53,
+      "expectedByKey": 53
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Geometria de posição",
+      "headings": 31,
+      "keys": 31,
+      "imported": 31,
+      "expectedByKey": 31
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Poliedros",
+      "headings": 32,
+      "keys": 32,
+      "imported": 32,
+      "expectedByKey": 32
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Prismas",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Pirâmides",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Cilindros",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Cones",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Esferas",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria espacial",
+      "sub": "Inscrição e circunscrição de sólidos",
+      "headings": 33,
+      "keys": 33,
+      "imported": 33,
+      "expectedByKey": 33
+    },
+    {
+      "topic": "Geometria analítica",
+      "sub": "Ponto",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria analítica",
+      "sub": "Reta",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria analítica",
+      "sub": "Distância entre ponto e reta",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    },
+    {
+      "topic": "Geometria analítica",
+      "sub": "Circunferência",
+      "headings": 61,
+      "keys": 61,
+      "imported": 61,
+      "expectedByKey": 61
+    },
+    {
+      "topic": "Geometria analítica",
+      "sub": "Cônicas",
+      "headings": 53,
+      "keys": 53,
+      "imported": 53,
+      "expectedByKey": 53
+    },
+    {
+      "topic": "Estatística",
+      "sub": "Estatística",
+      "headings": 41,
+      "keys": 41,
+      "imported": 41,
+      "expectedByKey": 41
+    },
+    {
+      "topic": "Matemática financeira",
+      "sub": "Juros e porcentagem",
+      "headings": 40,
+      "keys": 40,
+      "imported": 40,
+      "expectedByKey": 40
+    },
+    {
+      "topic": "Cálculo",
+      "sub": "Limites e continuidade",
+      "headings": 33,
+      "keys": 33,
+      "imported": 33,
+      "expectedByKey": 33
+    },
+    {
+      "topic": "Cálculo",
+      "sub": "Derivadas",
+      "headings": 51,
+      "keys": 51,
+      "imported": 51,
+      "expectedByKey": 51
+    },
+    {
+      "topic": "Cálculo",
+      "sub": "Integrais",
+      "headings": 34,
+      "keys": 34,
+      "imported": 34,
+      "expectedByKey": 34
+    },
+    {
+      "topic": "Vetores e geometria no espaço",
+      "sub": "Vetores",
+      "headings": 30,
+      "keys": 30,
+      "imported": 30,
+      "expectedByKey": 30
+    }
+  ]
+}
