@@ -3,9 +3,17 @@
   const client = window.prumoSupabaseClient;
   const detailRequests = new Map();
   const remoteIds = new Set();
+  const bookName = 'Tópicos de Álgebra Elementar';
   let pending;
   const status = {source: 'local', loaded: 0, refresh};
   window.prumoBankSync = status;
+
+  function normalizeBookMetadata(question) {
+    if (question?.bookOriginal === true && question.source?.name === bookName) {
+      return {...question, difficulty: 'Difícil', year: 2026, exam: bookName};
+    }
+    return question;
+  }
 
   function validSummary(question, rowId = question?.id) {
     return question && question.bookOriginal === true && Number.isSafeInteger(question.id)
@@ -40,7 +48,8 @@
         .not('resumo_aplicacao', 'is', null).order('id').range(offset, offset + 999);
       if (result.error || !Array.isArray(result.data)) return [];
       for (const row of result.data) {
-        if (validSummary(row.resumo_aplicacao, row.id)) questions.push(row.resumo_aplicacao);
+        const summary = normalizeBookMetadata(row.resumo_aplicacao);
+        if (validSummary(summary, row.id)) questions.push(summary);
       }
       if (result.data.length < 1000) return questions;
     }
@@ -53,7 +62,8 @@
     if (!remote) summaries = await localIndex();
     const indexes = new Map(QUESTIONS.map((question, index) => [question.id, index]));
     let loaded = 0;
-    for (const summary of summaries) {
+    for (const rawSummary of summaries) {
+      const summary = normalizeBookMetadata(rawSummary);
       if (!validSummary(summary)) continue;
       const previous = indexes.has(summary.id) ? QUESTIONS[indexes.get(summary.id)] : null;
       const cached = previous?.detailLoaded && previous.contentVersion === summary.contentVersion;
@@ -106,6 +116,7 @@
       if (!response.ok) throw new Error('Question details unavailable');
       detail = await response.json();
     }
+    detail = normalizeBookMetadata(detail);
     if (!validSummary(detail, id) || typeof detail.text !== 'string'
       || !Array.isArray(detail.steps)) {
       throw new Error('Invalid question details');

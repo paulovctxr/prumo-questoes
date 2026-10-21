@@ -33,6 +33,10 @@ somente os metadados necessários aos filtros. O enunciado textual, a eventual
 captura visual e a resolução são carregados individualmente ao abrir uma
 questão. Não existe área, banner ou rota separada para o livro.
 
+No banco da aplicação, as 712 questões são classificadas como `Difícil` e têm
+2026 como ano de aplicação. O ano de publicação da fonte continua registrado
+separadamente como 2021 nos metadados bibliográficos.
+
 `supabase/import_tae.sql` insere ou atualiza os mesmos 712 IDs. Reexecutar o
 arquivo substitui os antigos registros baseados em fotografias e limpa os
 endereços de imagem integral. Os demais registros da tabela são preservados.

@@ -160,18 +160,15 @@ def main():
             letter = match[1] if match else None
         if not is_choice or (letter and ord(letter) - ord('A') >= len(options)):
             letter = None
-        source_label = re.match(r'^\s*\(([^)]+)\)', transcription['text'])
-        exam = source_label[1].strip() if source_label else BOOK_NAME
-        year_match = re.search(r'\b(19\d{2}|20\d{2})\b', source_label[1]) if source_label else None
         record = {
             'id': 1000000 + int(chapter_id) * 1000 + number,
-            'topic': topic, 'sub': sub, 'difficulty': 'Não classificada',
+            'topic': topic, 'sub': sub, 'difficulty': 'Difícil',
             'text': transcription['text'], 'options': options,
             'answer': ord(letter) - ord('A') if letter else None,
             'steps': solution.get('steps', []),
             'type': 'Múltipla escolha' if is_choice else 'Discursiva',
-            'institution': BOOK_NAME, 'exam': exam,
-            'year': int(year_match[1]) if year_match else None,
+            'institution': BOOK_NAME, 'exam': BOOK_NAME,
+            'year': 2026,
             'solution': 'Texto' if solution.get('steps') else 'Pendente',
             'solutionNote': solution.get('editorial_note', ''),
             'answerText': solution.get('answer', ''),

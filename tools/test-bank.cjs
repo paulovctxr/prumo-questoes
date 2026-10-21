@@ -27,8 +27,11 @@ function mockBridge(databaseError, legacy = false) {
     options: legacyOptions, bookImages:[{src:'livro-algebra/q.webp'}],
     bookAnswerImages:[{src:'livro-algebra/answers.webp'}], contentVersion:'legacy'}
     : {...detail, steps: [...detail.steps, 'Origem remota confirmada no teste.']};
-  const remoteSummaries = legacy ? summaries.map(question => question.id === detail.id
-    ? {...question, options:legacyOptions, contentVersion:'legacy'} : question) : summaries;
+  const remoteSummaries = legacy ? summaries.map(question => {
+    const oldMetadata = {...question, difficulty:'Não classificada', year:null, exam:'Fonte antiga'};
+    return question.id === detail.id
+      ? {...oldMetadata, options:legacyOptions, contentVersion:'legacy'} : oldMetadata;
+  }) : summaries;
   return `window.prumoSupabaseClient = {
     auth: {getSession: async () => ({data: {session: {user: {id: 'test'}}}}), onAuthStateChange() {}},
     from(table) {
@@ -55,6 +58,8 @@ function mockBridge(databaseError, legacy = false) {
       if (/\/questoes-algebra\/\d+\.json$/.test(request.url())) requestedDetails.push(request.url());
     });
     await ready(page);
+    assert.equal(await page.evaluate(() => QUESTIONS.filter(question => question.bookOriginal
+      && question.difficulty === 'Difícil' && question.year === 2026).length),712);
     assert.deepEqual(requestedDetails, [], 'Opening filters must not download all question details');
     assert.match(await page.locator('#matchCount').innerText(), /2822/);
     assert.equal(await page.locator('[data-nav="book"],.book-entry').count(), 0);
@@ -141,6 +146,9 @@ function mockBridge(databaseError, legacy = false) {
     await legacyPage.route('**/supabase-auth.js', route => route.fulfill({contentType:'text/javascript',body:mockBridge(false,true)}));
     await legacyPage.route('**/questoes-algebra-index.json', route => route.abort());
     await ready(legacyPage);
+    assert.equal(await legacyPage.evaluate(() => QUESTIONS.filter(question => question.bookOriginal
+      && question.difficulty === 'Difícil' && question.year === 2026
+      && question.exam === 'Tópicos de Álgebra Elementar').length),712);
     await legacyPage.evaluate(() => startQuestions([1011002]));
     await transcriptionVisible(legacyPage);
     assert.equal(legacyRequests.length,1);

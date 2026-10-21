@@ -14,6 +14,10 @@ Execute `import_tae.sql` no SQL Editor do mesmo projeto. O script pode ser
 executado novamente: ele atualiza os 712 IDs já importados e preserva os
 demais registros.
 
+As 712 questões são gravadas com dificuldade `difícil` e ano de aplicação
+2026. O ano de publicação do livro permanece 2021 dentro dos metadados da
+fonte.
+
 Esta versão grava enunciados e alternativas como texto. Ela remove os antigos
 endereços de fotografias integrais e de páginas do gabarito. Apenas questões
 que dependem de um gráfico, diagrama ou tabela recebem o endereço de uma
