@@ -61,6 +61,7 @@ def inventory(pdf):
             starts = []
             answer_pages = []
             answer_end = None
+            exercise_headers = []
             warnings = []
             for page_number in range(start, end):
                 page = doc[page_number - 1]
@@ -77,6 +78,7 @@ def inventory(pdf):
                     elif re.search(r'EXERC[ÍI]CIOS|MISCEL[ÂA]NEA\s+DE\s+QUEST', text, re.I):
                         if phase != 'answers':
                             phase = 'questions'
+                            exercise_headers.append((page_number, line['top'] - 2))
                     if phase == 'answers':
                         if page_number not in answer_pages and page_number != 398:
                             answer_pages.append(page_number)
@@ -105,6 +107,11 @@ def inventory(pdf):
                     stop_page, stop_y = answer_end
                 else:
                     stop_page, stop_y = end - 1, doc[end - 2].rect.height - 48
+                # The next section heading is not part of the previous exercise.
+                separators = [position for position in exercise_headers
+                              if (question['page'], question['top']) < position < (stop_page, stop_y)]
+                if separators:
+                    stop_page, stop_y = min(separators)
                 segments = []
                 text = []
                 for page_number in range(question['page'], stop_page + 1):
@@ -115,6 +122,10 @@ def inventory(pdf):
                         continue
                     rect = fitz.Rect(25, top, page.rect.width - 25, bottom)
                     segment_text = page.get_text(clip=rect, sort=True)
+                    if separators and page_number == stop_page and not segment_text.strip():
+                        # A heading's decorative background can extend above
+                        # its text. Do not retain that fragment as an exercise.
+                        continue
                     if not segment_text.strip():
                         visuals = [fitz.Rect(item['bbox']) for item in page.get_image_info()]
                         visuals.extend(item['rect'] for item in page.get_drawings())

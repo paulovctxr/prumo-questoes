@@ -5,6 +5,7 @@
   const anon = window.PRUMO_SUPABASE_ANON_KEY;
   const configured = Boolean(url && anon && window.supabase);
   const client = configured ? window.supabase.createClient(url, anon) : null;
+  window.prumoSupabaseClient = client;
 
   function message(text, error) {
     const note = document.querySelector('.login-note');

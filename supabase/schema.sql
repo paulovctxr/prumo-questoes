@@ -10,7 +10,7 @@ create table if not exists public.questoes (
   id bigint primary key,
   enunciado text not null,
   alternativas jsonb not null default '[]'::jsonb,
-  gabarito integer not null check (gabarito >= 0),
+  gabarito integer check (gabarito >= 0),
   assunto text,
   subassunto text,
   instituicao text,
@@ -19,6 +19,8 @@ create table if not exists public.questoes (
   figura_url text,
   resolucao text,
   fonte text,
+  dados_aplicacao jsonb,
+  resumo_aplicacao jsonb,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );

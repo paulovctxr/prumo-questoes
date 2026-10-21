@@ -53,6 +53,8 @@ def export_image(page, rect, destination):
         return None
     pix = page.get_pixmap(matrix=fitz.Matrix(2.5, 2.5), clip=rect, alpha=False)
     image = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
+    if all(low == high == 255 for low, high in image.getextrema()):
+        return None
     image.save(destination, 'WEBP', lossless=True)
     return {'src': 'livro-algebra/' + destination.name,
             'width': pix.width, 'height': pix.height}

@@ -12,6 +12,7 @@ Com Python 3, PyMuPDF e Pillow instalados:
 
 ```sh
 python3 tools/export_tae.py /caminho/para/livro.pdf --output dist/livro-algebra
+python3 tools/integrate_tae.py /caminho/para/livro.pdf
 ```
 
 O arquivo de origem é a edição de 400 páginas enviada nesta conversa.
@@ -46,17 +47,45 @@ primeiro grau 10, 14, 26 e 27; diofantinas 13, 27 e 28.
 
 ## Aplicação e armazenamento
 
-O item `Livro de Álgebra` da navegação carrega `catalog.json`, com filtros
-de capítulo, busca, paginação e opção de mostrar apenas exercícios com
-resolução. As fórmulas das explicações usam o KaTeX já instalado no site.
+`bank-sync.js` registra os 712 exercícios no mesmo array `QUESTIONS`
+do restante do acervo, com IDs estáveis e classificação nos assuntos já
+existentes. Carrega somente os metadados necessários aos filtros, preferindo
+`resumo_aplicacao` da tabela `questoes` do Supabase para usuários autenticados.
+O enunciado, as imagens e os passos da resolução são buscados individualmente
+em `dados_aplicacao` ao abrir a questão. Não há área, banner, rota ou
+navegação separada para o livro.
+`algebra-renderer.js` preserva os recortes originais dentro dos cartões de
+questão normais e abre as resoluções no painel lateral existente.
 
-Esta integração usa os arquivos estáticos do site. Não houve inserção no
-Supabase. O ambiente não tem credenciais administrativas do projeto,
-e a tabela `questoes` atual não modela todos os tipos de exercícios
-discursivos nem múltiplas respostas corretas.
+Os filtros por assunto, instituição, tipo de questão e resolução usam os
+mesmos registros. Exercícios discursivos permitem escrever uma resposta,
+salva localmente, sem inventar correção automática. Somente questões com
+alternativa correta identificada entram nos simulados de correção automática.
+As fórmulas das explicações usam o KaTeX já instalado no site.
 
-Validação: 889 expressões das 127 resoluções foram aceitas pelo KaTeX;
-equações selecionadas foram conferidas com SymPy e contagens diofantinas
-por enumeração independente. O navegador confirmou os 712 registros,
-filtros, paginação, gabaritos originais, visualização das soluções e layout
-móvel, preservando o acervo anterior de 2.110 questões.
+O arquivo `supabase/import_tae.sql` prepara a tabela existente `questoes`
+para metadados e detalhes, permite gabarito nulo nas discursivas e insere os
+712 registros. Preserva os demais IDs e interrompe toda a transação se um
+ID pertencer a outra fonte. As políticas permitem leitura a autenticados;
+não é criada permissão pública de escrita.
+
+Não houve execução desse SQL no Supabase: esta sessão não dispõe de acesso
+administrativo ao projeto. É necessário executá-lo uma vez no SQL Editor.
+Até a importação, ou se o serviço estiver indisponível, o cliente usa
+`questoes-algebra-index.json` e os arquivos individuais em `questoes-algebra/`.
+Mesmo nessa alternativa, o lote completo não é incluído no JavaScript inicial.
+O índice tem 386 KB sem compressão e cerca de 19 KB comprimido com gzip;
+não contém enunciados, imagens nem resoluções. As imagens permanecem como
+arquivos WebP e o Supabase guarda seus endereços, sem blobs no JSON.
+
+Validação matemática: 889 expressões das 127 resoluções foram aceitas pelo
+KaTeX; equações selecionadas foram conferidas com SymPy e contagens
+diofantinas por enumeração independente. Os 712 registros são somados às
+2.110 questões anteriores, totalizando 2.822 exercícios no banco da aplicação.
+
+Execute `node tools/test-bank.cjs` com o servidor local na porta 8000 para
+validar filtros, carregamento individual, respostas, simulados, layout móvel
+e recuperação de falha. A consulta ao Supabase é testada com um cliente
+simulado, inclusive sem os arquivos estáticos disponíveis, e não equivale
+a uma importação ou validação no banco real. O SQL também foi validado
+sintaticamente com o parser de PostgreSQL, incluindo os blocos PL/pgSQL.
