@@ -116,6 +116,7 @@ function mockBridge(databaseError, legacy = false) {
     await page.evaluate(() => {filters=blankFilters();nav('questions')});
     await page.getByRole('button',{name:'Criar lista',exact:true}).click();
     await page.waitForSelector('.list-drawer');
+    assert.equal(await page.locator('[name="name"]').getAttribute('placeholder'),'Insira o nome da lista');
     assert.equal(await page.locator('.list-specialty-row').count(),
       await page.evaluate(() => new Set(QUESTIONS.map(question => question.topic)).size));
     assert.match(await page.locator('#listSelectedMessage').innerText(),/2\.822 questões/);
