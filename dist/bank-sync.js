@@ -94,7 +94,7 @@
       detail = await response.json();
     }
     if (!validSummary(detail, id) || typeof detail.text !== 'string'
-      || !Array.isArray(detail.steps) || !Array.isArray(detail.bookImages)) {
+      || !Array.isArray(detail.steps)) {
       throw new Error('Invalid question details');
     }
     QUESTIONS[index] = {...original, ...detail, detailLoaded: true, detailError: false};

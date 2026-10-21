@@ -1,15 +1,9 @@
-"""Register all original TAE exercises in the existing QUESTIONS collection.
-
-Reads the prepared facsimile catalog and extracts only unambiguous printed
-multiple-choice keys. Never turn an ungraded written answer into a wrong attempt.
-"""
+"""Register the text-only TAE transcriptions in the shared question bank."""
 import argparse
 import hashlib
 import json
 import re
 from pathlib import Path
-
-import fitz
 
 
 TOPIC_MAP = {
@@ -35,15 +29,33 @@ TOPIC_MAP = {
     '360': ('Álgebra e expressões algébricas', 'Problemas de álgebra'),
 }
 
-# Option labels inside formulas or embedded images can disappear in PDF text
-# extraction. Counts below were checked against the original exercise images.
-ORIGINAL_CHOICE_COUNTS = {
-    '48:13': 5, '142:10': 4, '176:19': 5, '197:1': 4, '197:3': 4,
-    '231:33': 4, '272:22': 5, '272:27': 4, '272:29': 4,
-    '272:30': 5, '309:23': 5, '360:9': 5, '360:29': 5,
+CHAPTER_TITLES = {
+    '11': 'Fundamentos da teoria dos conjuntos',
+    '37': 'Módulo de um número real', '48': 'Polinômios',
+    '73': 'Produtos notáveis', '89': 'Fatoração', '106': 'Frações algébricas',
+    '126': 'Equação do primeiro grau', '142': 'Função do primeiro grau',
+    '164': 'Equações diofantinas lineares',
+    '176': 'Sistemas de equações do primeiro grau',
+    '197': 'Desigualdades elementares', '216': 'Inequações do primeiro grau',
+    '231': 'Equação do segundo grau', '253': 'Trinômio do segundo grau',
+    '272': 'Função do segundo grau', '309': 'Tópicos de álgebra elementar',
+    '320': 'Equação irracional', '336': 'Inequação irracional',
+    '348': 'Transformação de expressões', '360': 'Miscelânea de questões',
 }
 
-DETAIL_FIELDS = ['text', 'steps', 'bookImages', 'bookAnswerImages', 'answerText', 'solutionNote']
+DETAIL_FIELDS = ['text', 'steps', 'answerText', 'solutionNote', 'figure']
+BOOK_NAME = 'Tópicos de Álgebra Elementar'
+
+
+def load_solutions():
+    result = {}
+    for path in sorted(Path(__file__).parent.glob('tae-solutions*.json')):
+        batch = json.loads(path.read_text())
+        overlap = result.keys() & batch.keys()
+        if overlap:
+            raise ValueError(f'Duplicate solution keys in {path}: {sorted(overlap)}')
+        result.update(batch)
+    return result
 
 
 def write_supabase_import(records, path):
@@ -94,11 +106,11 @@ BEGIN
       (item->>'year')::integer,
       CASE WHEN item->>'difficulty' IN ('Fácil','Média','Difícil')
         THEN lower(item->>'difficulty') ELSE NULL END,
-      item->'bookImages'->0->>'src',
+      item->'figure'->>'src',
       (SELECT string_agg(step, E'\\n\\n' ORDER BY n)
        FROM jsonb_array_elements_text(item->'steps') WITH ORDINALITY AS s(step,n)),
       item->'source'->>'name', item,
-      item - ARRAY['text','steps','bookImages','bookAnswerImages','answerText','solutionNote']::text[]
+      item - ARRAY['text','steps','answerText','solutionNote','figure']::text[]
     FROM incoming
     ON CONFLICT (id) DO UPDATE SET
       enunciado=EXCLUDED.enunciado, alternativas=EXCLUDED.alternativas,
@@ -124,69 +136,52 @@ COMMIT;
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('pdf', type=Path)
-    parser.add_argument('--catalog', type=Path, default=Path('dist/livro-algebra/catalog.json'))
+    parser.add_argument('--transcriptions', type=Path,
+                        default=Path('tools/tae-transcriptions.json'))
+    parser.add_argument('--figures', type=Path, default=Path('tools/tae-figures.json'))
     parser.add_argument('--output-dir', type=Path, default=Path('dist/questoes-algebra'))
     parser.add_argument('--index-output', type=Path, default=Path('dist/questoes-algebra-index.json'))
     parser.add_argument('--sql-output', type=Path, default=Path('supabase/import_tae.sql'))
     args = parser.parse_args()
-    book = json.loads(args.catalog.read_text())
-    printed_keys = {}
-    with fitz.open(args.pdf) as doc:
-        for chapter in book['chapters']:
-            text = '\n'.join(doc[image['page'] - 1].get_text(sort=True)
-                             for image in chapter['answerImages'])
-            pairs = re.findall(r'^\s*(\d{1,3})\s*(?:\)|[-–]|\s)\s*([a-eA-E])\s*$',
-                               text, re.MULTILINE)
-            chapter_keys = {}
-            for number, letter in pairs:
-                chapter_keys.setdefault(number, set()).add(letter.upper())
-            for number, letters in chapter_keys.items():
-                if len(letters) == 1:
-                    printed_keys[f"{chapter['id']}:{number}"] = letters.pop()
-    chapters = {chapter['id']: chapter for chapter in book['chapters']}
+    transcriptions = json.loads(args.transcriptions.read_text())
+    figures = json.loads(args.figures.read_text())
+    solutions = load_solutions()
     records = []
-    for question in book['questions']:
-        chapter = chapters[question['chapter']]
-        topic, sub = TOPIC_MAP[question['chapter']]
-        labels = set(re.findall(r'(?<![A-Za-z0-9])([a-eA-E])\s*\)', question['searchText']))
-        labels = {letter.upper() for letter in labels}
-        count = max((ord(letter) - ord('A') + 1 for letter in labels), default=0)
-        is_choice = {'A', 'B', 'C'} <= labels
-        if question['id'] in ORIGINAL_CHOICE_COUNTS:
-            count = ORIGINAL_CHOICE_COUNTS[question['id']]
-            is_choice = True
-        solution = question.get('solution', {})
-        letter = printed_keys.get(question['id'])
+    for key, transcription in transcriptions.items():
+        chapter_id, number_text = key.split(':')
+        number = int(number_text)
+        topic, sub = TOPIC_MAP[chapter_id]
+        options = transcription['options']
+        is_choice = bool(options)
+        solution = solutions.get(key, {})
+        letter = None
         if solution:
-            # Authored explanations may identify a corrected answer or a
-            # defective original with more than one valid option.
             match = re.match(r'^([A-E])(?:\s*[—–-]|\s*$)', solution['answer'])
             letter = match[1] if match else None
-        if not is_choice or (letter and ord(letter) - ord('A') >= count):
+        if not is_choice or (letter and ord(letter) - ord('A') >= len(options)):
             letter = None
-        source_label = re.match(r'^\s*\d+\)\s*\(([^)]+)\)', question['searchText'])
-        exam = source_label[1].strip() if source_label else book['title']
+        source_label = re.match(r'^\s*\(([^)]+)\)', transcription['text'])
+        exam = source_label[1].strip() if source_label else BOOK_NAME
         year_match = re.search(r'\b(19\d{2}|20\d{2})\b', source_label[1]) if source_label else None
         record = {
-            'id': 1000000 + int(question['chapter']) * 1000 + question['number'],
+            'id': 1000000 + int(chapter_id) * 1000 + number,
             'topic': topic, 'sub': sub, 'difficulty': 'Não classificada',
-            'text': question['searchText'],
-            'options': [f'Alternativa {chr(65 + index)}' for index in range(count)] if is_choice else [],
+            'text': transcription['text'], 'options': options,
             'answer': ord(letter) - ord('A') if letter else None,
             'steps': solution.get('steps', []),
             'type': 'Múltipla escolha' if is_choice else 'Discursiva',
-            'institution': book['title'], 'exam': exam,
+            'institution': BOOK_NAME, 'exam': exam,
             'year': int(year_match[1]) if year_match else None,
-            'solution': 'Texto' if solution.get('steps') else 'Gabarito',
+            'solution': 'Texto' if solution.get('steps') else 'Pendente',
             'solutionNote': solution.get('editorial_note', ''),
-            'answerText': solution.get('answer', letter or ''),
-            'bookOriginal': True, 'bookImages': question['images'],
-            'bookAnswerImages': chapter['answerImages'],
-            'source': {'name': book['title'], 'page': question['page'],
-                       'number': question['number'], 'chapter': chapter['title'],
-                       'publicationYear': book['year'], 'bookKey': question['id']},
+            'answerText': solution.get('answer', ''),
+            'bookOriginal': True, 'transcribed': True,
+            'source': {'name': BOOK_NAME, 'page': transcription['page'],
+                       'number': number, 'chapter': CHAPTER_TITLES[chapter_id],
+                       'publicationYear': 2021, 'bookKey': key},
         }
+        if key in figures:
+            record['figure'] = figures[key]
         version_data = json.dumps(record, ensure_ascii=False, sort_keys=True).encode()
         record['contentVersion'] = hashlib.sha256(version_data).hexdigest()[:16]
         records.append(record)

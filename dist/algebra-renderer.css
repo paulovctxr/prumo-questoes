@@ -1,5 +1,3 @@
-.bank-original-statement{margin:18px 0}
-.bank-original-image{display:block;width:100%;max-width:100%;height:auto;margin:12px 0;background:#fff;border-radius:4px}
+.bank-transcribed-statement{margin:18px 0;white-space:pre-line}
+.bank-essential-figure{margin:16px 0}.bank-essential-figure img{display:block;max-width:100%;height:auto;background:#fff;border-radius:6px}
 .written-answer-label{margin-top:20px}.written-answer-label textarea{min-height:110px;resize:vertical}
-.bank-printed-answer{margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
-.bank-printed-answer summary{cursor:pointer;line-height:1.6;color:var(--green)}
