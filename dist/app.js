@@ -266,3 +266,4 @@ document.addEventListener('click',e=>{
   renderFilters();
 },true);
 document.addEventListener('keydown',e=>{if(page!=='resolve'||$('modal').open||!e.altKey||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();const action=e.key==='ArrowRight'?'toolbar-next':'toolbar-prev';document.querySelector('[data-action="'+action+'"]:not(:disabled)')?.click()});
+const newQuestionsScript=document.createElement('script');newQuestionsScript.src='novas-questoes.js';document.head.appendChild(newQuestionsScript);
