@@ -43,13 +43,18 @@
 
   const cleanDemoCopy = () => {
     document.querySelectorAll('.demo,.login-note').forEach((node) => {
-    if (node.classList.contains('demo')) node.textContent = 'Banco de questões de matemática';
-    if (node.classList.contains('login-note') && configured) node.textContent = 'Acesse sua conta para continuar.';
+    const replacement = node.classList.contains('demo')
+      ? 'Banco de questões de matemática'
+      : (configured ? 'Acesse sua conta para continuar.' : null);
+    if (replacement !== null && node.textContent !== replacement) node.textContent = replacement;
     });
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach((node) => { node.nodeValue = node.nodeValue.replace(/demonstração|demonstrativo/gi, 'conta'); });
+    nodes.forEach((node) => {
+      const replacement = node.nodeValue.replace(/demonstração|demonstrativo/gi, 'conta');
+      if (replacement !== node.nodeValue) node.nodeValue = replacement;
+    });
   };
   new MutationObserver(cleanDemoCopy).observe(document.documentElement, { childList: true, subtree: true });
   cleanDemoCopy();
