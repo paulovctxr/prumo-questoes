@@ -22,6 +22,6 @@
     ['Inequações','Inequação polinomial','Difícil','O número de inteiros x que satisfazem (x−1)(x−2)(x−4)<0 e −3≤x≤6 é:', ['1','2','3','4','5'], 2, ['O sinal é negativo em (−∞,1)∪(2,4). Inteiros no intervalo: −3,−2,−1,0 e 3, total 5.'], 'PRUMO — questão inédita']
   ];
   const base = QUESTIONS.length;
-  novos.forEach((q, i) => QUESTIONS.push({id: 900000 + i, topic:q[0], sub:q[1], difficulty:q[2], text:q[3], options:q[4], answer:q[5], steps:q[6], type:'Múltipla escolha', institution:q[7], exam:q[7], year:2026, solution:'Texto', originalExcerpt:null}));
+  novos.forEach((q, i) => QUESTIONS.push({id: 900000 + i, topic:q[0], sub:q[1], difficulty:q[2], text:q[3], options:q[4], answer:q[5], steps:q[6], type:'Múltipla escolha', institution:"Inéditas d'Aba Azul", exam:"Inéditas d'Aba Azul", year:2026, solution:'Texto', originalExcerpt:null}));
   if (typeof render === 'function') render();
 })();
