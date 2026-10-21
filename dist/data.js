@@ -22,7 +22,7 @@ const raw=[
 [19,'Juros compostos','Difícil','Um capital de R$ 1.000,00 rende 10% ao período, em juros compostos, durante 2 períodos. Qual é o montante?',['R$ 1.100,00','R$ 1.200,00','R$ 1.210,00','R$ 1.220,00'],2,['Use $M=C(1+i)^n$.','$M=1000(1+0{,}10)^2=1000\\cdot1{,}21=1210$ reais.']]
 ];
 const QUESTIONS=raw.map((r,i)=>({id:i+1,topic:TOPICS[r[0]][0],sub:r[1],difficulty:r[2],text:r[3],options:r[4],answer:r[5],steps:r[6],type:r[4].length===2?'Certo/errado':'Múltipla escolha',institution:'PRUMO — acervo autoral',exam:'Preparação geral — autoral',year:null,solution:'Texto'}));
-function freshState(){return {favorites:[],attempts:[],lists:[],exams:[],activeExam:null,name:'Estudante'}}
+function freshState(){return {favorites:[],attempts:[],lists:[],folders:[],exams:[],activeExam:null,name:'Estudante'}}
 function latestAttempt(s,id){return [...s.attempts].reverse().find(a=>a.id===id)}
 function matchesResolution(q,value){if(!value)return true;if(value==='Texto'||value==='Com solução em texto')return q.solution==='Texto';if(value==='Gabarito')return q.solution==='Gabarito';if(value==='Sem solução em texto')return q.solution!=='Texto';if(value==='Vídeo'||value==='Com solução por vídeo')return Boolean(q.video);if(value==='Vídeo e texto'||value==='Com solução em vídeo e texto')return Boolean(q.video)&&q.solution==='Texto';if(value==='Sem vídeo'||value==='Sem solução por vídeo')return !q.video;return true}
 function filterValues(value){return Array.isArray(value)?value:value?[value]:[]}

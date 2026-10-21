@@ -112,8 +112,9 @@ body.list-drawer-open{overflow:hidden}
 .list-name-field small{text-align:right;color:var(--muted);font-weight:400}
 .list-destination{margin:0 -38px;padding:0 38px 23px;border-bottom:1px solid var(--border)}
 .list-destination h3,.list-specialties h3{margin:0 0 13px;color:var(--green);font-size:17px}
-.list-destination>div{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:8px;background:var(--pale)}
-.list-destination>div span{font-size:20px;color:var(--green)}
+.list-destination>label{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--pale)}
+.list-destination>label span{font-size:20px;color:var(--green)}
+.list-destination select{width:100%;padding:9px 34px 9px 8px;border:0;background:transparent;color:var(--text);font:inherit;font-weight:700}
 .list-specialties{padding-top:24px}
 .list-specialties-title{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .list-specialties-title>div{min-width:0}
@@ -139,7 +140,50 @@ body.list-drawer-open{overflow:hidden}
 .list-drawer-footer .btn:disabled{background:#dce8e9;color:#fff;border-color:#dce8e9}
 html[data-theme=dark] .list-drawer,html[data-theme=dark] .list-drawer-footer{background:#182637}
 html[data-theme=dark] .list-name-field input,html[data-theme=dark] .list-count-controls input{background:#142131;border-color:#40576b;color:var(--text)}
-html[data-theme=dark] .list-destination>div,html[data-theme=dark] .list-specialty-row{background:#203448}
+html[data-theme=dark] .list-destination>label,html[data-theme=dark] .list-specialty-row{background:#203448}
 html[data-theme=dark] .list-count-controls button:hover{background:#294a61}
 @media(max-width:700px){.list-drawer-header{padding:19px 18px 16px}.list-drawer-body{padding:20px 18px 28px}.list-destination{margin:0 -18px;padding:0 18px 20px}.list-drawer-footer{padding:14px 18px 18px}.list-specialties-title{display:block}.list-specialties-title .link{margin:0 0 13px}.list-specialty-row{align-items:flex-start;display:grid;gap:10px;padding:15px}.list-count-controls{justify-content:flex-end}.list-count-controls input{width:68px}}
 @media(prefers-reduced-motion:reduce){.list-drawer,.list-drawer-backdrop{animation:none}}
+
+/* Biblioteca de listas e pastas com acompanhamento de desempenho. */
+.saved-lists-panel{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.saved-lists-toolbar{display:grid;grid-template-columns:minmax(240px,1fr) auto auto;align-items:center;gap:22px;padding:24px;border-bottom:1px solid var(--border)}
+.saved-search{display:flex;align-items:center;gap:10px;max-width:520px;padding:0 15px;border:1px solid #cfdae5;border-radius:24px;background:#fff;color:var(--muted)}
+.saved-search input{width:100%;padding:13px 0;border:0;outline:0;background:transparent;color:var(--text)}
+.saved-view{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;white-space:nowrap}
+.saved-view select{min-width:145px;padding:12px 34px 12px 13px;border:1px solid #cfdae5;border-radius:7px;background:#fff;color:var(--text)}
+.saved-create-actions{display:flex;gap:9px}
+.folder-breadcrumb{display:flex;align-items:center;gap:9px;padding:12px 24px;border-bottom:1px solid var(--border);font-size:12px}
+.folder-breadcrumb .link{font-size:12px}
+.saved-table-wrap{overflow:auto}
+.saved-lists-table{min-width:1030px}
+.saved-lists-table th{height:62px;color:var(--muted);font-size:11px;font-weight:600}
+.saved-lists-table td{height:78px;color:var(--text);font-size:12px;vertical-align:middle}
+.saved-lists-table th:first-child,.saved-lists-table td:first-child{width:29%;padding-left:30px}
+.saved-lists-table th:last-child,.saved-lists-table td:last-child{padding-right:20px;text-align:right}
+.saved-folder-row{background:#f1f3f5}
+.saved-list-row:hover{background:#f5fafc}
+.saved-name{display:flex;align-items:center;gap:12px;max-width:100%;padding:5px 0;background:transparent;color:var(--text);text-align:left}
+.saved-name strong{overflow-wrap:anywhere}
+.saved-list-row td:first-child>small{display:block;margin:3px 0 0 34px;color:var(--muted)}
+.saved-folder-icon,.saved-list-icon{display:inline-grid;place-items:center;width:23px;height:23px;color:var(--green);font-size:18px;flex-shrink:0}
+.list-status{display:inline-flex;padding:6px 9px;border-radius:14px;background:#edf1f5;color:var(--muted);font-size:10px;white-space:nowrap}
+.list-status.progress{background:#fff5d9;color:#8a681b}
+.list-status.complete{background:#e5f6ed;color:#25724a}
+.list-status.folder{background:#e4ebef;color:#566b7c}
+.correct-dot{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#08b879;color:#fff;font-size:11px}
+.wrong-mark{color:#e34f48;font-size:20px;line-height:0}
+.stat-correct{color:#1b875a!important;font-weight:700}
+.stat-wrong{color:#c84a43!important;font-weight:700}
+.saved-actions{white-space:nowrap}
+.saved-actions .btn{min-height:34px;padding:8px 13px;font-size:10px}
+.saved-actions .icon{width:31px;height:31px;font-size:16px}
+.saved-empty{display:grid;place-items:center;gap:7px;padding:45px;color:var(--muted)}
+.saved-empty strong{color:var(--text)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+html[data-theme=dark] .saved-lists-panel{background:#182637}
+html[data-theme=dark] .saved-search,html[data-theme=dark] .saved-view select{background:#142131;border-color:#40576b;color:var(--text)}
+html[data-theme=dark] .saved-folder-row{background:#26394b}
+html[data-theme=dark] .saved-list-row:hover{background:#203448}
+@media(max-width:900px){.saved-lists-toolbar{grid-template-columns:1fr auto}.saved-search{max-width:none}.saved-create-actions{grid-column:1/-1}.saved-create-actions .btn{flex:1}}
+@media(max-width:600px){.saved-lists-toolbar{grid-template-columns:1fr;padding:16px;gap:12px}.saved-view{justify-content:space-between}.saved-view select{flex:1}.saved-create-actions{grid-column:auto}.saved-lists-table th:first-child,.saved-lists-table td:first-child{padding-left:18px}.folder-breadcrumb{padding:10px 16px}}

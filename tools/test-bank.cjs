@@ -113,7 +113,7 @@ function mockBridge(databaseError, legacy = false) {
     assert.match(await page.locator('.bank-essential-figure img').getAttribute('src'),
       /^questoes-algebra-figuras\/1272029\.webp$/);
     assert.equal(await page.locator('.question-card .option').count(),4);
-    await page.evaluate(() => {filters=blankFilters();nav('questions')});
+    await page.evaluate(() => {filters=blankFilters();state.attempts=[];save();nav('questions')});
     await page.getByRole('button',{name:'Criar lista',exact:true}).click();
     await page.waitForSelector('.list-drawer');
     assert.equal(await page.locator('[name="name"]').getAttribute('placeholder'),'Insira o nome da lista');
@@ -126,12 +126,32 @@ function mockBridge(databaseError, legacy = false) {
     assert.match(await page.locator('#listSelectedMessage').innerText(),/1\.000 questões/);
     assert.equal(await page.locator('#createListSubmit').isEnabled(),true);
     await page.locator('#createListSubmit').click();
-    await page.waitForSelector('.list-card');
+    await page.waitForSelector('.saved-list-row');
     assert.equal(await page.evaluate(() => state.lists.at(-1).ids.length),1000);
-    assert.equal(await page.getByRole('heading',{name:'Lista de revisão completa'}).count(),1);
+    assert.equal(await page.locator('.saved-list-row .saved-name strong').filter({hasText:'Lista de revisão completa'}).count(),1);
+    assert.equal(await page.locator('[data-list-stat="answered"]').innerText(),'0');
+    await page.evaluate(() => {const list=state.lists.at(-1);state.attempts.push(
+      {id:list.ids[0],selected:0,correct:true,at:new Date().toISOString(),source:'practice'},
+      {id:list.ids[1],selected:0,correct:false,at:new Date().toISOString(),source:'practice'});save();renderLists()});
+    assert.equal(await page.locator('[data-list-stat="answered"]').innerText(),'2');
+    assert.equal(await page.locator('[data-list-stat="correct"]').innerText(),'1');
+    assert.equal(await page.locator('[data-list-stat="wrong"]').innerText(),'1');
+    assert.equal(await page.locator('.saved-folder-row').count(),0);
+    assert.equal(await page.getByText('Provas Anteriores',{exact:true}).count(),0);
+    assert.equal(await page.getByText('Simulados avulsos',{exact:true}).count(),0);
+    await page.getByRole('button',{name:'+ Nova pasta',exact:true}).click();
+    await page.locator('#folderForm [name="name"]').fill('Álgebra avançada');
+    await page.getByRole('button',{name:'Criar pasta',exact:true}).click();
+    assert.equal(await page.locator('.saved-folder-row').count(),1);
+    await page.getByRole('button',{name:'Editar lista Lista de revisão completa'}).click();
+    await page.locator('#editList [name="folderId"]').selectOption({label:'Álgebra avançada'});
+    await page.getByRole('button',{name:'Salvar alterações',exact:true}).click();
+    await page.getByRole('button',{name:'Álgebra avançada',exact:true}).click();
+    assert.equal(await page.locator('.saved-list-row').count(),1);
+    assert.equal(await page.evaluate(() => state.folders.length),1);
     assert.deepEqual(errors,[]);
     await context.close();
-    console.log('PASS shared bank: 2822 questions, topic filters, demand loading, grading, written responses, exams, mobile and retry.');
+    console.log('PASS shared bank: 2822 questions, filters, grading, list statistics, custom folders, exams, mobile and retry.');
 
     const remoteContext = await browser.newContext();
     await remoteContext.addInitScript(() => sessionStorage.setItem('prumo-demo','yes'));
