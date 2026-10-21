@@ -2,7 +2,7 @@
   const novos = [
     ['Conjuntos','Teoria dos conjuntos','Difícil','Se n(A)=18, n(B)=23 e n(A∪B)=31, quantos subconjuntos próprios não vazios possui A∩B?', ['31','63','127','255','511'], 1, ['n(A∩B)=18+23−31=10. O número de subconjuntos próprios não vazios é 2^10−2=1022.'], 'PRUMO — questão inédita'],
     ['Polinômios','Identidades algébricas','Difícil','Se x+y=5 e xy=3, qual é o valor de x^4+y^4?', ['529','553','601','625','697'], 1, ['x²+y²=25−6=19; x⁴+y⁴=19²−2·9=343.'], 'PRUMO — questão inédita'],
-    ['Polinômios','Divisão polinomial','Difícil','O resto da divisão de P(x)=x^5−2x^3+ax+b por x²−1 é 3x−4. Determine a+b.', ['−9','−7','−5','−3','1'], 2, ['Como x²=1, P≡x−2x+ a x+b=(a−1)x+b. Logo a=4 e b=−4, então a+b=0.'], 'PRUMO — questão inédita'],
+    ['Polinômios','Divisão polinomial','Difícil','O resto da divisão de $P(x)=x^5-2x^3+ax+b$ por $x^2-1$ é $3x-4$. Determine $a+b$.', ['−9','−7','−5','−3','1'], 2, ['Como $x^2=1$, $P(x)\equiv(a-1)x+b$. Logo $a=4$ e $b=-4$.'], 'PRUMO — questão inédita'],
     ['Equações','Equação do 1º grau','Difícil','A soma das raízes reais de |2x−3|+|x+1|=7 é:', ['−1','0','1','2','3'], 3, ['Quebrando em x<−1, −1≤x≤3/2 e x>3/2, obtêm-se x=−5/3 e x=3; soma 4/3.'], 'PRUMO — questão inédita'],
     ['Funções','Função composta','Difícil','Se f(x)=x²−2x e g(x)=1/(x−1), o domínio de f∘g é:', ['R','R\{0}','R\{1}','R\{2}','R\{1,2}'], 4, ['É preciso x≠1 e g(x)≠1; portanto x≠1 e x≠2.'], 'PRUMO — questão inédita'],
     ['Funções','Função quadrática','Difícil','O menor valor de x²−(m+2)x+m, para m real, é igual a −9. O número de valores possíveis de m é:', ['0','1','2','3','infinitos'], 2, ['O mínimo é −(m+2)²/4+m=−9; daí m²−4m−32=0, com duas raízes.'], 'PRUMO — questão inédita'],
