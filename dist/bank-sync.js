@@ -15,6 +15,15 @@
         && question.answer >= 0 && question.answer < question.options.length));
   }
 
+  function isLegacyPhotoDetail(question) {
+    const placeholder = /^Alternativa [A-E](?:\s*\(na imagem\)|\s*[—-].*)?$/i;
+    return question?.bookOriginal === true && (
+      Array.isArray(question.bookImages) || Array.isArray(question.bookAnswerImages)
+      || (Array.isArray(question.options) && question.options.length > 0
+        && question.options.every(option => placeholder.test(String(option).trim())))
+    );
+  }
+
   async function localIndex() {
     const response = await fetch('questoes-algebra-index.json');
     if (!response.ok) throw new Error('Question index unavailable');
@@ -88,6 +97,10 @@
         if (!result.error) detail = result.data?.dados_aplicacao;
       } catch {}
     }
+    // Old imports stored the whole photographed statement and generic option
+    // labels. Prefer the deployed text transcription until the SQL migration
+    // is re-run, so the statement and selectable alternatives never duplicate.
+    if (isLegacyPhotoDetail(detail)) detail = null;
     if (!detail) {
       const response = await fetch(`questoes-algebra/${id}.json`);
       if (!response.ok) throw new Error('Question details unavailable');

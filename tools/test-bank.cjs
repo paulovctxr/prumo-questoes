@@ -20,8 +20,15 @@ async function transcriptionVisible(page) {
   });
 }
 
-function mockBridge(databaseError) {
-  const remote = {...detail, steps: [...detail.steps, 'Origem remota confirmada no teste.']};
+function mockBridge(databaseError, legacy = false) {
+  const legacyOptions = detail.options.map((_,index) => `Alternativa ${'ABCDE'[index]}`);
+  const remote = legacy ? {...detail,
+    text: `${detail.text}\n\na) Todas as proposições estão corretas.\n\nb) Apenas I, II, III e IV estão corretas\n\nc) Apenas I, II e V estão corretas\n\nd) Somente IV está incorreta\n\ne) Todas as proposições estão incorretas.`,
+    options: legacyOptions, bookImages:[{src:'livro-algebra/q.webp'}],
+    bookAnswerImages:[{src:'livro-algebra/answers.webp'}], contentVersion:'legacy'}
+    : {...detail, steps: [...detail.steps, 'Origem remota confirmada no teste.']};
+  const remoteSummaries = legacy ? summaries.map(question => question.id === detail.id
+    ? {...question, options:legacyOptions, contentVersion:'legacy'} : question) : summaries;
   return `window.prumoSupabaseClient = {
     auth: {getSession: async () => ({data: {session: {user: {id: 'test'}}}}), onAuthStateChange() {}},
     from(table) {
@@ -29,7 +36,7 @@ function mockBridge(databaseError) {
       return {select(fields) {this.fields = fields; return this;}, not() {return this;}, order() {return this;},
         eq(field,id) {if (field !== 'id' || id !== 1011002) throw Error('Wrong detail ID'); return this;},
         range: async (start,end) => (${databaseError ? "{error: {message: 'column not installed'}}" :
-          `{data: ${JSON.stringify(summaries.map(q => ({id:q.id,resumo_aplicacao:q})))},error:null}`} ),
+          `{data: ${JSON.stringify(remoteSummaries.map(q => ({id:q.id,resumo_aplicacao:q})))},error:null}`} ),
         single: async () => ({data: {dados_aplicacao: ${JSON.stringify(remote)}},error:null})};
     }
   };`;
@@ -123,6 +130,24 @@ function mockBridge(databaseError) {
     assert.deepEqual(remoteErrors,[]);
     await remoteContext.close();
     console.log('PASS Supabase adapter (mock): light metadata query, one-question detail, no static fallback requests, refresh without duplicates.');
+
+    const legacyContext = await browser.newContext();
+    await legacyContext.addInitScript(() => sessionStorage.setItem('prumo-demo','yes'));
+    const legacyPage = await legacyContext.newPage();
+    const legacyRequests=[];
+    legacyPage.on('request', request => {
+      if (/\/questoes-algebra\/1011002\.json$/.test(request.url())) legacyRequests.push(request.url());
+    });
+    await legacyPage.route('**/supabase-auth.js', route => route.fulfill({contentType:'text/javascript',body:mockBridge(false,true)}));
+    await legacyPage.route('**/questoes-algebra-index.json', route => route.abort());
+    await ready(legacyPage);
+    await legacyPage.evaluate(() => startQuestions([1011002]));
+    await transcriptionVisible(legacyPage);
+    assert.equal(legacyRequests.length,1);
+    assert.doesNotMatch(await legacyPage.locator('.bank-transcribed-statement').innerText(),/a\)\s*Todas/);
+    assert.match(await legacyPage.locator('.question-card .option').first().innerText(),/Todas as proposições/);
+    await legacyContext.close();
+    console.log('PASS legacy Supabase import: photographed duplicate falls back to the current text and real option buttons.');
 
     const fallbackContext=await browser.newContext();
     await fallbackContext.addInitScript(() => sessionStorage.setItem('prumo-demo','yes'));
