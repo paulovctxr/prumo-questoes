@@ -168,6 +168,9 @@ html[data-theme=dark] .list-count-controls button:hover{background:#294a61}
 .saved-name strong{overflow-wrap:anywhere}
 .saved-list-row td:first-child>small{display:block;margin:3px 0 0 34px;color:var(--muted)}
 .saved-folder-icon,.saved-list-icon{display:inline-grid;place-items:center;width:23px;height:23px;color:var(--green);font-size:18px;flex-shrink:0}
+.saved-folder-icon svg,.saved-list-icon svg{width:22px;height:22px}
+.saved-folder-icon{width:27px;height:25px;border-radius:6px;background:#e3f0f7}
+html[data-theme=dark] .saved-folder-icon{background:#29485e}
 .list-status{display:inline-flex;padding:6px 9px;border-radius:14px;background:#edf1f5;color:var(--muted);font-size:10px;white-space:nowrap}
 .list-status.progress{background:#fff5d9;color:#8a681b}
 .list-status.complete{background:#e5f6ed;color:#25724a}

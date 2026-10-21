@@ -146,6 +146,8 @@ function mockBridge(databaseError, legacy = false) {
     await page.locator('#folderForm [name="name"]').fill('Álgebra avançada');
     await page.getByRole('button',{name:'Criar pasta',exact:true}).click();
     assert.equal(await page.locator('.saved-folder-row').count(),1);
+    assert.equal(await page.locator('.saved-folder-icon svg').count(),1);
+    assert.equal(await page.locator('.saved-list-icon svg').count(),1);
     await page.getByRole('button',{name:'Editar lista Lista de revisão completa'}).click();
     assert.equal(await page.locator('#editList textarea').count(),0);
     await page.locator('#editList [name="folderId"]').selectOption({label:'Álgebra avançada'});
