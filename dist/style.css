@@ -153,6 +153,7 @@ html[data-theme=dark] .list-count-controls button:hover{background:#294a61}
 .saved-view{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;white-space:nowrap}
 .saved-view select{min-width:145px;padding:12px 34px 12px 13px;border:1px solid #cfdae5;border-radius:7px;background:#fff;color:var(--text)}
 .saved-create-actions{display:flex;gap:9px}
+.button-symbol{width:19px;height:19px;flex:0 0 19px;stroke-linecap:round;stroke-linejoin:round}
 .folder-breadcrumb{display:flex;align-items:center;gap:9px;padding:12px 24px;border-bottom:1px solid var(--border);font-size:12px}
 .folder-breadcrumb .link{font-size:12px}
 .saved-table-wrap{overflow:auto}

@@ -140,7 +140,9 @@ function mockBridge(databaseError, legacy = false) {
     assert.equal(await page.locator('.saved-folder-row').count(),0);
     assert.equal(await page.getByText('Provas Anteriores',{exact:true}).count(),0);
     assert.equal(await page.getByText('Simulados avulsos',{exact:true}).count(),0);
-    await page.getByRole('button',{name:'+ Nova pasta',exact:true}).click();
+    assert.equal(await page.locator('[data-action="create-folder"] .button-symbol').count(),1);
+    assert.equal(await page.locator('[data-action="list-all"] .button-symbol').count(),1);
+    await page.getByRole('button',{name:'Nova pasta',exact:true}).click();
     await page.locator('#folderForm [name="name"]').fill('Álgebra avançada');
     await page.getByRole('button',{name:'Criar pasta',exact:true}).click();
     assert.equal(await page.locator('.saved-folder-row').count(),1);
