@@ -7,6 +7,25 @@ const base = 'http://127.0.0.1:8000/';
 const root = path.resolve(__dirname, '..');
 const summaries = JSON.parse(fs.readFileSync(path.join(root, 'dist/questoes-algebra-index.json')));
 const detail = JSON.parse(fs.readFileSync(path.join(root, 'dist/questoes-algebra/1011002.json')));
+const taeDetails = fs.readdirSync(path.join(root, 'dist/questoes-algebra'))
+  .filter(file => file.endsWith('.json'))
+  .map(file => JSON.parse(fs.readFileSync(path.join(root, 'dist/questoes-algebra', file))));
+const convertedKeys = new Set(Object.keys(JSON.parse(
+  fs.readFileSync(path.join(root, 'tools/tae-written-conversions.json')))));
+assert.equal(taeDetails.length, 712);
+assert(taeDetails.every(question => question.type === 'Múltipla escolha'));
+assert(taeDetails.every(question => [4, 5].includes(question.options.length)));
+assert(taeDetails.every(question => new Set(question.options).size === question.options.length));
+assert(taeDetails.every(question => Number.isInteger(question.answer)
+  && question.answer >= 0 && question.answer < question.options.length));
+assert(taeDetails.every(question => !/[\uF000-\uF8FF]/.test(question.text + question.options.join(''))));
+const appSource = fs.readFileSync(path.join(root, 'dist/app.js'), 'utf8');
+assert(!/caderno de erros|data-list-errors|data-nav=["']errors/i.test(appSource));
+const convertedDetails = taeDetails.filter(question => convertedKeys.has(question.source.bookKey));
+assert.equal(convertedDetails.length, 275);
+assert(convertedDetails.every(question => Number.isInteger(question.answer)
+  && question.answer >= 0 && question.answer < question.options.length));
+assert(convertedDetails.every(question => question.steps.length >= 2));
 
 async function ready(page) {
   await page.goto(base, {waitUntil: 'networkidle'});
@@ -63,6 +82,8 @@ function mockBridge(databaseError, legacy = false) {
     assert.deepEqual(requestedDetails, [], 'Opening filters must not download all question details');
     assert.match(await page.locator('#matchCount').innerText(), /2822/);
     assert.equal(await page.locator('[data-nav="book"],.book-entry').count(), 0);
+    assert.equal(await page.locator('[data-nav="errors"],[data-list-errors]').count(), 0);
+    assert.equal(await page.getByText('Caderno de erros',{exact:true}).count(), 0);
     await page.locator('input[data-multi="topics"][value="Conjuntos"]').check();
     assert.equal(await page.evaluate(() => filterQuestions(state, filters).filter(q => q.bookOriginal).length),34);
     await page.evaluate(() => startQuestions([1011002]));
@@ -80,10 +101,11 @@ function mockBridge(databaseError, legacy = false) {
     await page.getByRole('button',{name:'Fechar resolução',exact:true}).click();
     await page.evaluate(() => startQuestions([1011001]));
     await transcriptionVisible(page);
-    await page.locator('[data-written-question="1011001"]').fill('32 subconjuntos');
-    assert.equal(await page.evaluate(() => state.writtenAnswers[1011001]),'32 subconjuntos');
-    assert.equal(await page.locator('.question-card [data-action="answer"]').count(),0);
-    assert.equal(await page.evaluate(() => state.attempts.length),1);
+    assert.equal(await page.locator('.question-card .option').count(),4);
+    const writtenAnswer = await page.evaluate(() => QUESTIONS.find(q=>q.id===1011001).answer);
+    await page.locator('.question-card .option').nth(writtenAnswer).click();
+    await page.getByRole('button',{name:'Responder →',exact:true}).click();
+    assert.equal(await page.evaluate(() => state.attempts.at(-1).correct),true);
     await page.evaluate(() => {
       state.activeExam={id:'test',name:'Teste de integração',ids:[1011008],answers:{},flags:[],startedAt:Date.now(),duration:300,index:0};
       page='exam';render();

@@ -21,10 +21,11 @@ As explicações elaboradas ficam em `tae-solutions*.json`. Cada registro tem
 resposta, passos e, quando necessário, uma nota editorial. Fórmulas usam
 LaTeX entre `$...$`.
 
-Há 127 resoluções elaboradas. Faltam 585. Questões pendentes não exibem a
-imagem do gabarito e não recebem resposta automática extraída do livro.
-Somente uma resposta sustentada pela resolução elaborada pode ativar a
-correção automática.
+As 712 questões são de múltipla escolha e possuem gabarito configurado e verificado estruturalmente. As 275
+questões que eram discursivas receberam alternativas próprias, gabarito e
+resolução textual. Ao todo, 362 questões já possuem resolução passo a passo;
+as demais exibem o gabarito enquanto aguardam a explicação editorial completa.
+Nenhuma questão exibe fotografia do gabarito do livro.
 
 ## Aplicação e armazenamento
 
@@ -45,9 +46,10 @@ O fallback local usa `questoes-algebra-index.json` e os arquivos individuais
 em `questoes-algebra/`. As 17 capturas recortadas somam cerca de 500 KB e são
 baixadas somente nas questões que realmente precisam delas.
 
-Estado matemático: 889 expressões das 127 resoluções foram aceitas pelo KaTeX;
-equações selecionadas foram conferidas com SymPy e contagens diofantinas por
-enumeração independente. O banco completo da aplicação tem 2.822 questões.
+Estado matemático: as 712 questões possuem alternativa correta configurada e
+as 362 resoluções disponíveis usam fórmulas compatíveis com KaTeX. Equações
+selecionadas foram conferidas com SymPy e contagens diofantinas por enumeração
+independente. O banco completo da aplicação tem 2.822 questões.
 
 Execute `node tools/test-bank.cjs` com `dist` servido na porta 8000 para
 validar filtros, carregamento individual, transcrições, figuras recortadas,

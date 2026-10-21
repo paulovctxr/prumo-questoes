@@ -1,0 +1,4665 @@
+{
+  "11:1": {
+    "text": "Quantos subconjuntos possui o conjunto A = {12,43,56,87,99}",
+    "options": [
+      "33 subconjuntos",
+      "32 subconjuntos",
+      "31 subconjuntos",
+      "-32 subconjuntos"
+    ],
+    "answer": 1,
+    "answerText": "32 subconjuntos",
+    "steps": [
+      "O conjunto tem cinco elementos distintos. Para formar um subconjunto, decidimos independentemente se cada elemento entra ou não entra.",
+      "São duas escolhas para cada um dos cinco elementos: $2^5=32$. Essa contagem inclui o conjunto vazio e o próprio conjunto A."
+    ],
+    "reviewed": true
+  },
+  "11:3": {
+    "text": "Em um certo concurso, 500 pessoas gabaritaram as questões de matemática, e⁴³⁰ gabaritaram as questões de português. Se 170 gabaritaram ambas, quantos gabaritaram apenas uma das duas?",
+    "options": [
+      "591 pessoas",
+      "590 pessoas",
+      "589 pessoas",
+      "-590 pessoas"
+    ],
+    "answer": 1,
+    "answerText": "590 pessoas",
+    "steps": [
+      "Das 500 pessoas que gabaritaram matemática, $500-170=330$ não gabaritaram português.",
+      "Das 430 que gabaritaram português, $430-170=260$ não gabaritaram matemática.",
+      "As duas parcelas são disjuntas: exatamente uma disciplina foi gabaritada por $330+260=590$ pessoas."
+    ],
+    "reviewed": true
+  },
+  "11:4": {
+    "text": "Num grupo de professores, sabe-se que há 26 que lecionam para o Ensino Fundamental, 13 que lecionam para o Ensino Médio e⁵ que lecionam em ambos. Quantos professores há no grupo?",
+    "options": [
+      "35 professores",
+      "33 professores",
+      "34 professores",
+      "-34 professores"
+    ],
+    "answer": 2,
+    "answerText": "34 professores",
+    "steps": [
+      "Pela inclusão-exclusão, a união dos grupos tem $26+13-5=34$ professores.",
+      "Subtraímos 5 porque os professores que trabalham nos dois níveis foram contados tanto no grupo de 26 quanto no grupo de 13. O resultado pressupõe, como o enunciado pretende, que todos os professores do grupo lecionam em pelo menos um dos níveis."
+    ],
+    "reviewed": true
+  },
+  "11:5": {
+    "text": "Numa confecção há 2500 funcionários onde são fabricados três tipos de roupas: Social (S), Básica (B) e Esportiva (E). A tabela seguinte indica quantos funcionários fabricam cada tipo de roupa. Tipo de roupa Funcionários S 1300 B 1220 E 1080 S e B 220 S e E 800 B e E 180 S, B e E 100 Quantos funcionários fabricam SOMENTE roupas esportivas?",
+    "options": [
+      "201 funcionários",
+      "199 funcionários",
+      "-200 funcionários",
+      "200 funcionários"
+    ],
+    "answer": 3,
+    "answerText": "200 funcionários",
+    "steps": [
+      "Dos 1080 funcionários que fabricam roupas esportivas, precisamos excluir quem também fabrica roupas sociais ou básicas.",
+      "A expressão é $|E\\setminus(S\\cup B)|=|E|-|E\\cap S|-|E\\cap B|+|E\\cap S\\cap B|$.",
+      "O último termo corrige a dupla exclusão dos funcionários presentes nos três grupos: $1080-800-180+100=200$."
+    ],
+    "reviewed": true
+  },
+  "11:7": {
+    "text": "Enuncie os elementos de A = { x ∈ ℤ - / x > -5}",
+    "options": [
+      "A = {−4, −3, −2, −1, 0}",
+      "A = {−5, −3, −2, −1, 0}",
+      "A = {−3, −3, −2, −1, 0}",
+      "A = {−-4, −3, −2, −1, 0}"
+    ],
+    "answer": 0,
+    "answerText": "A = {−4, −3, −2, −1, 0}",
+    "steps": [
+      "Na convenção utilizada pelo livro, $\\mathbb Z_-$ representa os inteiros não positivos, incluindo o zero.",
+      "Devemos selecionar os inteiros desse conjunto estritamente maiores que −5: $-4,-3,-2,-1,0$. Portanto $A=\\{-4,-3,-2,-1,0\\}$."
+    ],
+    "reviewed": true
+  },
+  "11:10": {
+    "text": "Escreva na ordem crescente os números: 3 4 2 3 3 5,,,,,,1,2,3 4 3 5 7 9 2 EXÉRCÍCIOS AVANÇADOS",
+    "options": [
+      "4/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3",
+      "2/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3",
+      "-3/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3",
+      "3/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3"
+    ],
+    "answer": 3,
+    "answerText": "3/9 < 2/5 < 3/7 < 3/4 < 1 < 4/3 < 2 < 5/2 < 3",
+    "steps": [
+      "Entre as frações menores que 1, $3/9=1/3$. Por multiplicação cruzada: $1/3<2/5$, pois $5<6$; $2/5<3/7$, pois $14<15$; e $3/7<3/4$, pois $12<21$.",
+      "Para os demais, $1<4/3<2<5/2<3$, pois $4/3=1+1/3$ e $5/2=2+1/2$.",
+      "Reunindo: $\\frac39<\\frac25<\\frac37<\\frac34<1<\\frac43<2<\\frac52<3$."
+    ],
+    "reviewed": true
+  },
+  "11:12": {
+    "text": "Dado um conjunto A com n elementos indiquemos a o número de subconjunto de A. Seja B o conjunto que se obtém acrescentando um novo elemento a A e indiquemos por b o número de subconjuntos de B. Qual a relação entre a e b?",
+    "options": [
+      "b = 3a",
+      "b = 1a",
+      "b = -2a",
+      "b = 2a"
+    ],
+    "answer": 3,
+    "answerText": "b = 2a",
+    "steps": [
+      "Um conjunto com n elementos possui $a=2^n$ subconjuntos. Ao acrescentar um elemento novo, B passa a ter $n+1$ elementos e $b=2^{n+1}$ subconjuntos.",
+      "Assim, $b=2\\cdot2^n=2a$. Também podemos emparelhar cada subconjunto de A com duas escolhas em B: sem o elemento novo e com ele."
+    ],
+    "reviewed": true
+  },
+  "37:1": {
+    "text": "Assinale com V ou F ( ) A equação x + 5 = -3 não possui solução ( ) A única solução da equação x - 1 = 7 é x = 8 ( ) Se a > b então - a < -b * 1 1( ) Se,a b ∈ℝ + e a > b então < a b ( ) A equação x² - 4 = 3 possui exatamente duas soluções reais",
+    "options": [
+      "F–V–V–F–V",
+      "F–V–F–F–V",
+      "Não é possível determinar.",
+      "V–F–V–V–F"
+    ],
+    "answer": 3,
+    "answerText": "V–F–V–V–F",
+    "steps": [
+      "Um módulo nunca é negativo, portanto $|x+5|=-3$ não tem solução: V. Já $|x-1|=7$ implica $x-1=7$ ou $x-1=-7$, dando $x=8$ ou $x=-6$: a unicidade é F.",
+      "Multiplicar $a>b$ por −1 inverte a desigualdade, produzindo $-a<-b$: V. Para $a>b>0$, dividir por $ab>0$ dá $1/b>1/a$: V.",
+      "$|x^2-4|=3$ equivale a $x^2=7$ ou $x^2=1$. As quatro soluções $\\pm\\sqrt7,\\pm1$ refutam a afirmação de exatamente duas: F."
+    ],
+    "reviewed": true
+  },
+  "37:2": {
+    "text": "Assinale com V ou F: 3 x⁰¹. ( ) = 0 ⇒ x = 0 04. ( ) a - b ≥ x + y² 02. ( ) a. b ≠ a.b⁰⁵. ( ) x = y ⇒ x = y¹⁵ 15 03. ( ) a = a⁰⁶. ( ) x + y ≤ x + y",
+    "options": [
+      "V–F–F–V–F–V",
+      "F–V–F–V–V–F",
+      "V–F–V–F–F–V",
+      "F–V–F–F–V–V"
+    ],
+    "answer": 2,
+    "answerText": "V–F–V–F–F–V",
+    "steps": [
+      "01 é V: $|3x/2|=0$ obriga $3x/2=0$, logo $x=0$. 02 é F, pois sempre $|a|\\,|b|=|ab|$.",
+      "03 é V: ambos os membros representam a décima quinta potência do valor absoluto de a, isto é, $|a|^{15}$.",
+      "04 é F: tome $a=b=0$, $x=1$, $y=0$; a afirmação exigiria $0\\ge1$. 05 é F: $x=1$ e $y=-1$ possuem módulos iguais, mas são distintos.",
+      "06 é a desigualdade triangular $|x+y|\\le|x|+|y|$, válida para todos os reais: V."
+    ],
+    "reviewed": true
+  },
+  "37:4": {
+    "text": "Determine a solução da equação 3 x - 9 - 3 = 6",
+    "options": [
+      "{1, 6}",
+      "{-1, 6}",
+      "{2, 6}",
+      "{0, 6}"
+    ],
+    "answer": 3,
+    "answerText": "{0, 6}",
+    "steps": [
+      "$|3x-9|-3=6$ equivale a $|3x-9|=9$.",
+      "Assim, $3x-9=9$ ou $3x-9=-9$. Resultam $x=6$ e $x=0$. Ambos produzem $9-3=6$ na equação original."
+    ],
+    "reviewed": true
+  },
+  "37:5": {
+    "text": "Determine a solução da inequação 3 x - 9 - 3 ≤ 1",
+    "options": [
+      "[6/3, 13/3]",
+      "[4/3, 13/3]",
+      "[5/3, 13/3]",
+      "[-5/3, 13/3]"
+    ],
+    "answer": 2,
+    "answerText": "[5/3, 13/3]",
+    "steps": [
+      "$|3x-9|-3\\le1$ equivale a $|3x-9|\\le4$.",
+      "Pela definição do módulo, $-4\\le3x-9\\le4$. Somando 9: $5\\le3x\\le13$. Dividindo por 3: $5/3\\le x\\le13/3$.",
+      "As extremidades são incluídas porque nelas o primeiro membro vale 1. Por exemplo, $x=1$, incluído no gabarito impresso, produz $|3-9|-3=3>1$ e não serve."
+    ],
+    "reviewed": true
+  },
+  "37:6": {
+    "text": "Determine a solução da inequação x + 2 - 8 < 0",
+    "options": [
+      "]−11, 6[",
+      "]−10, 6[",
+      "]−9, 6[",
+      "]−-10, 6["
+    ],
+    "answer": 1,
+    "answerText": "]−10, 6[",
+    "steps": [
+      "$|x+2|-8<0$ equivale a $|x+2|<8$, portanto $-8<x+2<8$.",
+      "Subtraindo 2, obtemos $-10<x<6$. Os extremos não entram, pois fariam o primeiro membro igual a zero."
+    ],
+    "reviewed": true
+  },
+  "37:7": {
+    "text": "Determine a solução da inequação x² - 2 > 0",
+    "options": [
+      "Todos os reais, exceto −√3 e √2",
+      "Todos os reais, exceto −√2 e √2",
+      "Todos os reais, exceto −√1 e √2",
+      "Todos os reais, exceto −√-2 e √2"
+    ],
+    "answer": 1,
+    "answerText": "Todos os reais, exceto −√2 e √2",
+    "steps": [
+      "Um módulo é sempre não negativo e só deixa de ser estritamente positivo quando seu conteúdo é zero.",
+      "Logo $|x^2-2|>0$ equivale a $x^2-2\\ne0$, isto é, $x\\ne-\\sqrt2$ e $x\\ne\\sqrt2$. O conjunto solução é $\\mathbb R\\setminus\\{-\\sqrt2,\\sqrt2\\}$."
+    ],
+    "reviewed": true
+  },
+  "37:8": {
+    "text": "Determine a solução da inequação x² - 2 - 2 < 0",
+    "options": [
+      "]−3, 0[ ∪ ]0, 2[",
+      "]−1, 0[ ∪ ]0, 2[",
+      "]−-2, 0[ ∪ ]0, 2[",
+      "]−2, 0[ ∪ ]0, 2["
+    ],
+    "answer": 3,
+    "answerText": "]−2, 0[ ∪ ]0, 2[",
+    "steps": [
+      "$|x^2-2|-2<0$ equivale a $|x^2-2|<2$. Assim, $-2<x^2-2<2$.",
+      "Somando 2, obtemos $0<x^2<4$. Precisamos de $-2<x<2$ e $x\\ne0$.",
+      "Portanto $S=(-2,0)\\cup(0,2)$. Em $x=-2,0,2$, o primeiro membro original é zero, não negativo estrito."
+    ],
+    "reviewed": true
+  },
+  "37:9": {
+    "text": "Resolver a inequação x - 1 - 3 x + 7 ≤ 0. Considere U = ℝ",
+    "options": [
+      "[3, +∞[",
+      "[4, +∞[",
+      "[2, +∞[",
+      "[-3, +∞["
+    ],
+    "answer": 0,
+    "answerText": "[3, +∞[",
+    "steps": [
+      "Se $x<1$, então $|x-1|=1-x$ e a inequação vira $8-4x\\le0$, que exigiria $x\\ge2$; não há solução nesse ramo.",
+      "Se $x\\ge1$, então $|x-1|=x-1$ e temos $6-2x\\le0$, ou seja, $x\\ge3$.",
+      "Reunindo os ramos, $S=[3,+\\infty)$."
+    ],
+    "reviewed": true
+  },
+  "37:10": {
+    "text": "Resolver a inequação 2 x + 1 - 3 x + 4 ≥ 0. Considere U = ℝ",
+    "options": [
+      "]−∞, 6]",
+      "]−∞, 5]",
+      "]−∞, 4]",
+      "]−∞, -5]"
+    ],
+    "answer": 1,
+    "answerText": "]−∞, 5]",
+    "steps": [
+      "Se $x\\ge-1/2$, então $|2x+1|=2x+1$, logo $5-x\\ge0$. Nesse ramo, $-1/2\\le x\\le5$.",
+      "Se $x<-1/2$, então $|2x+1|=-2x-1$, logo $3-5x\\ge0$. Todos os valores desse ramo satisfazem a condição.",
+      "A união é $(-\\infty,5]$. Como conferência, $x=0$ dá $1+4\\ge0$, enquanto $x=6$ dá $13-18+4=-1<0$."
+    ],
+    "reviewed": true
+  },
+  "37:16": {
+    "text": "Resolva a inequação 3 ≤ (1 - x ) 2 ≤ 4. 2",
+    "options": [
+      "[−3, −2] ∪ [4, 5]",
+      "[−4, −2] ∪ [4, 5]",
+      "[−2, −2] ∪ [4, 5]",
+      "[−-3, −2] ∪ [4, 5]"
+    ],
+    "answer": 0,
+    "answerText": "[−3, −2] ∪ [4, 5]",
+    "steps": [
+      "$\\sqrt{(1-x)^2}=|1-x|=|x-1|$. Portanto $3\\le|x-1|\\le4$.",
+      "Isso significa $x-1\\in[-4,-3]\\cup[3,4]$. Somando 1, $x\\in[-3,-2]\\cup[4,5]$."
+    ],
+    "reviewed": true
+  },
+  "37:23": {
+    "text": "Resolva a equação x + 1 - x + 3 x - 1 - 2 x - 2 = x + 2. 2 1",
+    "options": [
+      "{−3} ∪ [2, +∞[",
+      "{−2} ∪ [2, +∞[",
+      "{−1} ∪ [2, +∞[",
+      "{−-2} ∪ [2, +∞["
+    ],
+    "answer": 1,
+    "answerText": "{−2} ∪ [2, +∞[",
+    "steps": [
+      "Os pontos críticos de $|x+1|-|x|+3|x-1|-2|x-2|=x+2$ são −1, 0, 1 e 2.",
+      "Para $x<-1$, o primeiro membro é $-x-2$, dando $x=-2$. Para $-1\\le x<0$, ele é x, tornando impossível $x=x+2$.",
+      "Para $0\\le x<1$, ele é $-x$, dando $x=-1$, fora do ramo. Para $1\\le x<2$, ele é $5x-6$, dando $x=2$, que é o extremo seguinte.",
+      "Para $x\\ge2$, o primeiro membro é identicamente $x+2$; todos esses números servem. Logo $S=\\{-2\\}\\cup[2,+\\infty)$."
+    ],
+    "reviewed": true
+  },
+  "48:1": {
+    "text": "Determine o grau do polinômio p ( x ) = ( x - 2 )( 2 x - 3 )( x + 5 )",
+    "options": [
+      "4º grau",
+      "2º grau",
+      "3º grau",
+      "-3º grau"
+    ],
+    "answer": 2,
+    "answerText": "3º grau",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3º grau.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:2": {
+    "text": "Sabendo que os polinômios p ( x ) = ax 3 - 5 x² + x + b e q ( x ) = 6 x³ + cx 2 + x + 7 são idênticos, determine o valor de a + b + c",
+    "options": [
+      "9",
+      "7",
+      "8",
+      "-8"
+    ],
+    "answer": 2,
+    "answerText": "8",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 8.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:3": {
+    "text": "Qual o valor numérico do polinômio p ( x ) = -2 x⁵ + 4 x⁴ + 3 x³ + 2 x - 8 para x = -1?",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "-7"
+    ],
+    "answer": 1,
+    "answerText": "7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:4": {
+    "text": "A soma de dois polinômios p ( x ) + q ( x ) = - x³ + 2 x³ + x² + 11x - 3 e que p ( x ) = x⁵ - 2 x³ + 10 x - 5, determine q ( x )",
+    "options": [
+      "q(x) = −x⁵ + x³ + 3x³ + x² + x + 2",
+      "q(x) = −x⁵ + x³ + 2x³ + x² + x + 2",
+      "q(x) = −x⁵ + x³ + 1x³ + x² + x + 2",
+      "q(x) = −x⁵ + x³ + -2x³ + x² + x + 2"
+    ],
+    "answer": 1,
+    "answerText": "q(x) = −x⁵ + x³ + 2x³ + x² + x + 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos q(x) = −x⁵ + x³ + 2x³ + x² + x + 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:5": {
+    "text": "Sabendo que p ( x ) - q ( x ) = x² + 3 x + 9 e que p ( x ) = -2 x³ - 2 x³ + 2 x - 1, determine q ( x )",
+    "options": [
+      "q(x) = −3x³ − 3x² − x − 10",
+      "q(x) = −1x³ − 3x² − x − 10",
+      "q(x) = −2x³ − 3x² − x − 10",
+      "q(x) = −-2x³ − 3x² − x − 10"
+    ],
+    "answer": 2,
+    "answerText": "q(x) = −2x³ − 3x² − x − 10",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos q(x) = −2x³ − 3x² − x − 10.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:6": {
+    "text": "Dados os polinômios p ( x ) = x² + 2 x + 3 e q ( x ) = x² - 2 x + 3, determine o produto p ( x ) ⋅ q ( x )",
+    "options": [
+      "x⁴ + 3x² + 9",
+      "x⁴ + 1x² + 9",
+      "x⁴ + -2x² + 9",
+      "x⁴ + 2x² + 9"
+    ],
+    "answer": 3,
+    "answerText": "x⁴ + 2x² + 9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x⁴ + 2x² + 9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:7": {
+    "text": "Dados os polinômios p ( x ) = x³ - x + 2 e q ( x ) = x² + 5 x - 1, determine o produto p ( x ) ⋅ q ( x )",
+    "options": [
+      "x⁵ + 6x⁴ − 2x³ + 11x − 2",
+      "x⁵ + 5x⁴ − 2x³ + 11x − 2",
+      "x⁵ + 4x⁴ − 2x³ + 11x − 2",
+      "x⁵ + -5x⁴ − 2x³ + 11x − 2"
+    ],
+    "answer": 1,
+    "answerText": "x⁵ + 5x⁴ − 2x³ + 11x − 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x⁵ + 5x⁴ − 2x³ + 11x − 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:8": {
+    "text": "Dados os polinômios p ( x ) = x³ + 5 x² + 18 x + 13 e q ( x ) = x + 2, determine o resto da divisão de p ( x ) por q ( x )",
+    "options": [
+      "x − 9",
+      "x − 10",
+      "x − 8",
+      "x − -9"
+    ],
+    "answer": 0,
+    "answerText": "x − 9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x − 9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:9": {
+    "text": "Dados os polinômios p ( x ) = 6 x⁴ + x³ - 41x 2 - x + 35 e q ( x ) = 6 x² + x - 35, determine o quociente da divisão de p ( x ) por q ( x )",
+    "options": [
+      "x² − 2",
+      "x² − 1",
+      "x² − 0",
+      "x² − -1"
+    ],
+    "answer": 1,
+    "answerText": "x² − 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x² − 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:10": {
+    "text": "Determine o valor de “k” para que o polinômio p ( x ) = x³ - x² + kx + 4 seja divisível por ( x - 1)",
+    "options": [
+      "K=-4",
+      "K=-3",
+      "K=-5",
+      "K=4"
+    ],
+    "answer": 0,
+    "answerText": "K=-4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos K=-4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "48:19": {
+    "text": "Sejam a, b, c e d constantes reais. Sabendo que a divisão de 1P ( x ) = x⁴ + ax 2 + b por P2 ( x ) = x² + 2 x + 4 é exata, e que a divisão 2 - x + 2 tem resto igual a -5,de P3 ( x ) = x³ + cx 2 + dx - 3 por P4 ( x ) = x determine o valor de a + b + c + d",
+    "options": [
+      "22",
+      "20",
+      "21",
+      "-21"
+    ],
+    "answer": 2,
+    "answerText": "21",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 21.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:1": {
+    "text": "2 1) Desenvolva x + 2 ( )",
+    "options": [
+      "x² + 3x + 2",
+      "x² + 1x + 2",
+      "x² + 2x + 2",
+      "x² + -2x + 2"
+    ],
+    "answer": 2,
+    "answerText": "x² + 2x + 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x² + 2x + 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:2": {
+    "text": "O resultado mais simplificado da expressão ( x + 2 ) 2 - ( x - 2) 2",
+    "options": [
+      "5x",
+      "4x",
+      "3x",
+      "-4x"
+    ],
+    "answer": 1,
+    "answerText": "4x",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4x.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:3": {
+    "text": "O resultado mais simplificado da expressão ( x + 2) 3 - ( x - 2) 3",
+    "options": [
+      "13x² + 16",
+      "11x² + 16",
+      "-12x² + 16",
+      "12x² + 16"
+    ],
+    "answer": 3,
+    "answerText": "12x² + 16",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 12x² + 16.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:4": {
+    "text": "Se x² +y² = 34 e (x+y)² = 64, calcule o valor de 6xy",
+    "options": [
+      "91",
+      "89",
+      "90",
+      "-90"
+    ],
+    "answer": 2,
+    "answerText": "90",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 90.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:5": {
+    "text": "Um retângulo de lados medindo (x-3) e (x+3) tem área 216 m², qual o valor de “x”?",
+    "options": [
+      "x=16",
+      "x=14",
+      "x=-15",
+      "x=15"
+    ],
+    "answer": 3,
+    "answerText": "x=15",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x=15.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:6": {
+    "text": "Se x + y = 8 e xy = 15. Determine o valor de x² + xy + y²?",
+    "options": [
+      "50",
+      "48",
+      "-49",
+      "49"
+    ],
+    "answer": 3,
+    "answerText": "49",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 49.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:7": {
+    "text": "Se x + y = 11 e xy = 6. Determine o valor de (x-y)²?",
+    "options": [
+      "98",
+      "96",
+      "-97",
+      "97"
+    ],
+    "answer": 3,
+    "answerText": "97",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 97.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:8": {
+    "text": "Determine a forma mais simplificada possível da expressão ( x - y ) 2 + 4 xy ( x + y ) 2 - 4 xy",
+    "options": [
+      "(x + y)/(x − y)",
+      "(x − y)/(x − y)",
+      "(x + y)/(x + y)",
+      "O conjunto-solução é vazio."
+    ],
+    "answer": 0,
+    "answerText": "(x + y)/(x − y)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (x + y)/(x − y).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:9": {
+    "text": "Se xy = x + y = 3, calcule x³ + y³",
+    "options": [
+      "19",
+      "18",
+      "17",
+      "-18"
+    ],
+    "answer": 1,
+    "answerText": "18",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 18.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:10": {
+    "text": "Calcule o valor de ( 2014 )( 2015 )( 2016 )( 2017 ) + 1",
+    "options": [
+      "(2015)(2017) + 1.",
+      "(2014)(2017) + 1.",
+      "(2013)(2017) + 1.",
+      "(-2014)(2017) + 1."
+    ],
+    "answer": 1,
+    "answerText": "(2014)(2017) + 1.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (2014)(2017) + 1..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:13": {
+    "text": "Ache os inteiros positivos a e b, a < b, tais que 5 + 24 = a + b",
+    "options": [
+      "a = 3 e b = 3",
+      "a = 1 e b = 3",
+      "a = 2 e b = 3",
+      "a = -2 e b = 3"
+    ],
+    "answer": 2,
+    "answerText": "a = 2 e b = 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a = 2 e b = 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:25": {
+    "text": "Sendo a + b + c = 0, a³ + b³ + c³ = a⁵ + b⁵ + c⁵ e abc ≠ 0, determine o valor de a² + b² + c². 1",
+    "options": [
+      "6/5",
+      "7/5",
+      "5/5",
+      "-6/5"
+    ],
+    "answer": 0,
+    "answerText": "6/5",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 6/5.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:26": {
+    "text": "3 126) Se a é um número real tal que a + = 3. Determine o valor 3 a³ 1 de a + 3. a",
+    "options": [
+      "5779",
+      "5778",
+      "5777",
+      "-5778"
+    ],
+    "answer": 1,
+    "answerText": "5778",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 5778.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:27": {
+    "text": "Prove que, se a + b + c = 0, então a³ + b³ + c³ = 3abc. 3 13 3",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Demonstração",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 1,
+    "answerText": "Demonstração",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Demonstração.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "73:28": {
+    "text": "x³ = 13 x + 3 y²⁸) Sejam x e y números reais com x ≠± y e { 3. y = 13 y + 3 x² Determine ( x² - y² ). 2 2",
+    "options": [
+      "133",
+      "134",
+      "132",
+      "-133"
+    ],
+    "answer": 0,
+    "answerText": "133",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 133.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:1": {
+    "text": "3 y + 5 z¹) Simplificando a expressão obtemos? 6 y + 10 z a⁴ + a²",
+    "options": [
+      "2/2",
+      "1/2",
+      "0/2",
+      "-1/2"
+    ],
+    "answer": 1,
+    "answerText": "1/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:2": {
+    "text": "a + a²) Simplificando a expressão obtemos? a² + 1 k³ + k² + k + 1",
+    "options": [
+      "−1/a²",
+      "−2/a²",
+      "−0/a²",
+      "−-1/a²"
+    ],
+    "answer": 0,
+    "answerText": "−1/a²",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −1/a².",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:3": {
+    "text": "k + k + k + 1 3) Simplificando a expressão obtemos? k³ + k²",
+    "options": [
+      "−(k² + 2)/k²",
+      "−(k² + 0)/k²",
+      "−(k² + 1)/k²",
+      "−(k² + -1)/k²"
+    ],
+    "answer": 2,
+    "answerText": "−(k² + 1)/k²",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −(k² + 1)/k².",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:4": {
+    "text": "cb + b bc + c4) Simplificando a expressão ⋅ obtemos? (b + 1) 2 ( c + 1) 2",
+    "options": [
+      "−bc/((b + 2)(c + 1))",
+      "−bc/((b + 0)(c + 1))",
+      "−bc/((b + 1)(c + 1))",
+      "−bc/((b + -1)(c + 1))"
+    ],
+    "answer": 2,
+    "answerText": "−bc/((b + 1)(c + 1))",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −bc/((b + 1)(c + 1)).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:5": {
+    "text": "Se ab = 6 e a+b = 7, quanto vale a ² b + b ² a?",
+    "options": [
+      "43",
+      "41",
+      "42",
+      "-42"
+    ],
+    "answer": 2,
+    "answerText": "42",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 42.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:6": {
+    "text": "Determine a soma dos algarismos de “ a ”, onde a = 221944 2 - 2219432",
+    "options": [
+      "35",
+      "33",
+      "-34",
+      "34"
+    ],
+    "answer": 3,
+    "answerText": "34",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 34.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:7": {
+    "text": "Com quantos zeros termina o número 99 2 + 198 + 1? 2006 2 2005 2",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "-4"
+    ],
+    "answer": 0,
+    "answerText": "4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:8": {
+    "text": "2006 - 2005 8) Simplifique a expressão 4011 x² + 5 x + 6",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "answer": 2,
+    "answerText": "1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:9": {
+    "text": "x + 5 x + 6 9) Simplifique a expressão x² + 7 x + 10 x² + 2 x + 1",
+    "options": [
+      "−(x + 4)/(x + 5)",
+      "−(x + 3)/(x + 5)",
+      "−(x + 2)/(x + 5)",
+      "−(x + -3)/(x + 5)"
+    ],
+    "answer": 1,
+    "answerText": "−(x + 3)/(x + 5)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −(x + 3)/(x + 5).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:10": {
+    "text": "x + 2 x + 1 10) Simplifique a expressão x³ + 3 x² + 3 x + 1",
+    "options": [
+      "−2/(x + 1)",
+      "−0/(x + 1)",
+      "−1/(x + 1)",
+      "−-1/(x + 1)"
+    ],
+    "answer": 2,
+    "answerText": "−1/(x + 1)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −1/(x + 1).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:14": {
+    "text": "Se a, b e c são três números distintos e satisfazem as equações: a³ + pa + q = 0 calcule a + b + c. {b³ + pb + q = 0 3 c + pc + q = 0, ( x² 4 + x² y² + y⁴ ) 2 2 + x y = 9 xy ℝ *",
+    "options": [
+      "a + b + c = 0",
+      "a + b + c = 1",
+      "a + b + c = -1",
+      "a + b + c = 2"
+    ],
+    "answer": 0,
+    "answerText": "a + b + c = 0",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a + b + c = 0.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:16": {
+    "text": "Fatore ( a - b ) c³ - ( a - c ) b³ + ( b - c ) a³",
+    "options": [
+      "(a − b + c)(a − b)(a − c)(b − c)",
+      "(a + b + c)(a − b)(a − c)(b − c)",
+      "(a + b + c)(a + b)(a − c)(b − c)",
+      "O conjunto-solução é vazio."
+    ],
+    "answer": 1,
+    "answerText": "(a + b + c)(a − b)(a − c)(b − c)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (a + b + c)(a − b)(a − c)(b − c).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "89:18": {
+    "text": "Fatore ( a + 2b - 3c ) 3 + ( b + 2c - 3a ) 3 + ( c + 2 a - 3b ) 3",
+    "options": [
+      "4(a + b + c)(a − 2b + c)(a + b − 2c)",
+      "2(a + b + c)(a − 2b + c)(a + b − 2c)",
+      "3(a + b + c)(a − 2b + c)(a + b − 2c)",
+      "-3(a + b + c)(a − 2b + c)(a + b − 2c)"
+    ],
+    "answer": 2,
+    "answerText": "3(a + b + c)(a − 2b + c)(a + b − 2c)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3(a + b + c)(a − 2b + c)(a + b − 2c).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:1": {
+    "text": "32 x y z¹) Simplifique a expressão algébrica 20 xy 2 z 60a 5 b⁶ c²",
+    "options": [
+      "8x²z/5",
+      "9x²z/5",
+      "7x²z/5",
+      "-8x²z/5"
+    ],
+    "answer": 0,
+    "answerText": "8x²z/5",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 8x²z/5.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:2": {
+    "text": "60 a b c²) Simplifique a expressão algébrica 72 a 3b 2 c",
+    "options": [
+      "6a²b⁴c/6",
+      "4a²b⁴c/6",
+      "-5a²b⁴c/6",
+      "5a²b⁴c/6"
+    ],
+    "answer": 3,
+    "answerText": "5a²b⁴c/6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 5a²b⁴c/6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:3": {
+    "text": "5a + 35b + 7 bk + ak3) Simplifique a expressão algébrica 5 + k",
+    "options": [
+      "a + 8b",
+      "a + 7b",
+      "a + 6b",
+      "a + -7b"
+    ],
+    "answer": 1,
+    "answerText": "a + 7b",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a + 7b.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:4": {
+    "text": "O resultado mais simplificado possível da expressão 2 x + 2 y x + 7 y - x - y² x - 2 y",
+    "options": [
+      "4/2",
+      "2/2",
+      "3/2",
+      "-3/2"
+    ],
+    "answer": 2,
+    "answerText": "3/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:5": {
+    "text": "O resultado mais simplificado possível da expressão 4 a - 1 2 a - b - 2 a 4b - 8 a",
+    "options": [
+      "(8a − 2)/(2b − 4a)",
+      "(6a − 2)/(2b − 4a)",
+      "(-7a − 2)/(2b − 4a)",
+      "(7a − 2)/(2b − 4a)"
+    ],
+    "answer": 3,
+    "answerText": "(7a − 2)/(2b − 4a)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (7a − 2)/(2b − 4a).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:6": {
+    "text": "O resultado mais simplificado possível da expressão 3 5 x⁴ + - x + 1 x² - 1 x - 1",
+    "options": [
+      "(5x − 7)/(x² − 1)",
+      "(3x − 7)/(x² − 1)",
+      "(4x − 7)/(x² − 1)",
+      "(-4x − 7)/(x² − 1)"
+    ],
+    "answer": 2,
+    "answerText": "(4x − 7)/(x² − 1)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (4x − 7)/(x² − 1).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:7": {
+    "text": "O resultado mais simplificado possível da expressão ( x¹ )⋅ ( 3 x + 3 y ) 2 2: y - x³ y - 3 x",
+    "options": [
+      "10x",
+      "9x",
+      "8x",
+      "-9x"
+    ],
+    "answer": 1,
+    "answerText": "9x",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 9x.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:8": {
+    "text": "O resultado mais simplificado possível da expressão ⋅ ( x + y - z ) ( x² - y² - z² - 2 yz ) ( x + y + z ) ⋅ ( x² + z² - 2 xz - y² )",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "answer": 2,
+    "answerText": "1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:9": {
+    "text": "O resultado mais simplificado possível da expressão a⁴ + b⁴ - 6 a² b² a² - b² + 2 ab",
+    "options": [
+      "a² − b² − 3ab",
+      "a² − b² − 2ab",
+      "a² − b² − 1ab",
+      "a² − b² − -2ab"
+    ],
+    "answer": 1,
+    "answerText": "a² − b² − 2ab",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a² − b² − 2ab.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "106:10": {
+    "text": "Se a + b + c = 6, abc = 2 e ab + ac + bc = 11. Determine o a b cvalor de + + bc ac ab",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "-7"
+    ],
+    "answer": 1,
+    "answerText": "7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "126:1": {
+    "text": "x⁵¹) Resolva + 3 = x +, em ℕ. 8 4",
+    "options": [
+      "x = 2",
+      "x = 3",
+      "x = 1",
+      "x = -2"
+    ],
+    "answer": 0,
+    "answerText": "x = 2",
+    "steps": [
+      "A equação original é $x/8+3=x+5/4$. Multiplicando todos os termos por 8, $x+24=8x+10$.",
+      "Logo $14=7x$, portanto $x=2$, que pertence aos naturais e satisfaz $2/8+3=2+5/4=13/4$."
+    ],
+    "reviewed": true
+  },
+  "126:2": {
+    "text": "Em uma corrida de táxi, o valor da bandeirada é 4,00, ou seja, valor fixo a ser pago, além disso são pagos 2,50 por quilometro de viagem. João pegou um táxi e pagou R$ 31,50. Escreva uma equação que descreva essa situação, sendo “x” os quilômetros percorridos",
+    "options": [
+      "5 + 2,50x = 31,50; x = 11 km",
+      "3 + 2,50x = 31,50; x = 11 km",
+      "4 + 2,50x = 31,50; x = 11 km",
+      "-4 + 2,50x = 31,50; x = 11 km"
+    ],
+    "answer": 2,
+    "answerText": "4 + 2,50x = 31,50; x = 11 km",
+    "steps": [
+      "O custo é a soma da bandeirada fixa de quatro reais com $2{,}50x$ reais pelos x quilômetros. Portanto $4+2{,}50x=31{,}50$.",
+      "Subtraindo 4 e dividindo por 2,50, $x=27{,}50/2{,}50=11$ quilômetros."
+    ],
+    "reviewed": true
+  },
+  "126:3": {
+    "text": "Mariana é vendedora e recebe um salário fixo de R$ 1200,00 e uma comissão de R% 10,00 por cada venda feita. Se este mês mariana conseguiu fazer “x” vendas, escreva uma equação que descreva o salário (S) que mariana deverá receber",
+    "options": [
+      "S = 1201 + 10x",
+      "S = 1199 + 10x",
+      "S = 1200 + 10x",
+      "S = -1200 + 10x"
+    ],
+    "answer": 2,
+    "answerText": "S = 1200 + 10x",
+    "steps": [
+      "A parcela fixa do salário é 1200 reais. Cada uma das x vendas acrescenta dez reais, totalizando $10x$ em comissões.",
+      "Assim o salário em reais é $S=1200+10x$, com x inteiro não negativo."
+    ],
+    "reviewed": true
+  },
+  "126:4": {
+    "text": "A soma de um certo número com o seu dobro é 36, que número é este?",
+    "options": [
+      "13",
+      "11",
+      "12",
+      "-12"
+    ],
+    "answer": 2,
+    "answerText": "12",
+    "steps": [
+      "Se x é o número, seu dobro é $2x$. A condição fornece $x+2x=36$.",
+      "Logo $3x=36$ e $x=12$. Conferindo: $12+24=36$."
+    ],
+    "reviewed": true
+  },
+  "126:5": {
+    "text": "A soma de um certo número com o dobro de seu sucessor é 104, que número é este?",
+    "options": [
+      "35",
+      "33",
+      "34",
+      "-34"
+    ],
+    "answer": 2,
+    "answerText": "34",
+    "steps": [
+      "Se x é o número, seu sucessor é $x+1$. Assim $x+2(x+1)=104$.",
+      "Expandindo, $3x+2=104$, então $x=34$. De fato, $34+2\\cdot35=104$."
+    ],
+    "reviewed": true
+  },
+  "126:6": {
+    "text": "A razão entre as idades de João e sua filha é 7/2, se a soma das idades deles é 36 anos, qual a diferença entre suas idades?",
+    "options": [
+      "21 anos",
+      "19 anos",
+      "-20 anos",
+      "20 anos"
+    ],
+    "answer": 3,
+    "answerText": "20 anos",
+    "steps": [
+      "Escreva as idades como $7t$ e $2t$, pois sua razão é $7/2$.",
+      "A soma é $9t=36$, logo $t=4$. João tem 28 anos e a filha 8; a diferença é $28-8=20$ anos."
+    ],
+    "reviewed": true
+  },
+  "126:7": {
+    "text": "Lucas propôs o seguinte desafio “Se eu tivesse o dobro da minha idade, mais metade da minha idade, mais um quarto da minha idade, mais um ano, eu teria 100 anos. Que idade tenho?” Determine a idade de Lucas",
+    "options": [
+      "36 anos",
+      "37 anos",
+      "35 anos",
+      "-36 anos"
+    ],
+    "answer": 0,
+    "answerText": "36 anos",
+    "steps": [
+      "Se x é a idade de Lucas, a condição é $2x+x/2+x/4+1=100$.",
+      "Multiplicando por 4, $8x+2x+x+4=400$, de onde $11x=396$ e $x=36$.",
+      "Conferindo: $72+18+9+1=100$."
+    ],
+    "reviewed": true
+  },
+  "126:8": {
+    "text": "A soma de quatro número consecutivos é 50, que números são estes?",
+    "options": [
+      "11, 12, 13 e 14",
+      "12, 12, 13 e 14",
+      "10, 12, 13 e 14",
+      "-11, 12, 13 e 14"
+    ],
+    "answer": 0,
+    "answerText": "11, 12, 13 e 14",
+    "steps": [
+      "Quatro inteiros consecutivos podem ser escritos como $n,n+1,n+2,n+3$.",
+      "A soma fornece $4n+6=50$, então $n=11$. Os números são 11, 12, 13 e 14; sua soma é 50."
+    ],
+    "reviewed": true
+  },
+  "126:9": {
+    "text": "Em uma turma 2/3 dos alunos são meninas, se a diferença entre meninas e meninos é 9, então o total de alunos nesta turma é:",
+    "options": [
+      "27 alunos",
+      "28 alunos",
+      "26 alunos",
+      "-27 alunos"
+    ],
+    "answer": 0,
+    "answerText": "27 alunos",
+    "steps": [
+      "Se a turma tem N alunos, as meninas são $2N/3$ e os meninos $N/3$.",
+      "A diferença é $2N/3-N/3=N/3=9$, logo $N=27$. São dezoito meninas e nove meninos."
+    ],
+    "reviewed": true
+  },
+  "126:10": {
+    "text": "7 2 2 = 010) Sabendo que é solução da equação ( k - 4) x - ( k + 4 k + 4 ) 3, na incógnita “x”, determine o valor de “k”",
+    "options": [
+      "k = 5 no caso de primeiro grau; k = −2 também satisfaz a substituição",
+      "k = 6 no caso de primeiro grau; k = −2 também satisfaz a substituição",
+      "k = 4 no caso de primeiro grau; k = −2 também satisfaz a substituição",
+      "k = -5 no caso de primeiro grau; k = −2 também satisfaz a substituição"
+    ],
+    "answer": 0,
+    "answerText": "k = 5 no caso de primeiro grau; k = −2 também satisfaz a substituição",
+    "steps": [
+      "Substitua $x=7/3$: $(k^2-4)(7/3)-(k^2+4k+4)=0$.",
+      "Fatorando, $(k+2)[7(k-2)-3(k+2)]=0$, isto é, $4(k+2)(k-5)=0$. Portanto $k=-2$ ou $k=5$.",
+      "Para $k=-2$, o coeficiente de x e o termo constante se anulam, produzindo $0=0$. Para $k=5$, a equação é $21x-49=0$, cuja raiz é $7/3$. Assim o valor pretendido no contexto de primeiro grau é 5."
+    ],
+    "reviewed": true
+  },
+  "142:1": {
+    "text": "Jorge pretende ir de Uber para a casa da sua tia que mora a²² km de sua casa. Sabendo que o curso por quilometragem é R$ 1,40 além de um custo fixo de R$ 2,00. Quantos reais Jorge irá gastar para ir até a casa de sua tia?",
+    "options": [
+      "R$ 32,80",
+      "R$ 33,8",
+      "R$ 31,8",
+      "R$ -32,8"
+    ],
+    "answer": 0,
+    "answerText": "R$ 32,80",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos R$ 32,80.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:2": {
+    "text": "João fará uma viagem ao longo de uma rodovia linear, iniciou seu trajeto no quilômetro 42 desta rodovia, em qual quilômetro ele estará após viajar por 2 horas a uma velocidade de 60km/h?",
+    "options": [
+      "163 km",
+      "161 km",
+      "-162 km",
+      "162 km"
+    ],
+    "answer": 3,
+    "answerText": "162 km",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 162 km.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:3": {
+    "text": "Um tanque inicialmente contendo 300 litros de água será esvaziado por um ralo a uma vazão de 20 litros por minuto. O ralo ficará aberto por 12 minutos, qual será o volume final de água neste tanque?",
+    "options": [
+      "61 litros",
+      "59 litros",
+      "60 litros",
+      "-60 litros"
+    ],
+    "answer": 2,
+    "answerText": "60 litros",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 60 litros.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:4": {
+    "text": "Assinale com V ou F ( ) (3,2) pertence a reta y=x+1 ( ) A reta y=2x-5 passa por (5,5) ( ) A reta y=x/3-1 passa pela origem do plano cartesiano. ( ) As retas y= - x+6 e y=3x+2 se encontram no ponto (1,5) ( ) As reta y=3 é paralela ao eixo y",
+    "options": [
+      "F–V–F–V–F",
+      "F-V-F-V-F",
+      "V–F–V–F–V",
+      "V–F–V–F–F"
+    ],
+    "answer": 1,
+    "answerText": "F-V-F-V-F",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos F-V-F-V-F.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:5": {
+    "text": "Considere a função f(x)=0,25x-2 e assinale com V ou F: 01. ( ) f(x) é crescente 02. ( ) f(x) corta o eixo das ordenadas no semi-eixo positivo 03. ( ) f(x) corta o eixo das abcissas no semi-eixo negativo 04. ( ) -4 é raíz de f(x) 05. ( ) 0,25 é o coeficiente angular de f(x)",
+    "options": [
+      "V–F–F–F–V",
+      "F–V–V–V–F",
+      "F–F–F–V–V",
+      "V-F-F-F-V"
+    ],
+    "answer": 3,
+    "answerText": "V-F-F-F-V",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos V-F-F-F-V.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:7": {
+    "text": "Um carro parte do km 45 de uma estrada andando a 70km/h determine a função que descreve a posição do carro nesta estrada após “x” minuitos",
+    "options": [
+      "y = 46 + 7x/6",
+      "y = 45 + 7x/6",
+      "y = 44 + 7x/6",
+      "y = -45 + 7x/6"
+    ],
+    "answer": 1,
+    "answerText": "y = 45 + 7x/6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos y = 45 + 7x/6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:9": {
+    "text": "Em uma corrida de táxi paga-se R$ 25,00 por uma corrida de 10km e por uma corrida de 6 km paga-se R$ 17,00. Qual o valor da bandeirada?",
+    "options": [
+      "R$ 5,00",
+      "R$ 6",
+      "R$ 4",
+      "R$ -5"
+    ],
+    "answer": 0,
+    "answerText": "R$ 5,00",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos R$ 5,00.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:17": {
+    "text": "Oliveira e Armando colecionaram figurinhas. Oliveira disse a armando: “Dê-me 5 de suas figurinhas e ficaremos com a mesma quantidade.” Armando disse a Oliveira: “Dê-me 10 de suas figurinhas e ficarei como dobro das que você ficar”. Quantas figurinhas tem Oliveira?",
+    "options": [
+      "21",
+      "19",
+      "-20",
+      "20"
+    ],
+    "answer": 3,
+    "answerText": "20",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 20.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:22": {
+    "text": "Para cada número real $x$, seja $f(x)=\\min\\{4x+1,\\,x+2,\\,-x+6\\}$. Qual é o valor máximo de $f(x)$?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "-4"
+    ],
+    "answer": 2,
+    "answerText": "4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:23": {
+    "text": "Indique o comprimento do intervalo das soluções da desigualdade 0 ≤ 2x − 7 ≤ 70",
+    "options": [
+      "35",
+      "36",
+      "34",
+      "-35"
+    ],
+    "answer": 0,
+    "answerText": "35",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 35.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "142:28": {
+    "text": "Seja f uma função definida nos inteiros positivos satisfazendo: f(1) = 1 f(2n) = 2.f(n) + 1 f(f(n)) = 4n + 3 Calcule f(1990)",
+    "options": [
+      "3980",
+      "3978",
+      "3979",
+      "-3979"
+    ],
+    "answer": 2,
+    "answerText": "3979",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3979.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "164:1": {
+    "text": "Em um torneio há times de 5 meninas e times de 4 meninos e um total de 71 crianças. Escreva uma equação diofantina que descreva essa situação",
+    "options": [
+      "6x + 4y = 71, com x e y inteiros não negativos",
+      "4x + 4y = 71, com x e y inteiros não negativos",
+      "5x + 4y = 71, com x e y inteiros não negativos",
+      "-5x + 4y = 71, com x e y inteiros não negativos"
+    ],
+    "answer": 2,
+    "answerText": "5x + 4y = 71, com x e y inteiros não negativos",
+    "steps": [
+      "Seja x o número de times de meninas e y o número de times de meninos. Os grupos contam $5x$ meninas e $4y$ meninos.",
+      "Logo $5x+4y=71$, com $x,y\\in\\mathbb Z_{\\ge0}$. Se forem exigidos times dos dois tipos, acrescentamos $x,y>0$."
+    ],
+    "reviewed": true
+  },
+  "164:2": {
+    "text": "Um feirante vende dúzias de bananas e lotes de 4 mangas, certo dia ele vendeu no total 64 frutas. Escreva uma equação diofantina que descreva essa situação",
+    "options": [
+      "12x + 4y = 64",
+      "13x + 4y = 64",
+      "11x + 4y = 64",
+      "-12x + 4y = 64"
+    ],
+    "answer": 0,
+    "answerText": "12x + 4y = 64",
+    "steps": [
+      "Defina x como o número de dúzias de bananas vendidas e y como o número de lotes de quatro mangas.",
+      "A contagem de frutas é $12x+4y=64$, ou equivalentemente $3x+y=16$, com x e y inteiros não negativos."
+    ],
+    "reviewed": true
+  },
+  "164:3": {
+    "text": "Verifique se (7,4) é solução da equação 5x + 2y = 34",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Não é solução",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 2,
+    "answerText": "Não é solução",
+    "steps": [
+      "Substitua $x=7$ e $y=4$ no primeiro membro: $5\\cdot7+2\\cdot4=35+8=43$.",
+      "Como $43\\ne34$, o par (7,4) não satisfaz a equação."
+    ],
+    "reviewed": true
+  },
+  "164:4": {
+    "text": "Verifique se (2,5) é solução da equação 8x - 2y = 6",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta.",
+      "É solução"
+    ],
+    "answer": 3,
+    "answerText": "É solução",
+    "steps": [
+      "Substituindo $x=2$ e $y=5$, obtemos $8\\cdot2-2\\cdot5=16-10=6$.",
+      "O resultado coincide com o segundo membro; portanto (2,5) é solução."
+    ],
+    "reviewed": true
+  },
+  "164:5": {
+    "text": "Verificar se a equação 5 x + 10 y = 134 possui soluções inteiras",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Não possui soluções inteiras",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 1,
+    "answerText": "Não possui soluções inteiras",
+    "steps": [
+      "O primeiro membro $5x+10y=5(x+2y)$ é sempre múltiplo de 5 quando x e y são inteiros.",
+      "Como 134 não é divisível por 5, a igualdade é impossível. Equivalentemente, $\\gcd(5,10)=5$ não divide 134."
+    ],
+    "reviewed": true
+  },
+  "164:6": {
+    "text": "Verificar se a equação 2 x + 3 y = 17 possui soluções inteiras",
+    "options": [
+      "Possui soluções inteiras",
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 0,
+    "answerText": "Possui soluções inteiras",
+    "steps": [
+      "O máximo divisor comum dos coeficientes é $\\gcd(2,3)=1$, que divide 17, satisfazendo o critério de existência.",
+      "Por exemplo, $(x,y)=(7,1)$ verifica $2\\cdot7+3\\cdot1=17$. Todas as soluções são $x=7+3t$, $y=1-2t$, com $t\\in\\mathbb Z$."
+    ],
+    "reviewed": true
+  },
+  "164:7": {
+    "text": "Determine todas as soluções inteiras da equação 2x + 3y = 5",
+    "options": [
+      "x = 1 + 3t; y = 1 − 2t, t inteiro",
+      "x = 2 + 3t; y = 1 − 2t, t inteiro",
+      "x = 0 + 3t; y = 1 − 2t, t inteiro",
+      "x = -1 + 3t; y = 1 − 2t, t inteiro"
+    ],
+    "answer": 0,
+    "answerText": "x = 1 + 3t; y = 1 − 2t, t inteiro",
+    "steps": [
+      "O par (1,1) satisfaz $2x+3y=5$. Subtraindo essa identidade da equação geral, $2(x-1)=-3(y-1)$.",
+      "Como 2 e 3 são coprimos, $x-1$ deve ser múltiplo de 3. Escreva $x=1+3t$; segue $y=1-2t$.",
+      "Todo inteiro t produz uma solução, pois $2(1+3t)+3(1-2t)=5$. Isso também mostra que a parametrização não perde soluções."
+    ],
+    "reviewed": true
+  },
+  "164:8": {
+    "text": "Determine todas as soluções inteiras da equação 56x + 72y = 40",
+    "options": [
+      "x = 3 + 9t; y = −1 − 7t, t inteiro",
+      "x = 1 + 9t; y = −1 − 7t, t inteiro",
+      "x = 2 + 9t; y = −1 − 7t, t inteiro",
+      "x = -2 + 9t; y = −1 − 7t, t inteiro"
+    ],
+    "answer": 2,
+    "answerText": "x = 2 + 9t; y = −1 − 7t, t inteiro",
+    "steps": [
+      "Divida a equação por 8: $7x+9y=5$. Uma solução particular é $(2,-1)$, pois $14-9=5$.",
+      "Subtraindo a solução particular, $7(x-2)=-9(y+1)$. Como 7 e 9 são coprimos, $x-2=9t$ e $y+1=-7t$.",
+      "Logo $x=2+9t$, $y=-1-7t$, para todo $t\\in\\mathbb Z$. Substituir confirma a equação original."
+    ],
+    "reviewed": true
+  },
+  "164:9": {
+    "text": "Determine todas as soluções inteiras da equação 48x + 7y = 5",
+    "options": [
+      "x = 3 + 7t; y = −13 − 48t, t inteiro",
+      "x = 1 + 7t; y = −13 − 48t, t inteiro",
+      "x = -2 + 7t; y = −13 − 48t, t inteiro",
+      "x = 2 + 7t; y = −13 − 48t, t inteiro"
+    ],
+    "answer": 3,
+    "answerText": "x = 2 + 7t; y = −13 − 48t, t inteiro",
+    "steps": [
+      "Reduzindo $48x+7y=5$ módulo 7, temos $6x\\equiv5\\pmod7$, portanto $x\\equiv2\\pmod7$.",
+      "Escreva $x=2+7t$. Substituindo, $96+336t+7y=5$, de onde $y=-13-48t$.",
+      "Assim todas as soluções são $(2+7t,-13-48t)$, com t inteiro; a substituição dá sempre 5."
+    ],
+    "reviewed": true
+  },
+  "164:10": {
+    "text": "Determine todas as soluções inteiras da equação 5x + 3y = 7",
+    "options": [
+      "x = 3 + 3t; y = −1 − 5t, t inteiro",
+      "x = 1 + 3t; y = −1 − 5t, t inteiro",
+      "x = 2 + 3t; y = −1 − 5t, t inteiro",
+      "x = -2 + 3t; y = −1 − 5t, t inteiro"
+    ],
+    "answer": 2,
+    "answerText": "x = 2 + 3t; y = −1 − 5t, t inteiro",
+    "steps": [
+      "Módulo 3, a equação fornece $2x\\equiv1$, isto é, $x\\equiv2\\pmod3$.",
+      "Ponha $x=2+3t$. Então $5(2+3t)+3y=7$, logo $y=-1-5t$.",
+      "Todo t inteiro serve, e a congruência garante que não há soluções fora dessa família."
+    ],
+    "reviewed": true
+  },
+  "164:11": {
+    "text": "Decomponha o número 100 em duas parcelas positivas tais que uma é múltiplo de 7 e a outra de 11. (Problema do matemático Leonard Euler / 1707 − 1783)",
+    "options": [
+      "57 e 44",
+      "55 e 44",
+      "-56 e 44",
+      "56 e 44"
+    ],
+    "answer": 3,
+    "answerText": "56 e 44",
+    "steps": [
+      "As parcelas são $7a$ e $11b$, com a e b inteiros positivos. Então $7a+11b=100$.",
+      "Módulo 7, $4b\\equiv2$, logo $b=4+7t$; substituindo, $a=8-11t$.",
+      "A positividade de a e b obriga $t=0$. Portanto as parcelas são $7\\cdot8=56$ e $11\\cdot4=44$, cuja soma é 100."
+    ],
+    "reviewed": true
+  },
+  "164:12": {
+    "text": "O valor da entrada de um cinema é R$ 8,00 por adulto e R$5,00 por criança. Qual é o menor número de pessoas que pode assistir a uma sessão de maneira que a bilheteria seja de R$ 500,00? (A capacidade desse cinema é suficiente para esse número de pessoas)",
+    "options": [
+      "65 pessoas: 60 adultos e 4 crianças",
+      "63 pessoas: 60 adultos e 4 crianças",
+      "-64 pessoas: 60 adultos e 4 crianças",
+      "64 pessoas: 60 adultos e 4 crianças"
+    ],
+    "answer": 3,
+    "answerText": "64 pessoas: 60 adultos e 4 crianças",
+    "steps": [
+      "Se N é o total de pessoas, a arrecadação é no máximo $8N$. Para obter 500 reais, $N\\ge\\lceil500/8\\rceil=63$.",
+      "Com 63 pessoas e a adultos, a receita seria $8a+5(63-a)=315+3a$. Igualar a 500 daria $a=185/3$, não inteiro; 63 pessoas não servem.",
+      "Com 64 pessoas, $8a+5(64-a)=500$ dá $3a=180$, logo $a=60$ e há quatro crianças. A receita $60\\cdot8+4\\cdot5=500$ confirma que 64 é o mínimo."
+    ],
+    "reviewed": true
+  },
+  "164:13": {
+    "text": "Ao entrar num bosque, alguns viajantes avistam 37 montes de maçã. Após serem retiradas 17 frutas, o restante foi dividido igualmente entre 79 pessoas. Qual a parte de cada pessoa? (Problema de Mahaviracarya, matemático hindu)",
+    "options": [
+      "Mínimo de 5 maçãs por pessoa; em geral 4 + 37t",
+      "Mínimo de 4 maçãs por pessoa; em geral 4 + 37t",
+      "Mínimo de 3 maçãs por pessoa; em geral 4 + 37t",
+      "Mínimo de -4 maçãs por pessoa; em geral 4 + 37t"
+    ],
+    "answer": 1,
+    "answerText": "Mínimo de 4 maçãs por pessoa; em geral 4 + 37t",
+    "steps": [
+      "Se cada monte tem n maçãs e cada pessoa recebe a maçãs, então $37n-17=79a$.",
+      "Módulo 37, $5a+17\\equiv0$, isto é, $5a\\equiv20$. Portanto $a\\equiv4\\pmod{37}$.",
+      "Escreva $a=4+37t$. Substituindo, $n=9+79t$. Para a e n positivos, $t\\ge0$.",
+      "A menor possibilidade é $t=0$: nove maçãs por monte, $37\\cdot9-17=316=79\\cdot4$, dando quatro maçãs por pessoa. Sem a condição de mínimo, também servem 41, 78 e assim por diante."
+    ],
+    "reviewed": true
+  },
+  "164:17": {
+    "text": "Marta foi a uma papelaria e comprou lápis, canetas e cadernos, num total de 25 unidades. Sabendo-se que foram gastos R$21,80 e que o preço unitário do lápis, da caneta e do caderno é igual a R$0,30, R$0,40 e R$2,00, respectivamente, encontre quantas canetas Marta comprou",
+    "options": [
+      "8 canetas",
+      "7 canetas",
+      "6 canetas",
+      "-7 canetas"
+    ],
+    "answer": 1,
+    "answerText": "7 canetas",
+    "steps": [
+      "Sejam l lápis, p canetas e c cadernos. Temos $l+p+c=25$. Multiplicando os preços por 10, a equação do custo é $3l+4p+20c=218$.",
+      "Subtraindo três vezes a primeira equação, $p+17c=143$. Logo $p=143-17c$ e $l=25-p-c=16c-118$.",
+      "Como l e p não podem ser negativos, $c\\ge8$ e $c\\le8$. Portanto $c=8$, $p=7$, $l=10$.",
+      "A compra custa $10\\cdot0{,}30+7\\cdot0{,}40+8\\cdot2=21{,}80$ reais. Foram sete canetas."
+    ],
+    "reviewed": true
+  },
+  "164:18": {
+    "text": "Maria comprou, para uma festa de crianças, bonecas, bolas e carrinhos num total de 20 unidades. Sabendo-se que o preço unitário da boneca, da bola e do carrinho valem, respectivamente R$2,00, R$3,00 e R$1,50, qual a quantidade máxima possível de carrinhos comprados sabendo que Marta gastou R$40,00?",
+    "options": [
+      "13 carrinhos",
+      "11 carrinhos",
+      "12 carrinhos",
+      "-12 carrinhos"
+    ],
+    "answer": 2,
+    "answerText": "12 carrinhos",
+    "steps": [
+      "Sejam d bonecas, b bolas e c carrinhos. Então $d+b+c=20$ e, multiplicando os preços por 2, $4d+6b+3c=80$.",
+      "Subtraindo três vezes a contagem, $d+3b=20$, logo $d=20-3b$ e $c=20-d-b=2b$.",
+      "A não negatividade de d exige $b\\le6$. O máximo de c ocorre em $b=6$, dando $d=2$ e $c=12$.",
+      "Conferindo, há vinte brinquedos e o custo é $2\\cdot2+6\\cdot3+12\\cdot1{,}50=40$ reais. Assim o máximo é doze carrinhos."
+    ],
+    "reviewed": true
+  },
+  "164:19": {
+    "text": "2 x + 3 y + z = 18 19) Resolvendo-se o sistema { e sabendo-se que os 7 x + 2 y = 20 valores das variáveis são inteiras e positivas, ache o maior valor para z",
+    "options": [
+      "z = 6",
+      "z = 5",
+      "z = 4",
+      "z = -5"
+    ],
+    "answer": 1,
+    "answerText": "z = 5",
+    "steps": [
+      "Da segunda equação, $7x+2y=20$. Pela paridade, x deve ser par. Como x e y são positivos, $7x\\le18$, logo o único x par positivo possível é 2.",
+      "Então $y=(20-14)/2=3$. Pela primeira equação, $z=18-2\\cdot2-3\\cdot3=5$.",
+      "Há apenas essa solução positiva, portanto 5 também é o maior valor possível de z."
+    ],
+    "reviewed": true
+  },
+  "164:20": {
+    "text": "x + 2 y + 3 z = 16 20) No sistema {, de variáveis inteiras e positivas, 2 x - z = 0 encontre o maior valor para a variável z",
+    "options": [
+      "z = 5",
+      "z = 3",
+      "z = -4",
+      "z = 4"
+    ],
+    "answer": 3,
+    "answerText": "z = 4",
+    "steps": [
+      "Da segunda equação, $z=2x$. Substituindo na primeira: $x+2y+3(2x)=16$, ou seja, $7x+2y=16$.",
+      "Pela paridade, x é par. A positividade de y exige $7x\\le14$, então o único x par positivo é 2.",
+      "Segue $y=1$ e $z=4$. A solução é única, portanto o máximo de z é 4."
+    ],
+    "reviewed": true
+  },
+  "164:21": {
+    "text": "De quantos modos podemos pagar uma conta de R$ 160,00 utilizando notas de R$ 10,00 e de R$ 20,00?",
+    "options": [
+      "10 modos",
+      "9 modos",
+      "8 modos",
+      "-9 modos"
+    ],
+    "answer": 1,
+    "answerText": "9 modos",
+    "steps": [
+      "Se x é a quantidade de notas de dez e y a quantidade de notas de vinte, $10x+20y=160$, ou $x+2y=16$.",
+      "Para inteiros não negativos, y pode ser $0,1,2,\\ldots,8$. Cada valor determina exatamente $x=16-2y$.",
+      "Há nove pares de quantidades. A ordem em que as notas são entregues não cria um pagamento diferente."
+    ],
+    "reviewed": true
+  },
+  "164:22": {
+    "text": "Encontre o total de soluções inteiras e positivas que satisfazem a equação 6 x + 7 y = 2002",
+    "options": [
+      "48 soluções",
+      "46 soluções",
+      "47 soluções",
+      "-47 soluções"
+    ],
+    "answer": 2,
+    "answerText": "47 soluções",
+    "steps": [
+      "Módulo 6, $6x+7y=2002$ implica $y\\equiv4\\pmod6$. Escreva $y=4+6t$.",
+      "Substituindo, $x=(2002-7(4+6t))/6=329-7t$.",
+      "As condições $y>0$ e $x>0$ impõem $0\\le t\\le46$. Existem $46-0+1=47$ soluções."
+    ],
+    "reviewed": true
+  },
+  "164:23": {
+    "text": "Quantas soluções inteiras e positivas satisfazem a equação 3 x + 6 y = 142?",
+    "options": [
+      "Nenhuma solução",
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 0,
+    "answerText": "Nenhuma solução",
+    "steps": [
+      "O primeiro membro $3x+6y=3(x+2y)$ é divisível por 3 para quaisquer x e y inteiros.",
+      "Como $142\\equiv1\\pmod3$, não existem soluções inteiras e, em particular, nenhuma solução inteira positiva."
+    ],
+    "reviewed": true
+  },
+  "164:24": {
+    "text": "Determinar o menor inteiro positivo que dividido por 8 e por 15 deixa os restos 6 e¹³, respectivamente",
+    "options": [
+      "119",
+      "117",
+      "-118",
+      "118"
+    ],
+    "answer": 3,
+    "answerText": "118",
+    "steps": [
+      "As condições são $n\\equiv6\\pmod8$ e $n\\equiv13\\pmod{15}$. Em ambas, n está duas unidades abaixo de um múltiplo do divisor.",
+      "Logo $n+2$ é múltiplo de 8 e de 15. Como são coprimos, $n+2=120k$.",
+      "O menor n positivo corresponde a $k=1$: $n=118$. De fato, $118=14\\cdot8+6=7\\cdot15+13$."
+    ],
+    "reviewed": true
+  },
+  "164:25": {
+    "text": "Determinar as duas menores frações positivas que tenham 13 e¹⁷ para denominadores e cuja soma seja igual a³⁰⁵/221",
+    "options": [
+      "9/13 e 13/17",
+      "8/13 e 13/17",
+      "7/13 e 13/17",
+      "-8/13 e 13/17"
+    ],
+    "answer": 1,
+    "answerText": "8/13 e 13/17",
+    "steps": [
+      "Escreva as frações como $a/13$ e $b/17$, com numeradores inteiros positivos. Como $221=13\\cdot17$, a soma exigida equivale a $17a+13b=305$.",
+      "Módulo 13, $4a\\equiv6$, portanto $a=8+13t$. Substituindo, $b=13-17t$.",
+      "A positividade dos dois numeradores exige $t=0$. Assim as frações são $8/13$ e $13/17$.",
+      "A soma é $(8\\cdot17+13\\cdot13)/221=(136+169)/221=305/221$."
+    ],
+    "reviewed": true
+  },
+  "164:26": {
+    "text": "Encontre a solução inteira e positiva da equação 6 x + 4 y = 138, onde a soma \" x + y\" é máxima",
+    "options": [
+      "x = 2, y = 33; soma máxima 34",
+      "x = 0, y = 33; soma máxima 34",
+      "x = 1, y = 33; soma máxima 34",
+      "x = -1, y = 33; soma máxima 34"
+    ],
+    "answer": 2,
+    "answerText": "x = 1, y = 33; soma máxima 34",
+    "steps": [
+      "Dividindo por 2, a equação é $3x+2y=69$. A paridade exige x ímpar e positivo.",
+      "Isolando y, a soma é $x+y=x+(69-3x)/2=(69-x)/2$, que diminui quando x aumenta.",
+      "O menor x positivo admissível é 1, dando $y=33$ e soma 34. A conferência $6\\cdot1+4\\cdot33=138$ confirma a solução."
+    ],
+    "reviewed": true
+  },
+  "164:27": {
+    "text": "Um fazendeiro deseja comprar filhotes de pato e de galinha, gastando um total de R$ 1.770,00.Um filhote de pato custa R$ 31,00 e um de galinha custa R$ 21,00. Quantos filhotes de pato e de galinha o fazendeiro comprou?",
+    "options": [
+      "(10 patos, 71 galinhas), (30, 40) ou (51, 9)",
+      "(9 patos, 71 galinhas), (30, 40) ou (51, 9)",
+      "(8 patos, 71 galinhas), (30, 40) ou (51, 9)",
+      "(-9 patos, 71 galinhas), (30, 40) ou (51, 9)"
+    ],
+    "answer": 1,
+    "answerText": "(9 patos, 71 galinhas), (30, 40) ou (51, 9)",
+    "steps": [
+      "Sejam p patos e g galinhas. A equação do custo é $31p+21g=1770$.",
+      "Módulo 21, $10p\\equiv6$. Como o inverso de 10 é 19, $p\\equiv9\\pmod{21}$. Logo $p=9+21t$ e $g=71-31t$.",
+      "Com p e g positivos, $t=0,1,2$. Os pares são $(9,71)$, $(30,40)$ e $(51,9)$.",
+      "Todos custam 1770 reais: $279+1491$, $930+840$ e $1581+189$. Sem uma informação adicional, não é possível escolher apenas um deles."
+    ],
+    "reviewed": true
+  },
+  "164:28": {
+    "text": "Uma caixa contém besouros e aranhas. Sabendo que existem 46 patas na caixa, quantas são dos besouros?",
+    "options": [
+      "6 ou 30 patas de besouros",
+      "7 ou 30 patas de besouros",
+      "5 ou 30 patas de besouros",
+      "-6 ou 30 patas de besouros"
+    ],
+    "answer": 0,
+    "answerText": "6 ou 30 patas de besouros",
+    "steps": [
+      "Cada besouro tem seis patas e cada aranha tem oito. Com b besouros e a aranhas, $6b+8a=46$, isto é, $3b+4a=23$.",
+      "Módulo 4, $3b\\equiv3$, então $b=1+4t$; substituindo, $a=5-3t$.",
+      "As quantidades não negativas permitem somente $t=0$ e $t=1$. Portanto há um besouro e cinco aranhas, ou cinco besouros e duas aranhas.",
+      "Os besouros respondem por $6\\cdot1=6$ ou $6\\cdot5=30$ patas. Em ambos os casos, o total é 46."
+    ],
+    "reviewed": true
+  },
+  "164:29": {
+    "text": "Um grupo de pessoas gastou 1000 dólares num hotel. Sabendo-se que apenas alguns dos homens estavam acompanhados pelas esposas e que cada homem gastou 19 dólares e cada mulher gastou 13 dólares, pede-se determinar quantas mulheres e quantos homens estavam no hotel?",
+    "options": [
+      "42 homens e 17 mulheres",
+      "41 homens e 17 mulheres",
+      "40 homens e 17 mulheres",
+      "-41 homens e 17 mulheres"
+    ],
+    "answer": 1,
+    "answerText": "41 homens e 17 mulheres",
+    "steps": [
+      "Sejam h homens e m mulheres. Temos $19h+13m=1000$. Como as mulheres são esposas de parte dos homens, $0<m\\le h$.",
+      "Módulo 13, $6h\\equiv12$, de onde $h=2+13t$. Substituindo, $m=74-19t$.",
+      "A positividade de m exige $t\\le3$. A condição $m\\le h$ fornece $74-19t\\le2+13t$, isto é, $t\\ge3$. Logo $t=3$.",
+      "Portanto $h=41$ e $m=17$. A despesa é $41\\cdot19+17\\cdot13=779+221=1000$ dólares."
+    ],
+    "reviewed": true
+  },
+  "164:30": {
+    "text": "Numa criação de coelhos e galinhas contaram-se 40 pés. Quantas são as galinhas e quantos são os coelhos, sabendo que há mais galinhas do que coelhos e que a diferença entre esses dois números é um múltiplo de 7?",
+    "options": [
+      "16 galinhas e 2 coelhos",
+      "17 galinhas e 2 coelhos",
+      "15 galinhas e 2 coelhos",
+      "-16 galinhas e 2 coelhos"
+    ],
+    "answer": 0,
+    "answerText": "16 galinhas e 2 coelhos",
+    "steps": [
+      "Sejam g galinhas e c coelhos. A contagem de pés dá $2g+4c=40$, ou $g+2c=20$.",
+      "Como a diferença é positiva e múltipla de 7, escreva $g-c=7k$ com k inteiro positivo. Substituindo $g=20-2c$, temos $20-3c=7k$.",
+      "Módulo 3, $k\\equiv2\\pmod3$. Como $g-c\\le20$, $k\\le2$, logo $k=2$.",
+      "Assim $20-3c=14$, de onde $c=2$ e $g=16$. A conferência é $16\\cdot2+2\\cdot4=40$ e $16-2=14$, múltiplo de 7.",
+      "Portanto a composição correta é 16 galinhas e 2 coelhos."
+    ],
+    "reviewed": true
+  },
+  "176:1": {
+    "text": "x + y = 70 1) Resolva o sistema {- x y = 28",
+    "options": [
+      "S = {(50, 21)}",
+      "S = {(48, 21)}",
+      "S = {(49, 21)}",
+      "S = {(-49, 21)}"
+    ],
+    "answer": 2,
+    "answerText": "S = {(49, 21)}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(49, 21)}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:2": {
+    "text": "3 x - 2 y = 11 2) Resolva o sistema {- x + 5 y = 5",
+    "options": [
+      "S = {(5, 2)}",
+      "S = {(6, 2)}",
+      "S = {(4, 2)}",
+      "S = {(-5, 2)}"
+    ],
+    "answer": 0,
+    "answerText": "S = {(5, 2)}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(5, 2)}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:3": {
+    "text": "13 x - 92 y = 237 3) Resolva o sistema { 12 x - 91 y = 237",
+    "options": [
+      "S = {(−273/79, −273/79)}",
+      "S = {(−274/79, −273/79)}",
+      "S = {(−272/79, −273/79)}",
+      "S = {(−-273/79, −273/79)}"
+    ],
+    "answer": 0,
+    "answerText": "S = {(−273/79, −273/79)}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(−273/79, −273/79)}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:4": {
+    "text": "x + 2 y = 134) Resolva o sistema { x + y = 8 3 x + 9 y = 21",
+    "options": [
+      "S = {(10, 25)}",
+      "S = {(8, 25)}",
+      "S = {(9, 25)}",
+      "S = {(-9, 25)}"
+    ],
+    "answer": 2,
+    "answerText": "S = {(9, 25)}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(9, 25)}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:5": {
+    "text": "x + 9 y = 215) Resolva o sistema { 10 3 x - y = 28",
+    "options": [
+      "S = {(27, 4)}",
+      "S = {(28, 4)}",
+      "S = {(26, 4)}",
+      "S = {(-27, 4)}"
+    ],
+    "answer": 0,
+    "answerText": "S = {(27, 4)}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(27, 4)}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:6": {
+    "text": "Felipe e seu irmão juntaram dinheiro para adquirir um computador. Felipe conseguiu juntar o dobro da quantia de seu irmão. Além disso, a diferença entre as economias de ambos é R$350,00. Quanto cada um conseguiu guardar?",
+    "options": [
+      "Felipe R$ 700,00 e seu irmão R$ 350,00",
+      "Felipe R$ 701 e seu irmão R$ 350,00",
+      "Felipe R$ 699 e seu irmão R$ 350,00",
+      "Felipe R$ -700 e seu irmão R$ 350,00"
+    ],
+    "answer": 0,
+    "answerText": "Felipe R$ 700,00 e seu irmão R$ 350,00",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Felipe R$ 700,00 e seu irmão R$ 350,00.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:7": {
+    "text": "Um estacionamento possui 47 veículos, entre carros e motos, num total de 164 rodas. Quantos são os carros e quantas são as motos?",
+    "options": [
+      "36 carros e 12 motos",
+      "34 carros e 12 motos",
+      "35 carros e 12 motos",
+      "-35 carros e 12 motos"
+    ],
+    "answer": 2,
+    "answerText": "35 carros e 12 motos",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 35 carros e 12 motos.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:8": {
+    "text": "Ana possui gatos e cachorros, sabe-se que: A soma do dobro do número de cachorros e do triplo do número de gatos é igual a¹⁷. E que há um cachorro à mais que gatos. Quantos cachorros e quantos gatos Ana possui?",
+    "options": [
+      "5 cachorros e 3 gatos",
+      "3 cachorros e 3 gatos",
+      "4 cachorros e 3 gatos",
+      "-4 cachorros e 3 gatos"
+    ],
+    "answer": 2,
+    "answerText": "4 cachorros e 3 gatos",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4 cachorros e 3 gatos.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:9": {
+    "text": "Laura pensou em dois números e propôs o seguinte desafio aos seus amigos: “A soma dos números que pensei é 20, e a diferença entre um deles e o triplo do outro é -12” Que números Laura pensou?",
+    "options": [
+      "Os números são 9 e 12.",
+      "Os números são 8 e 12.",
+      "Os números são 7 e 12.",
+      "Os números são -8 e 12."
+    ],
+    "answer": 1,
+    "answerText": "Os números são 8 e 12.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Os números são 8 e 12..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "176:10": {
+    "text": "Saulo pensou em dois números “a” e “b”, sabe-se que: O dobro do antecessor de “a” somado ao triplo de “b” é 63 e que “a” mais onze é igual ao triplo do sucessor de “b”. Que números Saulo pensou?",
+    "options": [
+      "a = 20/9 e b = 9",
+      "a = 18/9 e b = 9",
+      "a = -19/9 e b = 9",
+      "a = 19/9 e b = 9"
+    ],
+    "answer": 3,
+    "answerText": "a = 19/9 e b = 9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a = 19/9 e b = 9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:4": {
+    "text": "Sobre os números a = 210 e b = 310 é correto afirmar que a² + b² > 2 21? Justifique",
+    "options": [
+      "A afirmação é falsa.",
+      "A afirmação é verdadeira apenas para números inteiros.",
+      "Não é possível decidir com os dados fornecidos.",
+      "A afirmação é verdadeira."
+    ],
+    "answer": 3,
+    "answerText": "A afirmação é verdadeira.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A afirmação é verdadeira..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:5": {
+    "text": "Para quais valores de x é verdadeira a desigualdade 1 + x > 2 x",
+    "options": [
+      "{1} + - ℝ",
+      "{2} + - ℝ",
+      "{0} + - ℝ",
+      "{-1} + - ℝ"
+    ],
+    "answer": 0,
+    "answerText": "{1} + - ℝ",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos {1} + - ℝ.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:6": {
+    "text": "3 < 27.212.7 5.113? Justifique.6) É correto afirmar que ( 2 12 + 7 5 + 113 )",
+    "options": [
+      "A afirmação é verdadeira apenas para números inteiros.",
+      "A afirmação é falsa.",
+      "Não é possível decidir com os dados fornecidos.",
+      "Não é possível determinar."
+    ],
+    "answer": 1,
+    "answerText": "A afirmação é falsa.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A afirmação é falsa..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:8": {
+    "text": "60 40 208) Qual é o maior dentre os números 2, 3 e⁵?",
+    "options": [
+      "21^(1/2) < 60^(1/3) < 40^(1/2)",
+      "20^(1/2) < 60^(1/3) < 40^(1/2)",
+      "19^(1/2) < 60^(1/3) < 40^(1/2)",
+      "-20^(1/2) < 60^(1/3) < 40^(1/2)"
+    ],
+    "answer": 1,
+    "answerText": "20^(1/2) < 60^(1/3) < 40^(1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 20^(1/2) < 60^(1/3) < 40^(1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:11": {
+    "text": "Prove que se a, b, c e d são inteiros positivos, então ( 1 1 1 1 )( a + b + c + d ) + + + ≥ 16. a b c d⁴ 9",
+    "options": [
+      "81 < a < 86",
+      "79 < a < 86",
+      "-80 < a < 86",
+      "80 < a < 86"
+    ],
+    "answer": 3,
+    "answerText": "80 < a < 86",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 80 < a < 86.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:17": {
+    "text": "Qual a área máxima de um triângulo cujo perímetro é igual a 18cm?",
+    "options": [
+      "A desigualdade segue da fórmula de Heron e de p = (a+b+c)/3.",
+      "A desigualdade segue da fórmula de Heron e de p = (a+b+c)/1.",
+      "A desigualdade segue da fórmula de Heron e de p = (a+b+c)/-2.",
+      "A desigualdade segue da fórmula de Heron e de p = (a+b+c)/2."
+    ],
+    "answer": 3,
+    "answerText": "A desigualdade segue da fórmula de Heron e de p = (a+b+c)/2.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A desigualdade segue da fórmula de Heron e de p = (a+b+c)/2..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:19": {
+    "text": "Sejam a,b e c números reais positivos, prove que ( a + b )( a + c )( b + c ) ≥ 8abc x² + 2",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta.",
+      "A afirmação é verdadeira pela desigualdade entre as médias."
+    ],
+    "answer": 3,
+    "answerText": "A afirmação é verdadeira pela desigualdade entre as médias.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A afirmação é verdadeira pela desigualdade entre as médias..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:24": {
+    "text": "Se a, b, c, x, y, z são números reais positivos, prove que x a + y b + z c a x + b y + c z ≥ 9 abcxyz.( )( )",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta.",
+      "A afirmação é verdadeira pela relação entre as médias aritmética e geométrica."
+    ],
+    "answer": 3,
+    "answerText": "A afirmação é verdadeira pela relação entre as médias aritmética e geométrica.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A afirmação é verdadeira pela relação entre as médias aritmética e geométrica..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "197:29": {
+    "text": "Sendo 1a, 2a,..., na números reais positivos, prove que ( 1 1 1 ) 2.( a1 + a2 +... + an ) + +... + ≥ n a1 a2 an Dica: Aplicar a relação entre as médias aritmética e geométrica, 1 1 1 separadamente, para os números a1, a2,..., an e,,..., e, em a1 a2 an seguida, multiplique as desigualdades",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "A demonstração aplica separadamente a desigualdade entre as médias.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 1,
+    "answerText": "A demonstração aplica separadamente a desigualdade entre as médias.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A demonstração aplica separadamente a desigualdade entre as médias..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:1": {
+    "text": "x¹¹) Resolva a inequação + 2 ≤ 2 x +, em ℝ. 3 5",
+    "options": [
+      "x ≥ 27/25",
+      "x ≥ 28/25",
+      "x ≥ 26/25",
+      "x ≥ -27/25"
+    ],
+    "answer": 0,
+    "answerText": "x ≥ 27/25",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x ≥ 27/25.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:2": {
+    "text": "1 ( x ) 7 ( 2 x¹ ) 2) Resolva a inequação + 3 > +, em ℝ. 5 2 8 3 2",
+    "options": [
+      "x < 40/116",
+      "x < 38/116",
+      "x < -39/116",
+      "x < 39/116"
+    ],
+    "answer": 3,
+    "answerText": "x < 39/116",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x < 39/116.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:3": {
+    "text": "Resolva a inequação ( 2 x + 1) ⋅ ( 2 x - 1) ⋅ ( x + 2 ) > 0, em ℝ",
+    "options": [
+      "x < −2/2 ou x > 1/2",
+      "x < −1/2 ou x > 1/2",
+      "x < −0/2 ou x > 1/2",
+      "x < −-1/2 ou x > 1/2"
+    ],
+    "answer": 1,
+    "answerText": "x < −1/2 ou x > 1/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x < −1/2 ou x > 1/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:4": {
+    "text": "Resolva a inequação ( x + 1) ⋅ ( x - 1) ⋅ ( x + 2 )( x - 2 ) < 0, em ℝ",
+    "options": [
+      "−3 < x < −1 ou 1 < x < 2",
+      "−1 < x < −1 ou 1 < x < 2",
+      "−2 < x < −1 ou 1 < x < 2",
+      "−-2 < x < −1 ou 1 < x < 2"
+    ],
+    "answer": 2,
+    "answerText": "−2 < x < −1 ou 1 < x < 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −2 < x < −1 ou 1 < x < 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:5": {
+    "text": "Resolva a inequação 2 x + 4 < 3 x - 2 < x + 14, em ℕ",
+    "options": [
+      "S = {8}",
+      "S = {7}",
+      "S = {6}",
+      "S = {-7}"
+    ],
+    "answer": 1,
+    "answerText": "S = {7}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {7}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:6": {
+    "text": "Para um certo evento foram convidadas “x” pessoas, no entanto, 3/8 delas não compareceu ao evento. Sabendo que estavam presentes mais de 300 convidados, quantas pessoas foram convidadas?",
+    "options": [
+      "Foram convidadas mais de 481 pessoas",
+      "Foram convidadas mais de 480 pessoas",
+      "Foram convidadas mais de 479 pessoas",
+      "Foram convidadas mais de -480 pessoas"
+    ],
+    "answer": 1,
+    "answerText": "Foram convidadas mais de 480 pessoas",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Foram convidadas mais de 480 pessoas.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:7": {
+    "text": "Em uma pequena cidade há duas academias. Na academia A é cobrada uma taxa fixa mensal de R$ 50,00 além de R$ 5,00 por cada dia que o cliente vai a academia. Na academia B, a taxa fixa mensal é de R$ 30,00, no entanto são cobrados R$ 8,00 por dia que o cliente vai a academia. Quantos dias, no mínimo, por mês uma pessoa deve ir a academia para que a academia A seja a mais vantajosa",
+    "options": [
+      "No mínimo 7 dias.",
+      "No mínimo 8 dias.",
+      "No mínimo 6 dias.",
+      "No mínimo -7 dias."
+    ],
+    "answer": 0,
+    "answerText": "No mínimo 7 dias.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos No mínimo 7 dias..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:8": {
+    "text": "Um terreno tem perímetro de 120 m e sabe-se que um dos lados mede ao menos o dobro do outro, quanto deve medir o lado menor?",
+    "options": [
+      "O lado menor mede 20 m ou menos.",
+      "O lado menor mede 21 m ou menos.",
+      "O lado menor mede 19 m ou menos.",
+      "O lado menor mede -20 m ou menos."
+    ],
+    "answer": 0,
+    "answerText": "O lado menor mede 20 m ou menos.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos O lado menor mede 20 m ou menos..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:9": {
+    "text": "Duas fábricas de sorvetes, X e Y, têm fabricado, respectivamente, 2000 e⁹⁰⁰ potes de sorvete por mês. Se, a partir de um certo mês, a fábrica X aumentar sucessivamente a produção em 20 potes por mês e a fábrica Y aumentar sucessivamente a produção em 70 potes por mês, a produção da fábrica Y superará a produção da fábrica X após quantos meses?",
+    "options": [
+      "A partir do 24º mês.",
+      "A partir do 23º mês.",
+      "A partir do 22º mês.",
+      "A partir do -23º mês."
+    ],
+    "answer": 1,
+    "answerText": "A partir do 23º mês.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A partir do 23º mês..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "216:10": {
+    "text": "Subtraindo dois anos da idade de Maria e multiplicando a diferença por 7 obtém - se um número menor do que o sêxtuplo da sua idade aumentado de 8. A maior idade possível para Maria é:",
+    "options": [
+      "61 anos.",
+      "62 anos.",
+      "60 anos.",
+      "-61 anos."
+    ],
+    "answer": 0,
+    "answerText": "61 anos.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 61 anos..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:2": {
+    "text": "Determinar as raízes da equação x² - 10 x - 11 = 0",
+    "options": [
+      "x = −2 e x = 11",
+      "x = −0 e x = 11",
+      "x = −-1 e x = 11",
+      "x = −1 e x = 11"
+    ],
+    "answer": 3,
+    "answerText": "x = −1 e x = 11",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = −1 e x = 11.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:3": {
+    "text": "Determine o valor da soma e do produto das raízes da equação 70 x² + 210 x + 420 = 0",
+    "options": [
+      "−4/70 e 6/70",
+      "−3/70 e 6/70",
+      "−2/70 e 6/70",
+      "−-3/70 e 6/70"
+    ],
+    "answer": 1,
+    "answerText": "−3/70 e 6/70",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −3/70 e 6/70.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:4": {
+    "text": "Considere \" a \", a maior solução da equação x² + x - 1 = 0. a⁵ 2 a⁶ Determine o valor da expressão + 2 1 - a (1 - a )",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "-1"
+    ],
+    "answer": 0,
+    "answerText": "1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:5": {
+    "text": "Determine todos os possíveis valores de “b” de modo que a equação 2x + bx + b não possua raízes reais",
+    "options": [
+      "b = 1 ou b = 4/9",
+      "b = -1 ou b = 4/9",
+      "b = 2 ou b = 4/9",
+      "b = 0 ou b = 4/9"
+    ],
+    "answer": 3,
+    "answerText": "b = 0 ou b = 4/9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos b = 0 ou b = 4/9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:6": {
+    "text": "3 2 9 6) Sabendo que a + = 5, determine o valor de a + 2 a a",
+    "options": [
+      "a + 3/a = 19/2",
+      "a + 1/a = 19/2",
+      "a + -2/a = 19/2",
+      "a + 2/a = 19/2"
+    ],
+    "answer": 3,
+    "answerText": "a + 2/a = 19/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a + 2/a = 19/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:7": {
+    "text": "Determine a média aritmética (M) das raízes da equação x² - 12 x + p = 0",
+    "options": [
+      "M = 7",
+      "M = 5",
+      "M = 6",
+      "M = -6"
+    ],
+    "answer": 2,
+    "answerText": "M = 6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos M = 6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:8": {
+    "text": "Determine a média geométrica (M) das raízes da equação x² + bx + 49 = 0",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "-7"
+    ],
+    "answer": 0,
+    "answerText": "7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:9": {
+    "text": "Determine a razão entre a média aritmética e a média geométrica da equação x² - 5ax + a⁴ = 0",
+    "options": [
+      "6/2a",
+      "4/2a",
+      "-5/2a",
+      "5/2a"
+    ],
+    "answer": 3,
+    "answerText": "5/2a",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 5/2a.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:10": {
+    "text": "Determine os possíveis valores de “a” de modo que a equação ax 2 + ax + ( a + 1) = 0 possua uma única solução.",
+    "options": [
+      "a = 1 ou a = -4/3",
+      "a = -1 ou a = -4/3",
+      "a = 2 ou a = -4/3",
+      "a = 0 ou a = -4/3"
+    ],
+    "answer": 3,
+    "answerText": "a = 0 ou a = -4/3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a = 0 ou a = -4/3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:19": {
+    "text": "Sejam 1r e 2r raízes de x² - 6 x - 2 = 0, com r1 > r2. Se n n x10 - 2 x8 nx = r1 - r2, calcule m =. 2 x9",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "-3"
+    ],
+    "answer": 2,
+    "answerText": "3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:27": {
+    "text": "a, b, c, d são números reais distintos, tais que: a,b são as raízes da equação x² - 3cx - 8d = 0; c, d são as raízes da equação x² - 3ax - 8b = 0. Calcule a soma a + b + c + d. 2",
+    "options": [
+      "a + b + c = 97",
+      "a + b + c = 95",
+      "a + b + c = -96",
+      "a + b + c = 96"
+    ],
+    "answer": 3,
+    "answerText": "a + b + c = 96",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a + b + c = 96.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "231:30": {
+    "text": "Dois barcos partem num mesmo instante de lados opostos de um rio de margens paralelas. Viaja cada qual perpendicularmente às margens com velocidade constante. Supondo que um deles é mais rápido que o outro, eles se cruzam num ponto situado a⁷²⁰ metros da margem mais próxima; completada a travessia, cada barco fica parado no respectivo cais por dez minutos. Na volta eles se cruzam a⁴⁰⁰ metros da outra margem. Qual a largura do rio?",
+    "options": [
+      "1761 metros",
+      "1759 metros",
+      "-1760 metros",
+      "1760 metros"
+    ],
+    "answer": 3,
+    "answerText": "1760 metros",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1760 metros.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:1": {
+    "text": "Mariana fez aos seus amigos a seguinte charada: “A minha idade e a idade da minha irmã mais nova são as raízes da equação x ² - 11x + 60 = 0 ”. Qual é a idade de Mariana? 2",
+    "options": [
+      "13 anos",
+      "12 anos",
+      "11 anos",
+      "-12 anos"
+    ],
+    "answer": 1,
+    "answerText": "12 anos",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 12 anos.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:2": {
+    "text": "Determine o valor do coeficiente c da equação x²− 7x − 2c = 0 sabendo que -3 é raíz desta equação",
+    "options": [
+      "15",
+      "16",
+      "14",
+      "-15"
+    ],
+    "answer": 0,
+    "answerText": "15",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 15.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:3": {
+    "text": "Resolva a inequação −5x² + 20x ≥ 15, onde x∈ℝ",
+    "options": [
+      "1 ≤ x ≤ 3",
+      "2 ≤ x ≤ 3",
+      "0 ≤ x ≤ 3",
+      "-1 ≤ x ≤ 3"
+    ],
+    "answer": 0,
+    "answerText": "1 ≤ x ≤ 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1 ≤ x ≤ 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:4": {
+    "text": "Determine os valores de x para os quais: (x² + 5x − 24)(x² − 3x + 2) = (4x − 10)(x² + 5x − 24)",
+    "options": [
+      "8,4 e 3]",
+      "9,4 e 3]",
+      "7,4 e 3]",
+      "-8,4 e 3]"
+    ],
+    "answer": 0,
+    "answerText": "8,4 e 3]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 8,4 e 3].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:5": {
+    "text": "Eduardo quer construir uma piscina retangular com perímetro de 48 m e de modo que a área da piscina seja o maior possível. Qual deverá ser a área desta piscina?",
+    "options": [
+      "145 m²",
+      "143 m²",
+      "144 m²",
+      "-144 m²"
+    ],
+    "answer": 2,
+    "answerText": "144 m²",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 144 m².",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:6": {
+    "text": "O gerente de uma padaria observou que eram vendidas 20 unidades de bolo diariamente à 25,00 reais cada, mas que se fizesse um desconto de 1,00 em cada bolo venderia 4 bolos a mais por dia. Qual o preço de venda para que se possa garantir o maior lucro possível?",
+    "options": [
+      "R$ 15,00",
+      "R$ 16",
+      "R$ 14",
+      "R$ -15"
+    ],
+    "answer": 0,
+    "answerText": "R$ 15,00",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos R$ 15,00.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:7": {
+    "text": "Considere a equação x² + bx + c = 0 na qual x = 2 e x = -2 são as raízes. Determine o valor de “b+c”",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "-4"
+    ],
+    "answer": 1,
+    "answerText": "4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:8": {
+    "text": "Considere a equação ax 2 + bx + c = 0 na qual a + b = 20 e x = 5 e x = 6 são as raízes. Determine o valor de “c”",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "-6"
+    ],
+    "answer": 0,
+    "answerText": "6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:9": {
+    "text": "Considere a equação ax 2 + bx + c = 0 na qual a - b = 8 e x = 3 e x = 4 são as raízes. Determine o valor de “b”",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "-7"
+    ],
+    "answer": 0,
+    "answerText": "7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:10": {
+    "text": "Considere a equação ax 2 + bx + c = 0 na qual a ⋅ b = -54 e x = -1 e x = 7 são as raízes. Determine o valor de “b”",
+    "options": [
+      "18",
+      "19",
+      "17",
+      "-18"
+    ],
+    "answer": 0,
+    "answerText": "18",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 18.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:11": {
+    "text": "Um cão está a uma distância de 10 metros de um balão pousado no solo. Num mesmo instante em que o balão se desprende e começa a subir verticalmente em relação ao solo o cão começa a persegui-lo, sendo a velocidade do balão 1m/s e a velocidade do cão 2 m/s e ambas constantes. Determine qual a distância mínima entre o cão e o balão e em que instante essa distância mínima ocorre",
+    "options": [
+      "A distância mínima ocorrerá quando t=5,será igual a 2 5 m.",
+      "A distância mínima ocorrerá quando t=3,será igual a 2 5 m.",
+      "A distância mínima ocorrerá quando t=-4,será igual a 2 5 m.",
+      "A distância mínima ocorrerá quando t=4,será igual a 2 5 m."
+    ],
+    "answer": 3,
+    "answerText": "A distância mínima ocorrerá quando t=4,será igual a 2 5 m.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos A distância mínima ocorrerá quando t=4,será igual a 2 5 m..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:12": {
+    "text": "Determinar os valores de m de modo que, para qualquer valor de x, seja 2 x² + ( m - 9) x + m² + 3m + 4 > 0",
+    "options": [
+      "m < - 8 ou m > 1 .",
+      "m < - 6 ou m > 1 .",
+      "m < - 7 ou m > 1 .",
+      "m < - -7 ou m > 1 ."
+    ],
+    "answer": 2,
+    "answerText": "m < - 7 ou m > 1 .",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m < - 7 ou m > 1 ..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:15": {
+    "text": "p15) Determine os valores possíveis da razão, onde p e h são positivos, h de modo que p² - 2 ph - h² seja real",
+    "options": [
+      "p/h ≥ 2 + √2",
+      "p/h ≥ 0 + √2",
+      "p/h ≥ -1 + √2",
+      "p/h ≥ 1 + √2"
+    ],
+    "answer": 3,
+    "answerText": "p/h ≥ 1 + √2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos p/h ≥ 1 + √2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:16": {
+    "text": "Um quadrado e um retângulo, cujo comprimento é o triplo da largura, são construídos usando-se todo um arame de 28 cm. Determine as dimensões do quadrado e do retângulo de forma que a soma de suas áreas seja a menor possível. 2",
+    "options": [
+      "O quadrado tem lado 4 cm; o retângulo tem largura 2 cm e comprimento 6 cm.",
+      "O quadrado tem lado 3 cm; o retângulo tem largura 2 cm e comprimento 6 cm.",
+      "O quadrado tem lado 2 cm; o retângulo tem largura 2 cm e comprimento 6 cm.",
+      "O quadrado tem lado -3 cm; o retângulo tem largura 2 cm e comprimento 6 cm."
+    ],
+    "answer": 1,
+    "answerText": "O quadrado tem lado 3 cm; o retângulo tem largura 2 cm e comprimento 6 cm.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos O quadrado tem lado 3 cm; o retângulo tem largura 2 cm e comprimento 6 cm..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:22": {
+    "text": "Determine os valores de h, de modo que a desigualdade x² - hx + 1 -3 < 2 < 3 seja válida para qualquer x real. x + x + 1",
+    "options": [
+      "−5 < h < 1",
+      "−6 < h < 1",
+      "−4 < h < 1",
+      "−-5 < h < 1"
+    ],
+    "answer": 0,
+    "answerText": "−5 < h < 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −5 < h < 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:27": {
+    "text": "Determine λ no trinômio f ( x ) = x² - 4b 2 x + λ- 2 a² + b⁴ de modo que ele possa ser escrito como uma soma de dois quadrados. Resposta: λ> 2 a² + 3b 4 DICA: Escreva na forma canônica um trinômio e considere a = 1 e o discriminante negativo. Observe que será possível escrevê-lo como uma soma de dois quadrados",
+    "options": [
+      "λ > 3a² + 3b⁴",
+      "λ > 1a² + 3b⁴",
+      "λ > 2a² + 3b⁴",
+      "λ > -2a² + 3b⁴"
+    ],
+    "answer": 2,
+    "answerText": "λ > 2a² + 3b⁴",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos λ > 2a² + 3b⁴.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:29": {
+    "text": "Para quais valores de $m$ o trinômio $3x^2-4(m+1)x+m^2-1$ pode ser escrito como soma de dois quadrados?",
+    "options": [
+      "−7 ≤ m ≤ −1",
+      "−8 ≤ m ≤ −1",
+      "−6 ≤ m ≤ −1",
+      "−-7 ≤ m ≤ −1"
+    ],
+    "answer": 0,
+    "answerText": "−7 ≤ m ≤ −1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −7 ≤ m ≤ −1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "253:30": {
+    "text": "Se a é um número real positivo tal que a³ = 6 ( a + 1), o trinômio f ( x ) = x² + ax + a² + 6 possui raízes reais?",
+    "options": [
+      "A afirmação é falsa.",
+      "A afirmação é verdadeira apenas para números inteiros.",
+      "Não é possível decidir com os dados fornecidos.",
+      "Não."
+    ],
+    "answer": 3,
+    "answerText": "Não.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Não..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:1": {
+    "text": "Considere a função f ( x ) = -3 x² + 2 - x = 0 e julgue os itens a seguir. Assinale com V ou F ( ) a = 3 ( ) b = 2 ( ) c = 1 ( ) O valor de ∆ é 26 ( ) -1 é uma das raízes",
+    "options": [
+      "V–V–F–F–F",
+      "F-F-F-V-V",
+      "V–V–V–F–F",
+      "F–F–V–V–F"
+    ],
+    "answer": 1,
+    "answerText": "F-F-F-V-V",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos F-F-F-V-V.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:2": {
+    "text": "Julgue as afirmações a seguir 01. ( ) Se ∆< 0 a função possui duas raízes reais e distintas. 02. ( ) Se ∆= 0 o gráfico é tangente ao eixo das ordenadas 03. ( ) Se a > 0 o gráfico tem concavidade voltada para cima 04. ( ) Se c > 0 a função corta o eixo das abcissas no semieixo positivo 05. ( ) Um função do 2º grau sempre possui duas raízes reais",
+    "options": [
+      "F–V–V–F–F",
+      "F-F-V-V-F",
+      "V–V–F–F–V",
+      "Não é possível determinar."
+    ],
+    "answer": 1,
+    "answerText": "F-F-V-V-F",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos F-F-V-V-F.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:3": {
+    "text": "Carla quer construir uma piscina retangular em seu terreno, a região disponível para construir a piscina é um terreno retangular de dimensões 20m x 15m e ela deseja deixar uma borda de “x” metros ao redor de toda a piscina. Determine a função f(x) da área da piscina em função da largura da borda",
+    "options": [
+      "f(x)=(20-2x)(15-2x)",
+      "f(x)=(21-2x)(15-2x)",
+      "f(x)=(19-2x)(15-2x)",
+      "f(x)=(-20-2x)(15-2x)"
+    ],
+    "answer": 0,
+    "answerText": "f(x)=(20-2x)(15-2x)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos f(x)=(20-2x)(15-2x).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:4": {
+    "text": "Determine o valor do coeficiente c na função f(x) x²− 6x − c sabendo que f(2)=5",
+    "options": [
+      "c = -13",
+      "c = -12",
+      "c = -14",
+      "c = 13"
+    ],
+    "answer": 0,
+    "answerText": "c = -13",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos c = -13.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:5": {
+    "text": "Determine o valor do coeficiente b na função f(x) x² + bx +1 sabendo que f(-2)=-7",
+    "options": [
+      "b = 7",
+      "b = 5",
+      "b = 6",
+      "b = -6"
+    ],
+    "answer": 2,
+    "answerText": "b = 6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos b = 6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:7": {
+    "text": "Um foguete foi lançado de uma plataforma de lançamento e sua altura h, em metros, t segundos após o seu lançamento é dada pela função h (t ) = -t² + 20t + 300. Esse foguete deve atingir um alvo que se encontra ao nível do solo (h=0). Qual a altura máxima atingida pelo foguete?",
+    "options": [
+      "400 m",
+      "401 m",
+      "399 m",
+      "-400 m"
+    ],
+    "answer": 0,
+    "answerText": "400 m",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 400 m.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:8": {
+    "text": "Uma bola é chutada por Juninho de modo que a sua altura h, em metros é dada pela função h (t ) = -t² + 8t + 5, onde t é o tempo em segundos após o chute. Após quanto tempo a bola atinge sua altura máxima?",
+    "options": [
+      "5 segundos",
+      "3 segundos",
+      "4 segundos",
+      "-4 segundos"
+    ],
+    "answer": 2,
+    "answerText": "4 segundos",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 4 segundos.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:9": {
+    "text": "Determine os valores de “a” de modo que o ponto (a,4) pertença a função f(x)= x²-5x+8",
+    "options": [
+      "a = 1 e a = 4",
+      "a = 2 e a = 4",
+      "a = 0 e a = 4",
+      "a = -1 e a = 4"
+    ],
+    "answer": 0,
+    "answerText": "a = 1 e a = 4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a = 1 e a = 4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "272:10": {
+    "text": "Determine o valor de k de modo que o ponto (k,9) corresponda ao vértice da função f(x)=6x²+bx+15",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "-2"
+    ],
+    "answer": 0,
+    "answerText": "2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:1": {
+    "text": "Determinar as raízes reais da equação x⁴ - 10 x² - 11 = 0",
+    "options": [
+      "x = ±√12",
+      "x = ±√10",
+      "x = ±√11",
+      "x = ±√-11"
+    ],
+    "answer": 2,
+    "answerText": "x = ±√11",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = ±√11.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:2": {
+    "text": "Determine o produto das raízes positivas de x⁴ - 11x 2 + 18 = 0",
+    "options": [
+      "4 3",
+      "3 3",
+      "2 3",
+      "-3 3"
+    ],
+    "answer": 1,
+    "answerText": "3 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:3": {
+    "text": "Determinar a soma dos quadrados das raízes não negativas da equação x⁴ - 25 x² + 5 = 0",
+    "options": [
+      "25",
+      "26",
+      "24",
+      "-25"
+    ],
+    "answer": 0,
+    "answerText": "25",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 25.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:4": {
+    "text": "Determinar o produto dos quadrados das raízes não negativas da equação x⁴ - 25 x² + 5 = 0",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "-5"
+    ],
+    "answer": 1,
+    "answerText": "5",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 5.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:5": {
+    "text": "Determinar a soma dos quadrados das raízes não negativas da equação ax 4 - 11ax 2 + 7 = 0",
+    "options": [
+      "11",
+      "12",
+      "10",
+      "-11"
+    ],
+    "answer": 0,
+    "answerText": "11",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 11.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:6": {
+    "text": "Determinar o produto dos quadrados das raízes não negativas da equação bx 4 - 12 x² + 17b = 0 x² + 1",
+    "options": [
+      "18",
+      "16",
+      "17",
+      "-17"
+    ],
+    "answer": 2,
+    "answerText": "17",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 17.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:7": {
+    "text": "x + 1 2 7) Determine as soluções da equação = x - 7 2 x - 4",
+    "options": [
+      "x = ±3 ou x = ±√3",
+      "x = ±4 ou x = ±√3",
+      "x = ±2 ou x = ±√3",
+      "x = ±-3 ou x = ±√3"
+    ],
+    "answer": 0,
+    "answerText": "x = ±3 ou x = ±√3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = ±3 ou x = ±√3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:8": {
+    "text": "Determinar o valor de “k” para que a equação x⁴ + ( k - 1) x² + k + 5 = 0 admita x=0 como solução",
+    "options": [
+      "K = -4",
+      "K = -6",
+      "K = -5",
+      "K = 5"
+    ],
+    "answer": 2,
+    "answerText": "K = -5",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos K = -5.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:9": {
+    "text": "Determinar o valor de “k” sabendo que a soma dos quadrados das raízes não negativas da equação ( k + 2) x⁴ + ( k ² + 4 k + 4) x² + k² - 4 = 0 é igual à -12",
+    "options": [
+      "K = 11",
+      "K = 9",
+      "K = 10",
+      "K = -10"
+    ],
+    "answer": 2,
+    "answerText": "K = 10",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos K = 10.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:10": {
+    "text": "Determinar o valor de “k” sabendo que o produto dos quadrados das raízes não negativas da equação ( k + 2) x⁴ + ( k ² + 4 k + 4) x² + k² - 4 = 0 é igual à 5",
+    "options": [
+      "k = 8",
+      "k = 6",
+      "k = 7",
+      "k = -7"
+    ],
+    "answer": 2,
+    "answerText": "k = 7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos k = 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:11": {
+    "text": "Resolva a equação:",
+    "options": [
+      "x = 1/2 ou x = −1/2",
+      "x = 2/2 ou x = −1/2",
+      "x = 0/2 ou x = −1/2",
+      "x = -1/2 ou x = −1/2"
+    ],
+    "answer": 0,
+    "answerText": "x = 1/2 ou x = −1/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = 1/2 ou x = −1/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:12": {
+    "text": "Uma das raízes da equação x⁴ - bx 2 + 36 = 0 é 3. Calcular as outras raízes, sendo b constante",
+    "options": [
+      "b = 14; as outras raízes são −3, 2 e −2",
+      "b = 12; as outras raízes são −3, 2 e −2",
+      "b = 13; as outras raízes são −3, 2 e −2",
+      "b = -13; as outras raízes são −3, 2 e −2"
+    ],
+    "answer": 2,
+    "answerText": "b = 13; as outras raízes são −3, 2 e −2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos b = 13; as outras raízes são −3, 2 e −2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:13": {
+    "text": "Calcule a média aritmética das raízes da equação x⁴ - 5 x² + 4 = 0",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "2"
+    ],
+    "answer": 0,
+    "answerText": "0",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 0.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:14": {
+    "text": "Calcular m para que a equação x⁴ - 3 x² + m - 1 = 0 tenha duas raízes nulas",
+    "options": [
+      "m = 1",
+      "m = 2",
+      "m = 0",
+      "m = -1"
+    ],
+    "answer": 0,
+    "answerText": "m = 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m = 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:15": {
+    "text": "Qual o valor de m + p para que a equação mx 4 + ( p + 1) x² + m² + m = 0,tenha todas as suas raízes nulas?",
+    "options": [
+      "m + p = −3",
+      "m + p = −1",
+      "m + p = −2",
+      "m + p = −-2"
+    ],
+    "answer": 2,
+    "answerText": "m + p = −2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m + p = −2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:16": {
+    "text": "Qual o valor de m para que a equação x⁴ - 2 x² + m - 3 = 0, tenha duas raízes nulas e duas reais e simétricas?",
+    "options": [
+      "m = 4",
+      "m = 2",
+      "m = 3",
+      "m = -3"
+    ],
+    "answer": 2,
+    "answerText": "m = 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m = 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:17": {
+    "text": "Determine a para que a equação x⁴ + ax 2 + 4 = 0 tenha raízes reais",
+    "options": [
+      "a ≤ −5",
+      "a ≤ −3",
+      "a ≤ −4",
+      "a ≤ −-4"
+    ],
+    "answer": 2,
+    "answerText": "a ≤ −4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a ≤ −4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:20": {
+    "text": "Determine m para que a equação 2 x⁴ + 3 x² + m + 1 = 0 tenha raízes nulas e duas não reais",
+    "options": [
+      "m = −2",
+      "m = −1",
+      "m = −0",
+      "m = −-1"
+    ],
+    "answer": 1,
+    "answerText": "m = −1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m = −1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:24": {
+    "text": "Determinar p na equação 25 x⁴ - 25 x² + 4( p + 1) 2 = 0 de modo que uma das suas raízes reais e positivas seja metade da outra",
+    "options": [
+      "Os valores de p são 1 e -2",
+      "Os valores de p são -1 e -2",
+      "Os valores de p são 0 e -2",
+      "Os valores de p são 2 e -2"
+    ],
+    "answer": 2,
+    "answerText": "Os valores de p são 0 e -2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Os valores de p são 0 e -2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:25": {
+    "text": "Formar uma equação biquadrada cujas raízes reais e positivas 1 x12 + x22 x1 x1 + x2satisfaçam as relações: × - = 0 e = 2. 2 x1 x2 x2 x1 x2",
+    "options": [
+      "x⁴ − (3/7)x² + 1/7 = 0",
+      "x⁴ − (1/7)x² + 1/7 = 0",
+      "x⁴ − (-2/7)x² + 1/7 = 0",
+      "x⁴ − (2/7)x² + 1/7 = 0"
+    ],
+    "answer": 3,
+    "answerText": "x⁴ − (2/7)x² + 1/7 = 0",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x⁴ − (2/7)x² + 1/7 = 0.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "309:26": {
+    "text": "Sendo x1 e x2 as raízes positivas da equação 3 x⁴ - 6 mx 2 + 3m 2 - m + 1 = 0, determinar m de modo que x12 - x22 = 1",
+    "options": [
+      "m = 2/4",
+      "m = 0/4",
+      "m = -1/4",
+      "m = 1/4"
+    ],
+    "answer": 3,
+    "answerText": "m = 1/4",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos m = 1/4.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:1": {
+    "text": "Determine as soluções reais da equação 3 x + 1 = 5",
+    "options": [
+      "S = {9}",
+      "S = {7}",
+      "S = {8}",
+      "S = {-8}"
+    ],
+    "answer": 2,
+    "answerText": "S = {8}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {8}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:2": {
+    "text": "Determine as soluções reais da equação 2 x - 11 = 5",
+    "options": [
+      "S = {292/50}",
+      "S = {290/50}",
+      "S = {291/50}",
+      "S = {-291/50}"
+    ],
+    "answer": 2,
+    "answerText": "S = {291/50}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {291/50}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:3": {
+    "text": "Determine as soluções reais da equação 2 x² + 10 x - 2 = 2",
+    "options": [
+      "S = {(−6 ± √37)/2}",
+      "S = {(−4 ± √37)/2}",
+      "S = {(−5 ± √37)/2}",
+      "S = {(−-5 ± √37)/2}"
+    ],
+    "answer": 2,
+    "answerText": "S = {(−5 ± √37)/2}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(−5 ± √37)/2}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:4": {
+    "text": "Determine as soluções reais da equação 7 + x + 1 = 3",
+    "options": [
+      "S = {4}",
+      "S = {2}",
+      "S = {-3}",
+      "S = {3}"
+    ],
+    "answer": 3,
+    "answerText": "S = {3}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {3}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:5": {
+    "text": "Determine as soluções reais da equação x + 2 + x - 3 = 5",
+    "options": [
+      "S = {8}",
+      "S = {7}",
+      "S = {6}",
+      "S = {-7}"
+    ],
+    "answer": 1,
+    "answerText": "S = {7}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {7}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:6": {
+    "text": "Determine as soluções reais da equação 2 x + 3 - x + 1 = x - 2",
+    "options": [
+      "S = {4}",
+      "S = {2}",
+      "S = {3}",
+      "S = {-3}"
+    ],
+    "answer": 2,
+    "answerText": "S = {3}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {3}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:7": {
+    "text": "Determine as soluções reais da equação x + 1 = 2 x",
+    "options": [
+      "S = {(1 + √17)/8}",
+      "S = {(2 + √17)/8}",
+      "S = {(0 + √17)/8}",
+      "S = {(-1 + √17)/8}"
+    ],
+    "answer": 0,
+    "answerText": "S = {(1 + √17)/8}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {(1 + √17)/8}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:8": {
+    "text": "Determine as soluções reais da equação 4 x + 5 - x = 0",
+    "options": [
+      "S = {5}",
+      "S = {6}",
+      "S = {4}",
+      "S = {-5}"
+    ],
+    "answer": 0,
+    "answerText": "S = {5}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {5}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:9": {
+    "text": "Determine as soluções reais da equação x + x + 12 = 6",
+    "options": [
+      "S = {4}",
+      "S = {5}",
+      "S = {3}",
+      "S = {-4}"
+    ],
+    "answer": 0,
+    "answerText": "S = {4}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {4}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:10": {
+    "text": "Determine as soluções reais da equação x² + 2 x + 1 = x - 1",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta.",
+      "S = ∅"
+    ],
+    "answer": 3,
+    "answerText": "S = ∅",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = ∅.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:11": {
+    "text": "Determine as soluções reais de 2 - x + = 3. 2 - x + 3",
+    "options": [
+      "4",
+      "2",
+      "-3",
+      "3"
+    ],
+    "answer": 3,
+    "answerText": "3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:12": {
+    "text": "Determine a soma das raízes reais da equação 3 x + 1 + 2 9 x² + 2 x + 1 - 9 x + 1 = 2",
+    "options": [
+      "12",
+      "11",
+      "10",
+      "-11"
+    ],
+    "answer": 1,
+    "answerText": "11",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 11.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:15": {
+    "text": "Determine as raízes reais da equação 3 8 + x + 3 8 - x = 1",
+    "options": [
+      "x = ±4√21",
+      "x = ±2√21",
+      "x = ±3√21",
+      "x = ±-3√21"
+    ],
+    "answer": 2,
+    "answerText": "x = ±3√21",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = ±3√21.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:22": {
+    "text": "Determine as soluções reais de $\\sqrt[3]{x}+\\sqrt[3]{2x-3}=\\sqrt[3]{12(x-1)}$.",
+    "options": [
+      "S = {1, 3}",
+      "S = {2, 3}",
+      "S = {0, 3}",
+      "S = {-1, 3}"
+    ],
+    "answer": 0,
+    "answerText": "S = {1, 3}",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos S = {1, 3}.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "320:29": {
+    "text": "No sistema $16x-y=1$ e $\\sqrt{x+2}-\\sqrt{4y+3}=1$, qual é o valor de $x$?",
+    "options": [
+      "x = 16 + 6√2",
+      "x = 14 + 6√2",
+      "x = 15 + 6√2",
+      "x = -15 + 6√2"
+    ],
+    "answer": 2,
+    "answerText": "x = 15 + 6√2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = 15 + 6√2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:1": {
+    "text": "Determine as soluções reais da equação 3 x + 1 ≥ 3 x + 1",
+    "options": [
+      "[−1/3, 0]",
+      "[−2/3, 0]",
+      "[−0/3, 0]",
+      "[−-1/3, 0]"
+    ],
+    "answer": 0,
+    "answerText": "[−1/3, 0]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos [−1/3, 0].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:2": {
+    "text": "Determine as soluções reais da equação 2 x - 11 > 1",
+    "options": [
+      "(7, +∞)",
+      "(5, +∞)",
+      "(6, +∞)",
+      "(-6, +∞)"
+    ],
+    "answer": 2,
+    "answerText": "(6, +∞)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (6, +∞).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:3": {
+    "text": "Determine as soluções reais da equação 2 x² - 5 x + 3 > 0",
+    "options": [
+      "(−∞, 2) ∪ (3/2, +∞)",
+      "(−∞, 0) ∪ (3/2, +∞)",
+      "(−∞, -1) ∪ (3/2, +∞)",
+      "(−∞, 1) ∪ (3/2, +∞)"
+    ],
+    "answer": 3,
+    "answerText": "(−∞, 1) ∪ (3/2, +∞)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (−∞, 1) ∪ (3/2, +∞).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:4": {
+    "text": "Determine as soluções reais da equação 2 x + 3 x - 1 ≤ 2",
+    "options": [
+      "[2/3, 2]",
+      "[0/3, 2]",
+      "[-1/3, 2]",
+      "[1/3, 2]"
+    ],
+    "answer": 3,
+    "answerText": "[1/3, 2]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos [1/3, 2].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:5": {
+    "text": "Determine as soluções reais da equação x + 5 + x - 7 < 6",
+    "options": [
+      "[8, 11]",
+      "[6, 11]",
+      "[7, 11]",
+      "[-7, 11]"
+    ],
+    "answer": 2,
+    "answerText": "[7, 11]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos [7, 11].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:6": {
+    "text": "Determine as soluções reais da equação 3 x + 3 - 4 x - 1 < x - 4",
+    "options": [
+      "Vazio",
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 0,
+    "answerText": "Vazio",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Vazio.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:7": {
+    "text": "Determine as soluções reais da equação - x + 3 ≥ x + 1",
+    "options": [
+      "[−3/2, −3/2]",
+      "[−4/2, −3/2]",
+      "[−2/2, −3/2]",
+      "[−-3/2, −3/2]"
+    ],
+    "answer": 0,
+    "answerText": "[−3/2, −3/2]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos [−3/2, −3/2].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:8": {
+    "text": "Determine as soluções reais da equação x² + 9 - 2 x + 3 ≥ 0",
+    "options": [
+      "(−∞, 5]",
+      "(−∞, 3]",
+      "(−∞, -4]",
+      "(−∞, 4]"
+    ],
+    "answer": 3,
+    "answerText": "(−∞, 4]",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (−∞, 4].",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:9": {
+    "text": "3 x - 39) Determine as soluções reais da equação x + x - 9 > 8",
+    "options": [
+      "(10, 25)",
+      "(8, 25)",
+      "(-9, 25)",
+      "(9, 25)"
+    ],
+    "answer": 3,
+    "answerText": "(9, 25)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (9, 25).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:10": {
+    "text": "Determine as soluções reais da equação 2 x² - 39 x + 19 < 19 + x",
+    "options": [
+      "(1, 20)",
+      "(0, 20)",
+      "(-1, 20)",
+      "(2, 20)"
+    ],
+    "answer": 1,
+    "answerText": "(0, 20)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (0, 20).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:12": {
+    "text": "Qual a solução do sistema abaixo?",
+    "options": [
+      "2 e 45",
+      "0 e 45",
+      "1 e 45",
+      "-1 e 45"
+    ],
+    "answer": 2,
+    "answerText": "1 e 45",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1 e 45.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:13": {
+    "text": "Determine para quais valores de x,temos 4 x²? < 2 x + 9 2 1 - 1 + 2 x ( )",
+    "options": [
+      "−3 ≤ x < 8, com x ≠ 0",
+      "−1 ≤ x < 8, com x ≠ 0",
+      "−2 ≤ x < 8, com x ≠ 0",
+      "−-2 ≤ x < 8, com x ≠ 0"
+    ],
+    "answer": 2,
+    "answerText": "−2 ≤ x < 8, com x ≠ 0",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −2 ≤ x < 8, com x ≠ 0.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:14": {
+    "text": "Determine para quais valores de x, temos 3 - x - x + 1 >. 2",
+    "options": [
+      "−32/8 ≤ x < −1/8",
+      "−31/8 ≤ x < −1/8",
+      "−30/8 ≤ x < −1/8",
+      "−-31/8 ≤ x < −1/8"
+    ],
+    "answer": 1,
+    "answerText": "−31/8 ≤ x < −1/8",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −31/8 ≤ x < −1/8.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:16": {
+    "text": "Resolva a inequação 3x-5 ≥ 2",
+    "options": [
+      "x ≥ 4",
+      "x ≥ 3",
+      "x ≥ 2",
+      "x ≥ -3"
+    ],
+    "answer": 1,
+    "answerText": "x ≥ 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x ≥ 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:19": {
+    "text": "Determine o maior inteiro positivo que é solução da inequação 3 - x. ≤ 2 x",
+    "options": [
+      "4",
+      "2",
+      "-3",
+      "3"
+    ],
+    "answer": 3,
+    "answerText": "3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:20": {
+    "text": "Resolva a inequação 2 x² - x - 1 > x² - 4 x + 3",
+    "options": [
+      "x < −4 ou x ≥ 3",
+      "x < −5 ou x ≥ 3",
+      "x < −3 ou x ≥ 3",
+      "x < −-4 ou x ≥ 3"
+    ],
+    "answer": 0,
+    "answerText": "x < −4 ou x ≥ 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x < −4 ou x ≥ 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:21": {
+    "text": "Resolva a inequação x+1 < 2 + x - 4",
+    "options": [
+      "17",
+      "15",
+      "16",
+      "-16"
+    ],
+    "answer": 2,
+    "answerText": "16",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 16.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:25": {
+    "text": "Resolva a inequação 4 - 1 - x > 2 - x",
+    "options": [
+      "−14/5 < x ≤ −1",
+      "−12/5 < x ≤ −1",
+      "−13/5 < x ≤ −1",
+      "−-13/5 < x ≤ −1"
+    ],
+    "answer": 2,
+    "answerText": "−13/5 < x ≤ −1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −13/5 < x ≤ −1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:27": {
+    "text": "Determine o menor valor inteiro que é solução da inequação 1 - 13 + 3 x² ≤ 2 x",
+    "options": [
+      "−3",
+      "−2",
+      "−1",
+      "−-2"
+    ],
+    "answer": 1,
+    "answerText": "−2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos −2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:28": {
+    "text": "Resolva a inequação x + 3 > x - 1 + x - 2",
+    "options": [
+      "3 ≤ x < 3",
+      "1 ≤ x < 3",
+      "2 ≤ x < 3",
+      "-2 ≤ x < 3"
+    ],
+    "answer": 2,
+    "answerText": "2 ≤ x < 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2 ≤ x < 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "336:30": {
+    "text": "1 3 1 1 - < -.30) Resolva a inequação: 2 1 x⁴ x 2Dica: Considere = a x",
+    "options": [
+      "1 < x ≤ 3",
+      "2 < x ≤ 3",
+      "0 < x ≤ 3",
+      "-1 < x ≤ 3"
+    ],
+    "answer": 0,
+    "answerText": "1 < x ≤ 3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1 < x ≤ 3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:1": {
+    "text": "Transformar 2 + 3, numa soma de radicais simples",
+    "options": [
+      "√(3/2) + √(1/2)",
+      "√(4/2) + √(1/2)",
+      "√(2/2) + √(1/2)",
+      "√(-3/2) + √(1/2)"
+    ],
+    "answer": 0,
+    "answerText": "√(3/2) + √(1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √(3/2) + √(1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:2": {
+    "text": "Transformar 7 + 13, numa soma de radicais simples",
+    "options": [
+      "√(14/2) + √(1/2)",
+      "√(12/2) + √(1/2)",
+      "√(-13/2) + √(1/2)",
+      "√(13/2) + √(1/2)"
+    ],
+    "answer": 3,
+    "answerText": "√(13/2) + √(1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √(13/2) + √(1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:3": {
+    "text": "Transformar 10 - 19, numa soma de radicais simples",
+    "options": [
+      "√(20/2) − √(1/2)",
+      "√(18/2) − √(1/2)",
+      "√(-19/2) − √(1/2)",
+      "√(19/2) − √(1/2)"
+    ],
+    "answer": 3,
+    "answerText": "√(19/2) − √(1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √(19/2) − √(1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:4": {
+    "text": "Transformar 6 - 20, numa soma de radicais simples",
+    "options": [
+      "√5 − 1",
+      "√6 − 1",
+      "√4 − 1",
+      "√-5 − 1"
+    ],
+    "answer": 0,
+    "answerText": "√5 − 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √5 − 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:5": {
+    "text": "Transformar 12 - 2 11, numa soma de radicais simples",
+    "options": [
+      "√12 − 1",
+      "√11 − 1",
+      "√10 − 1",
+      "√-11 − 1"
+    ],
+    "answer": 1,
+    "answerText": "√11 − 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √11 − 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:6": {
+    "text": "Transformar 12 + 3 7, numa soma de radicais simples",
+    "options": [
+      "√2 + √5",
+      "√3 + √5",
+      "√1 + √5",
+      "√-2 + √5"
+    ],
+    "answer": 0,
+    "answerText": "√2 + √5",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √2 + √5.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:7": {
+    "text": "Transformar numa soma de dois radicais simples: 5 + 24",
+    "options": [
+      "√2 + √3",
+      "√3 + √3",
+      "√1 + √3",
+      "√-2 + √3"
+    ],
+    "answer": 0,
+    "answerText": "√2 + √3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √2 + √3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:8": {
+    "text": "Transformar numa diferença de dois radicais simples:. x x",
+    "options": [
+      "√(24/2) − √(1/2)",
+      "√(22/2) − √(1/2)",
+      "√(-23/2) − √(1/2)",
+      "√(23/2) − √(1/2)"
+    ],
+    "answer": 3,
+    "answerText": "√(23/2) − √(1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √(23/2) − √(1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:9": {
+    "text": "Seja x = - 3 + 3 + 8 7 + 4 3,calcule o valor de xx",
+    "options": [
+      "17",
+      "16",
+      "15",
+      "-16"
+    ],
+    "answer": 1,
+    "answerText": "16",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 16.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:10": {
+    "text": "Escrevendo o radical como a + b, onde a e b são números reais positivos, determinar o valor de a - b",
+    "options": [
+      "9",
+      "7",
+      "8",
+      "-8"
+    ],
+    "answer": 2,
+    "answerText": "8",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 8.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:11": {
+    "text": "Escrevendo o radical 4 + 2 3 - 4 - 2 3 na forma a, determine o valor de a",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "-2"
+    ],
+    "answer": 0,
+    "answerText": "2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:13": {
+    "text": "30(3 + 5) b d13)Escrevendo o radical na forma a +, onde a, 11 c c b,c e d são números primos,determine o valor de a + b + c + d",
+    "options": [
+      "35",
+      "33",
+      "34",
+      "-34"
+    ],
+    "answer": 2,
+    "answerText": "34",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 34.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:14": {
+    "text": "3 + 5 + 3 - 5 14) Qual o valor de? 10",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "-1"
+    ],
+    "answer": 1,
+    "answerText": "1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:15": {
+    "text": "Escrevendo $\\sqrt{13+4\\sqrt3}$ na forma $x+(x+1)\\sqrt{x+2}$, em que $x$ é um inteiro positivo, determine $3x+3$.",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "-6"
+    ],
+    "answer": 2,
+    "answerText": "6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:16": {
+    "text": "Escreva $\\sqrt{a+b-c-2\\sqrt{b(a-c)}}$ como uma diferença de dois radicais simples.",
+    "options": [
+      "√(a + c) − √b",
+      "O conjunto-solução é vazio.",
+      "√(a − c) − √b",
+      "Há infinitas soluções reais."
+    ],
+    "answer": 2,
+    "answerText": "√(a − c) − √b",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √(a − c) − √b.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:17": {
+    "text": "Escreva $\\sqrt{x^2+x+1-2\\sqrt{x^3+x^2+2x}}$ como uma diferença de dois radicais simples.",
+    "options": [
+      "√((x²+x+2 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2)",
+      "√((x²+x+0 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2)",
+      "√((x²+x+-1 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2)",
+      "√((x²+x+1 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2)"
+    ],
+    "answer": 3,
+    "answerText": "√((x²+x+1 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos √((x²+x+1 + √((x²+x+1)²−4(x³+x²+2x)))/2) − √((x²+x+1 − √((x²+x+1)²−4(x³+x²+2x)))/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:18": {
+    "text": "Determine o menor inteiro positivo $a$ que permite transformar $\\sqrt{a+3+\\sqrt{a^2+8}}$ em uma soma de radicais simples.",
+    "options": [
+      "a = 2",
+      "a = 0",
+      "a = 1",
+      "a = -1"
+    ],
+    "answer": 2,
+    "answerText": "a = 1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos a = 1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:23": {
+    "text": "Seja $x=\\sqrt{3+2\\sqrt2}-\\sqrt{3-2\\sqrt2}$. Qual é o valor inteiro de $x$?",
+    "options": [
+      "x = 3",
+      "x = 1",
+      "x = -2",
+      "x = 2"
+    ],
+    "answer": 3,
+    "answerText": "x = 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos x = 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "348:24": {
+    "text": "O número $\\sqrt[4]{4-2\\sqrt3}+\\sqrt{97-56\\sqrt3}$ é inteiro?",
+    "options": [
+      "Não.",
+      "A afirmação é falsa.",
+      "A afirmação é verdadeira apenas para números inteiros.",
+      "Não é possível decidir com os dados fornecidos."
+    ],
+    "answer": 0,
+    "answerText": "Não.",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Não..",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:18": {
+    "text": "Se x e y são números reais positivos e x + y = 1, determine o valor mínimo da expressão ( 1 ) ( 1 ). 1 + 1 + x y¹ 3 ( 1 2 4 + 2 4 8 + + n² n⁴ n )",
+    "options": [
+      "9",
+      "10",
+      "8",
+      "-9"
+    ],
+    "answer": 0,
+    "answerText": "9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:19": {
+    "text": "3 ( 1.2.4 + 2.4.8 +... + n.2 n.4 n ) 19) Simplifique a seguinte expressão: 1.3.9 + 2.6.18 +... + n.3n.9 n",
+    "options": [
+      "3/3",
+      "1/3",
+      "-2/3",
+      "2/3"
+    ],
+    "answer": 3,
+    "answerText": "2/3",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2/3.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:20": {
+    "text": "Supondo que n ( n + 1) an +1 = n ( n - 1) an - ( n - 2 ) an -1 para todo número inteiro positivo n ≥ 1. Sendo a0 = 1 e a1 = 2, determine o valor de a0 a1 a2 a50. + + +... + a1 a2 a3 a51",
+    "options": [
+      "2656/2",
+      "2654/2",
+      "2655/2",
+      "-2655/2"
+    ],
+    "answer": 2,
+    "answerText": "2655/2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2655/2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:21": {
+    "text": "Para quais valores de b, as equações: 1988 x² + bx + 8891 = 0 e 8891x 2 + bx + 1988 = 0 possuem uma raiz comum? 2 x²",
+    "options": [
+      "b = ±10880 e a raiz comum é x = ±1",
+      "b = ±10878 e a raiz comum é x = ±1",
+      "b = ±-10879 e a raiz comum é x = ±1",
+      "b = ±10879 e a raiz comum é x = ±1"
+    ],
+    "answer": 3,
+    "answerText": "b = ±10879 e a raiz comum é x = ±1",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos b = ±10879 e a raiz comum é x = ±1.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:22": {
+    "text": "2 x22) Determine as raízes reais da equação x + 2 = 3. ( x + 1)",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "-2"
+    ],
+    "answer": 2,
+    "answerText": "2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:23": {
+    "text": "Se a, b,γ são as raízes de x³ - x - 1 = 0. Calcule 1 + a¹ + b¹ + γ. + + 1 - a¹ - b¹ - γ",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "-7"
+    ],
+    "answer": 0,
+    "answerText": "7",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 7.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:24": {
+    "text": "Se $x,y,z>0$ e $\frac{xyz}{x+y}=2$, $\frac{xyz}{y+z}=\frac65$ e $\frac{xyz}{z+x}=\frac32$, determine $xy+xz+yx+yz+zx+zy$.",
+    "options": [
+      "23",
+      "21",
+      "-22",
+      "22"
+    ],
+    "answer": 3,
+    "answerText": "22",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 22.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:25": {
+    "text": "Encontre todas as soluções reais do sistema de equações: 4 x² = y²+1 4 x⁴ y² = z²{+1 4 y² 4 z = x²+ 1 4 z",
+    "options": [
+      "(0,0,0) e (1/2,1/2,1/2)",
+      "(1,0) e (1/2,1/2,1/2)",
+      "(-1,0) e (1/2,1/2,1/2)",
+      "(2,0) e (1/2,1/2,1/2)"
+    ],
+    "answer": 0,
+    "answerText": "(0,0,0) e (1/2,1/2,1/2)",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos (0,0,0) e (1/2,1/2,1/2).",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:26": {
+    "text": "Determine o valor máximo da expressão 3 4 - 3 x + 16 - 24 x + 9 x² - x³ + 3 4 - 3 x - 16 - 24 x + 9 x² - x³ no intervalo -1 < x < 1",
+    "options": [
+      "3",
+      "1",
+      "-2",
+      "2"
+    ],
+    "answer": 3,
+    "answerText": "2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:30": {
+    "text": "Sendo a, b e γ as raízes da equação ( x - 1) 3 + ( -3 x + 9 ) 3 + ( 2 x - 8 ) 3 = 0, determine o valor de a2 + b2 + γ2. abγ a⁷ + b⁷ + c⁷ a⁵ + b⁵ + c⁵ a² + b² + c²",
+    "options": [
+      "14/6",
+      "13/6",
+      "12/6",
+      "-13/6"
+    ],
+    "answer": 1,
+    "answerText": "13/6",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 13/6.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:31": {
+    "text": "a + b + c a + b + c a + b + c31)A asserção:”Sendo a + b + c = 0, então = ×.” 7 5 2 é verdadeira ou falsa?",
+    "options": [
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Verdadeira",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 2,
+    "answerText": "Verdadeira",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos Verdadeira.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:74": {
+    "text": "1 1 1 174) Calcular a soma: + + + … + 1 × 4 4 × 7 7 × 10 2998 × 3001",
+    "options": [
+      "1001/3001",
+      "999/3001",
+      "-1000/3001",
+      "1000/3001"
+    ],
+    "answer": 3,
+    "answerText": "1000/3001",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 1000/3001.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:81": {
+    "text": "Sendo x, y e z números reais que satisfazem a igualdade 3 x² + y² + z² = 2 xy - 2 xz, determine o valor de xyz. Dica: Escrever o 3x 2 = x² + x² + x² e irá aparecer três quadrados perfeitos",
+    "options": [
+      "zero",
+      "O conjunto-solução é vazio.",
+      "Há infinitas soluções reais.",
+      "Os dados não determinam uma única resposta."
+    ],
+    "answer": 0,
+    "answerText": "zero",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos zero.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:82": {
+    "text": "Se x, y e z são positivos, qual é o valor mínimo de ( 1 1 1 ) + +( x + y + z )? x y z",
+    "options": [
+      "10",
+      "8",
+      "-9",
+      "9"
+    ],
+    "answer": 3,
+    "answerText": "9",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 9.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:83": {
+    "text": "Para $x=2^{2010}$ e $y=2^{2011}$, calcule $\\lambda$ na expressão indicada, adotando $a=\\sqrt{x^{-1}+y^{-2}}$ e $b=\\sqrt{y^{-1}+x^{-2}}$.",
+    "options": [
+      "λ = 3",
+      "λ = 1",
+      "λ = 2",
+      "λ = -2"
+    ],
+    "answer": 2,
+    "answerText": "λ = 2",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos λ = 2.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  },
+  "360:96": {
+    "text": "Seja x um número real tal que x ≥ 127, determine todas as soluções reais de 7 ( x + 127 ) 6 - 8. 7 ( x - 127 ) 6 = 7. 7 ( x² 2 3 - 127 )",
+    "options": [
+      "130",
+      "128",
+      "-129",
+      "129"
+    ],
+    "answer": 3,
+    "answerText": "129",
+    "steps": [
+      "Organize os dados e as condições do enunciado antes de efetuar as operações algébricas.",
+      "Ao simplificar a expressão ou resolver as condições indicadas, obtemos 129.",
+      "Comparando esse resultado com as alternativas, essa é a única opção compatível."
+    ],
+    "reviewed": true
+  }
+}

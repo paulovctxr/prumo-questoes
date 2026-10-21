@@ -139,19 +139,30 @@ def main():
     parser.add_argument('--transcriptions', type=Path,
                         default=Path('tools/tae-transcriptions.json'))
     parser.add_argument('--figures', type=Path, default=Path('tools/tae-figures.json'))
+    parser.add_argument('--conversions', type=Path,
+                        default=Path('tools/tae-written-conversions.json'))
+    parser.add_argument('--editorial-overrides', type=Path,
+                        default=Path('tools/tae-editorial-overrides.json'))
+    parser.add_argument('--answer-keys', type=Path,
+                        default=Path('tools/tae-answer-keys.json'))
     parser.add_argument('--output-dir', type=Path, default=Path('dist/questoes-algebra'))
     parser.add_argument('--index-output', type=Path, default=Path('dist/questoes-algebra-index.json'))
     parser.add_argument('--sql-output', type=Path, default=Path('supabase/import_tae.sql'))
     args = parser.parse_args()
     transcriptions = json.loads(args.transcriptions.read_text())
     figures = json.loads(args.figures.read_text())
+    conversions = json.loads(args.conversions.read_text())
+    editorial_overrides = json.loads(args.editorial_overrides.read_text())
+    answer_keys = json.loads(args.answer_keys.read_text())
     solutions = load_solutions()
     records = []
     for key, transcription in transcriptions.items():
         chapter_id, number_text = key.split(':')
         number = int(number_text)
         topic, sub = TOPIC_MAP[chapter_id]
-        options = transcription['options']
+        conversion = conversions.get(key, {})
+        editorial = editorial_overrides.get(key, {})
+        options = conversion.get('options', editorial.get('options', transcription['options']))
         is_choice = bool(options)
         solution = solutions.get(key, {})
         letter = None
@@ -160,18 +171,21 @@ def main():
             letter = match[1] if match else None
         if not is_choice or (letter and ord(letter) - ord('A') >= len(options)):
             letter = None
+        answer = conversion.get('answer', answer_keys.get(key,
+                                ord(letter) - ord('A') if letter else None))
+        steps = conversion.get('steps', solution.get('steps', []))
         record = {
             'id': 1000000 + int(chapter_id) * 1000 + number,
             'topic': topic, 'sub': sub, 'difficulty': 'Difícil',
-            'text': transcription['text'], 'options': options,
-            'answer': ord(letter) - ord('A') if letter else None,
-            'steps': solution.get('steps', []),
+            'text': conversion.get('text', editorial.get('text', transcription['text'])), 'options': options,
+            'answer': answer,
+            'steps': steps,
             'type': 'Múltipla escolha' if is_choice else 'Discursiva',
             'institution': BOOK_NAME, 'exam': BOOK_NAME,
             'year': 2026,
-            'solution': 'Texto' if solution.get('steps') else 'Pendente',
+            'solution': 'Texto' if steps else 'Pendente',
             'solutionNote': solution.get('editorial_note', ''),
-            'answerText': solution.get('answer', ''),
+            'answerText': conversion.get('answerText', solution.get('answer', '')),
             'bookOriginal': True, 'transcribed': True,
             'source': {'name': BOOK_NAME, 'page': transcription['page'],
                        'number': number, 'chapter': CHAPTER_TITLES[chapter_id],

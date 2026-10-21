@@ -1,0 +1,569 @@
+{
+  "48:29": {
+    "text": "Se P(x) é um polinômio de grau maior que 3, P(1)=2, P(2)=3 e P(3)=5, e R(x) é o resto da divisão de P(x) por (x−1)(x−2)(x−3), qual é o valor de R(98)?",
+    "options": [
+      "4751",
+      "4753",
+      "4755",
+      "4757",
+      "4759"
+    ]
+  },
+  "73:11": {
+    "text": "Considere x e y reais tais que 375y²x−125y³−375yx²+125x³=125b e y²+x²+2yx=a². Qual é o valor de (x²−y²)⁶?",
+    "options": [
+      "a³b⁶",
+      "a⁸b⁶",
+      "a⁶b²",
+      "a⁶b³",
+      "a⁴b⁶"
+    ]
+  },
+  "73:29": {
+    "text": "A expressão radical indicada no enunciado é igual a a. Qual é o valor da soma das potências x^(2/3)+y^(2/3)?",
+    "options": [
+      "a^(2/3)",
+      "a^(3/2)",
+      "a^(3/4)",
+      "a^(4/3)",
+      "a^(4/5)"
+    ]
+  },
+  "106:14": {
+    "text": "Se a, b e c são reais, com a≠b, b≠c e c≠a, simplifique (b−c)/((a−b)(a−c)) + (c−a)/((b−c)(b−a)) + (a−b)/((c−a)(c−b)).",
+    "options": [
+      "1/(a−b)+1/(b−c)+1/(c−a)",
+      "2/(a−b)+2/(b−c)+2/(c−a)",
+      "3/(a−b)+3/(b−c)+3/(c−a)",
+      "2/(a−b)−2/(b−c)−3/(c−a)",
+      "1/(a−b)−2/(b−c)−3/(c−a)"
+    ]
+  },
+  "142:6": {
+    "text": "Sobre a função f(x)=2x/3+9, qual afirmação é correta?",
+    "options": [
+      "Se f(x)>0, então x≥−27/2.",
+      "Se f(x)<0, então x<−27/2.",
+      "Se f(x)>0, então x≥6.",
+      "Se f(x)<0, então x<−6.",
+      "Se f(x)<0, então x<27/2."
+    ]
+  },
+  "197:14": {
+    "text": "Se x e y são reais positivos e xy=1, o valor mínimo de 1/x⁴+1/(4y⁴) ocorre para qual valor de x?",
+    "options": [
+      "√2",
+      "⁴√2",
+      "1",
+      "0,5",
+      "0,25"
+    ]
+  },
+  "197:16": {
+    "text": "Se A=x²+1/x² e B=x−1/x são positivos, qual é o valor mínimo de A/B?",
+    "options": [
+      "2",
+      "√2",
+      "2√2",
+      "3√2",
+      "4"
+    ]
+  },
+  "231:28": {
+    "text": "A razão entre as raízes positivas de ax²+bx+c=0 é m/n. Qual expressão é igual a b²/(ac)?",
+    "options": [
+      "1/m+1/n",
+      "1/m²+1/n²",
+      "(n/m+m/n)²",
+      "√(n/m)+√(m/n)",
+      "(√(n/m)+√(m/n))²"
+    ]
+  },
+  "253:20": {
+    "text": "Se P(x)=ax²+bx+c, P(3)=P(−2)=0 e P(1)=6, qual afirmação sobre P é correta?",
+    "options": [
+      "P(2)<0",
+      "P tem valor máximo igual a 27/4",
+      "P tem valor máximo igual a 11/4",
+      "P tem valor máximo igual a 25/4",
+      "P tem valor mínimo igual a −25/4"
+    ]
+  },
+  "360:34": {
+    "text": "Determine a soma das raízes reais de (√(2x²−2x+12)−√(x²−5))/((5x²−2x−3)√(2x²−2x+12))=2/9.",
+    "options": [
+      "1/5",
+      "2/7",
+      "1",
+      "2",
+      "3/5"
+    ]
+  },
+  "360:38": {
+    "text": "Qual é o conjunto-solução de (x−1)/(x⁴+3x³−2x²)<0?",
+    "options": [
+      "(−∞,−1)∪(2,+∞)",
+      "(−∞,−1)∪(1,2)",
+      "(−∞,−1)∪(0,2)",
+      "(−∞,−1)∪(1,2]",
+      "(−∞,−1)∪(−1,0)"
+    ]
+  },
+  "360:44": {
+    "text": "Considere x e y reais tais que 375y²x−125y³−375yx²+125x³=125b e y²+x²+2yx=a². Qual é o valor de (x²−y²)⁶?",
+    "options": [
+      "a³b⁶",
+      "a⁸b⁶",
+      "a⁶b²",
+      "a⁶b³",
+      "a⁴b⁶"
+    ]
+  },
+  "360:89": {
+    "text": "Se x e y são reais positivos e xy=1, o valor mínimo de 1/x⁴+1/(4y⁴) ocorre para qual valor de x?",
+    "options": [
+      "√2",
+      "⁴√2",
+      "1",
+      "0,5",
+      "0,25"
+    ]
+  },
+  "320:16": {
+    "text": "Qual é a raiz de √(1−√(x⁴−x²))=x−1?",
+    "options": [
+      "6/5",
+      "5/4",
+      "4/3",
+      "3/2",
+      "1"
+    ]
+  },
+  "320:17": {
+    "text": "A solução real de √(x+1)−√x=1/(4√x) é:",
+    "options": [
+      "uma dízima periódica",
+      "um quadrado perfeito",
+      "um racional cujo inverso tem quatro divisores positivos",
+      "um número irracional",
+      "inexistente"
+    ]
+  },
+  "320:18": {
+    "text": "Calcule o menor k>0 para que a raiz real de √(4−∛(x³−k))=1 seja inteira.",
+    "options": [
+      "1",
+      "60",
+      "27",
+      "37",
+      "40"
+    ]
+  },
+  "320:19": {
+    "text": "A maior raiz real de √(2x+1)−4∛(2x+1)+3·∜[6](2x+1)=0 é:",
+    "options": [
+      "zero",
+      "irracional",
+      "par entre 42 e 310",
+      "par maior que 320",
+      "ímpar maior que 160"
+    ]
+  },
+  "320:20": {
+    "text": "A solução de √(6x+6)−√(5x−5)=√(4x+4)−√(3x−3) tem a forma (a−√15−√24)/(b−√15+√24). Determine (a,b).",
+    "options": [
+      "(9,−1)",
+      "(−9,−1)",
+      "(9,1)",
+      "(−1,9)",
+      "(−9,1)"
+    ]
+  },
+  "320:21": {
+    "text": "Se x=√a é raiz da equação apresentada, qual afirmação sobre a é correta?",
+    "options": [
+      "a é par e menor que 7",
+      "a é inteiro e possui quatro divisores positivos",
+      "a é par e maior que 11",
+      "a é ímpar e maior que 20",
+      "a é primo"
+    ]
+  },
+  "320:23": {
+    "text": "Se r é a menor raiz real de √(x²)+√(x⁴)=√(x⁶), qual afirmação é correta?",
+    "options": [
+      "r<−1",
+      "−1<r<0",
+      "r=0",
+      "0<r<1",
+      "r>1"
+    ]
+  },
+  "320:24": {
+    "text": "Sobre o conjunto-solução real de √((2x+1)²)=x−3, assinale a alternativa correta.",
+    "options": [
+      "É unitário e seu elemento é positivo.",
+      "Tem dois elementos, um racional e outro irracional.",
+      "É vazio.",
+      "É unitário e seu elemento é negativo.",
+      "Tem dois elementos irracionais."
+    ]
+  },
+  "320:25": {
+    "text": "Qual é o quociente entre a maior e a menor raiz de ∜[9]x+∜[9](x⁸)/x=17/4?",
+    "options": [
+      "2²⁷",
+      "2³²",
+      "2³⁶",
+      "2⁴⁵",
+      "2⁵⁴"
+    ]
+  },
+  "320:26": {
+    "text": "Os reais positivos a e b satisfazem a√(a²+2b²)=b√(9a²−b²). Qual é um valor possível para a/b?",
+    "options": [
+      "(5+2√5)/2",
+      "(5+√3)/2",
+      "(3+2√3)/2",
+      "(3+√3)/2",
+      "(3+√5)/2"
+    ]
+  },
+  "320:27": {
+    "text": "A equação √(3x+1)−√(2x−1)=1 tem duas raízes. Qual é a soma delas?",
+    "options": [
+      "10",
+      "4",
+      "8",
+      "5",
+      "6"
+    ]
+  },
+  "320:28": {
+    "text": "No sistema ∜x+∜[5]y=3 e √x+∜[5](y²)=5, qual é o maior valor de y?",
+    "options": [
+      "1",
+      "16",
+      "32",
+      "64",
+      "128"
+    ]
+  },
+  "320:30": {
+    "text": "A solução de √(2+∛(3x−1))+∛(3x−1)=4 é:",
+    "options": [
+      "divisor de 30",
+      "múltiplo de 5",
+      "fator de 40",
+      "múltiplo de 7",
+      "divisível por 9"
+    ]
+  },
+  "320:31": {
+    "text": "Se A é o conjunto-solução de √((x²−5x+6)⁴)=1/16, quantos elementos A possui?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "320:32": {
+    "text": "Sobre o conjunto-solução real de x+2=√(x²+2√(4x²+8x+2)), assinale a alternativa correta.",
+    "options": [
+      "É vazio.",
+      "Possui somente um elemento.",
+      "Possui dois elementos de sinais iguais.",
+      "Possui dois elementos de sinais opostos."
+    ]
+  },
+  "320:33": {
+    "text": "Julgue: I) √x+√(x+5)=7 possui duas soluções; II) multiplicar uma inequação por x²−2x+3 não altera seu conjunto-solução; III) a soma dos inversos das raízes de x²−x+2=0 é 1/2.",
+    "options": [
+      "I, II e III são verdadeiras.",
+      "Apenas I e II são verdadeiras.",
+      "Apenas I e III são verdadeiras.",
+      "Apenas II e III são verdadeiras.",
+      "Apenas II é verdadeira."
+    ]
+  },
+  "348:19": {
+    "text": "Simplificando o radical composto indicado no exercício, obtém-se x. Qual é o valor de (xˣ)ˣ?",
+    "options": [
+      "8",
+      "16",
+      "1",
+      "1024",
+      "2"
+    ]
+  },
+  "348:20": {
+    "text": "Qual alternativa decimal está mais próxima de ∜(49+20√6)?",
+    "options": [
+      "3,00",
+      "3,05",
+      "3,15",
+      "3,25",
+      "3,35"
+    ]
+  },
+  "348:21": {
+    "text": "Simplifique ∜((√48+7)²)+∜((√48−7)²).",
+    "options": [
+      "2√3",
+      "4∜3",
+      "4",
+      "2√7",
+      "√(4√3+7)+√(4√3−7)"
+    ]
+  },
+  "348:22": {
+    "text": "Calcule 6√(50−5√75)−√(128−16√48).",
+    "options": [
+      "22√(3−1)",
+      "22√(2−1)",
+      "11(√2−√6)",
+      "11(√6−√2)",
+      "11(√6−2)"
+    ]
+  },
+  "348:25": {
+    "text": "Se A=√(17−2√30)−√(17+2√30), calcule (A+2√2)²⁰⁰³.",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "348:26": {
+    "text": "Julgue: I) √(3−2√2)−√(3+2√2) é irracional; II) na decomposição √7−√2=√A−√B, vale (B−2)/A=6/∜[8](a⁷); III) para a real não nulo, a√(a√a)=∜[8](a⁷)/a.",
+    "options": [
+      "V–F–V",
+      "F–V–F",
+      "V–V–V",
+      "V–F–F",
+      "F–F–F"
+    ]
+  },
+  "348:27": {
+    "text": "Se A=1/(1−√2)+2√2 e B=1/(2+1/(2+1/(1+√2))), qual relação é correta?",
+    "options": [
+      "A=1/B",
+      "A>B",
+      "B>A",
+      "A=B",
+      "A+B=0"
+    ]
+  },
+  "348:28": {
+    "text": "As expressões X e Y são opostas, conforme as frações conjugadas do enunciado. A que expressão equivale X²−Y²?",
+    "options": [
+      "X·Y",
+      "X+Y",
+      "X−Y",
+      "X/Y",
+      "Y/X"
+    ]
+  },
+  "348:29": {
+    "text": "Se C=(M√M−P√P)/(√M−√P), A=√(MP)+1 e M+P=9, calcule (C−A)^(2/3).",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16",
+      "32"
+    ]
+  },
+  "348:30": {
+    "text": "A soma √(25/8+11√2/8)+√(25/8−11√2/8) pertence a qual intervalo?",
+    "options": [
+      "[−5,−3)",
+      "[−3,−1)",
+      "[−1,1)",
+      "[1,3)",
+      "[3,5)"
+    ]
+  },
+  "348:31": {
+    "text": "Para x=√(2+√3), y=√(2+√(2+√3)) e z conforme o produto de radicais conjugados do enunciado, simplifique (xyz)⁻¹/(2−√3).",
+    "options": [
+      "2−√3",
+      "1",
+      "2+√3",
+      "2√3"
+    ]
+  },
+  "348:32": {
+    "text": "Huguinho afirma que ∛(10+6√3)=1+√3; Zezinho, que (√(3+2√2)−√(3−2√2))² é inteiro; Luizinho, que a soma dos algarismos de 10²⁰²¹−10²⁰¹⁹ é múltipla de 3. Quem acertou?",
+    "options": [
+      "Todos os três.",
+      "Apenas um aluno.",
+      "Apenas Huguinho e Zezinho.",
+      "Apenas Huguinho e Luizinho.",
+      "Apenas Zezinho e Luizinho."
+    ]
+  },
+  "348:33": {
+    "text": "Simplifique 1/(√6+√5)+1/(√5+2)+1/(2−√3)+1/(√3+√2)+1/(√2−1).",
+    "options": [
+      "√6+2√3+1",
+      "√6+2√2+1",
+      "√6+5",
+      "√6+1",
+      "√6−1"
+    ]
+  },
+  "48:16": {
+    "text": "Seja $p(x)$ um polinômio de grau 4 com coeficientes reais. Na divisão de $p(x)$ por $x-2$, obtém-se quociente $q(x)$ e resto 26. Na divisão de $p(x)$ por $x^2+x-1$, obtém-se quociente $h(x)$ e resto $8x-5$. Sabendo que $q(0)=13$ e $q(1)=26$, determine $h(2)+h(3)$.",
+    "options": [
+      "16",
+      "0",
+      "−47",
+      "−28",
+      "1"
+    ]
+  },
+  "216:11": {
+    "text": "Foram vendidos $N$ bilhetes de uma extração da Loteria Estadual, sendo $N$ múltiplo de 10. Todo bilhete vermelho recebeu um prêmio. Entre os 100 primeiros bilhetes, 4 eram vermelhos; entre os restantes, 2 de cada grupo de 10 eram vermelhos. Se no máximo 15% dos bilhetes vendidos receberam prêmio, qual é o maior valor possível de $N$?",
+    "options": [
+      "350",
+      "340",
+      "330",
+      "320",
+      "310"
+    ]
+  },
+  "197:9": {
+    "text": "Considere $a=7^{50}+7^{51}+7^{53}$. Em qual intervalo entre potências consecutivas de 7 está $a$?",
+    "options": [
+      "$7^{50}<a<7^{51}$",
+      "$7^{51}<a<7^{52}$",
+      "$7^{52}<a<7^{53}$",
+      "$7^{53}<a<7^{54}$",
+      "$7^{54}<a<7^{55}$"
+    ]
+  },
+  "336:23": {
+    "text": "Quantas soluções inteiras possui a inequação $x^2-2x+2<2x^2-x+4$?",
+    "options": [
+      "Nenhuma",
+      "10",
+      "25",
+      "50",
+      "Infinitas"
+    ]
+  },
+  "309:29": {
+    "text": "Se a equação $x^4-4(m+2)x^2+m^2=0$ admite quatro raízes reais, contadas com multiplicidade, então:",
+    "options": [
+      "o maior valor inteiro de $m$ é −3",
+      "a soma dos três menores valores inteiros possíveis de $m$ é zero",
+      "a soma dos três maiores valores inteiros possíveis de $m$ é −12",
+      "somente valores inteiros positivos de $m$ são possíveis",
+      "somente valores negativos de $m$ são possíveis"
+    ]
+  },
+  "360:1": {
+    "text": "Se $\\frac1a+\\frac1b+\\frac1c=\\frac1{a+b+c}$, qual é o valor de $\\frac{a^3+b^3+c^3}{(a+b+c)^3}$?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "253:14": {
+    "text": "Considere o trinômio $y=kx^2+2(k+1)x-(k+1)$. Qual afirmação é correta?",
+    "options": [
+      "É negativo para todo $x$ e todo $k\\ne0$",
+      "É negativo para todo $x$ se $k\\le-2$",
+      "É positivo para todo $x$ e todo $k\\ne0$",
+      "É negativo para todo $x$ se $-1<k<-\\frac12$",
+      "Nenhuma das anteriores"
+    ]
+  },
+  "309:32": {
+    "text": "Qual é a soma dos cubos das raízes reais de $(x^2-2x+1)^2=5x^2-10x+1$?",
+    "options": [
+      "36",
+      "34",
+      "18",
+      "−18",
+      "−34"
+    ]
+  },
+  "360:3": {
+    "text": "Considere $x=2+\\sqrt{2+\\sqrt{2+\\sqrt{2+\\cdots}}}$ e $y=3+\\sqrt{3\\sqrt{3\\sqrt{3\\cdots}}}$. Determine $xy$.",
+    "options": [
+      "1",
+      "6",
+      "12",
+      "18",
+      "24"
+    ]
+  },
+  "309:31": {
+    "text": "Seja $S\\subset\\mathbb{R}$ o conjunto-solução de $\\sqrt[4]{(x^2+x)^4}+\\sqrt[8]{(x^2+x)^4}=420$. Assinale a alternativa verdadeira.",
+    "options": [
+      "Todos os elementos de $S$ são irracionais",
+      "O produto dos elementos de $S$ é positivo",
+      "A soma do maior e do menor elemento de $S$ é 1",
+      "O conjunto $S$ possui quatro elementos"
+    ]
+  },
+  "360:7": {
+    "text": "Se $p(x)=ax^9+bx^8+1$ é divisível por $(x-1)^2$, com $a\\ne0$ e $b\\ne0$, qual é o valor de $a$?",
+    "options": [
+      "−9",
+      "−10",
+      "8",
+      "9",
+      "10"
+    ]
+  },
+  "197:10": {
+    "text": "Considere $a=2^{86}+2^{84}+2^{82}+2^{80}$. Em qual intervalo entre potências consecutivas de 2 está $a$?",
+    "options": [
+      "$2^{86}<a<2^{87}$",
+      "$2^{87}<a<2^{88}$",
+      "$2^{88}<a<2^{89}$",
+      "$2^{89}<a<2^{90}$",
+      "$2^{90}<a<2^{91}$"
+    ]
+  },
+  "48:32": {
+    "text": "(CMRJ 2019) Considere $f(x)=3x^2+6x-24$ e $g(x)=\\frac1{10}x^2+2x+9$. Um triângulo tem um vértice no ponto de mínimo de $g$ e os outros dois nos pontos em que o gráfico de $f$ intercepta o eixo $x$. Qual é a área desse triângulo?",
+    "options": [
+      "30",
+      "15",
+      "9",
+      "6",
+      "3"
+    ]
+  },
+  "89:15": {
+    "text": "Se $x,y>0$ e $\\sqrt{(x^2+y^2)^2-(xy)^2}+xy=9xy$, determine $\\left(\\frac{x}{y}+\\frac{y}{x}\\right)^2$.",
+    "options": [
+      "9",
+      "121",
+      "49",
+      "65",
+      "169"
+    ]
+  },
+  "336:29": {
+    "text": "Quantas soluções inteiras possui a inequação $\\frac{x-2}{\\sqrt{2x-3}-1}<4$?",
+    "options": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "Nenhuma"
+    ]
+  }
+}
