@@ -113,6 +113,21 @@ function mockBridge(databaseError, legacy = false) {
     assert.match(await page.locator('.bank-essential-figure img').getAttribute('src'),
       /^questoes-algebra-figuras\/1272029\.webp$/);
     assert.equal(await page.locator('.question-card .option').count(),4);
+    await page.evaluate(() => {filters=blankFilters();nav('questions')});
+    await page.getByRole('button',{name:'Criar lista',exact:true}).click();
+    await page.waitForSelector('.list-drawer');
+    assert.equal(await page.locator('.list-specialty-row').count(),
+      await page.evaluate(() => new Set(QUESTIONS.map(question => question.topic)).size));
+    assert.match(await page.locator('#listSelectedMessage').innerText(),/2\.822 questões/);
+    assert.equal(await page.locator('#createListSubmit').isDisabled(),true);
+    await page.locator('[name="name"]').fill('Lista de revisão completa');
+    await page.locator('#fitListLimit').click();
+    assert.match(await page.locator('#listSelectedMessage').innerText(),/1\.000 questões/);
+    assert.equal(await page.locator('#createListSubmit').isEnabled(),true);
+    await page.locator('#createListSubmit').click();
+    await page.waitForSelector('.list-card');
+    assert.equal(await page.evaluate(() => state.lists.at(-1).ids.length),1000);
+    assert.equal(await page.getByRole('heading',{name:'Lista de revisão completa'}).count(),1);
     assert.deepEqual(errors,[]);
     await context.close();
     console.log('PASS shared bank: 2822 questions, topic filters, demand loading, grading, written responses, exams, mobile and retry.');
