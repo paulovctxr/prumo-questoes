@@ -117,6 +117,7 @@ function mockBridge(databaseError, legacy = false) {
     await page.getByRole('button',{name:'Criar lista',exact:true}).click();
     await page.waitForSelector('.list-drawer');
     assert.equal(await page.locator('[name="name"]').getAttribute('placeholder'),'Insira o nome da lista');
+    assert.equal(await page.locator('.list-drawer textarea').count(),0);
     assert.equal(await page.locator('.list-specialty-row').count(),
       await page.evaluate(() => new Set(QUESTIONS.map(question => question.topic)).size));
     assert.match(await page.locator('#listSelectedMessage').innerText(),/2\.822 questões/);
@@ -144,6 +145,7 @@ function mockBridge(databaseError, legacy = false) {
     await page.getByRole('button',{name:'Criar pasta',exact:true}).click();
     assert.equal(await page.locator('.saved-folder-row').count(),1);
     await page.getByRole('button',{name:'Editar lista Lista de revisão completa'}).click();
+    assert.equal(await page.locator('#editList textarea').count(),0);
     await page.locator('#editList [name="folderId"]').selectOption({label:'Álgebra avançada'});
     await page.getByRole('button',{name:'Salvar alterações',exact:true}).click();
     await page.getByRole('button',{name:'Álgebra avançada',exact:true}).click();
